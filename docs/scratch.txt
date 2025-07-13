@@ -1,0 +1,21 @@
+this is some text
+
+
+
+
+Project Outlines
+    Build a series of hardware-implementable cores for trading acceleration
+
+    Item 1: 
+        Data transmission protocols and formatting
+
+        Take in trading data over ethernet and turn it into a specific format
+        
+        Required items:
+            (software) module to stream the data to the FPGA
+                implemented in Pyton or C++?
+            (hardware) module to receive the data from ethernet
+                Basic test is to display some basic data from that into a screen or LED array to verify correctness & latency requirements
+
+
+
