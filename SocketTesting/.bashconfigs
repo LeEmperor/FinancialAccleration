@@ -1,0 +1,4 @@
+alias comp="clang++ main.cpp -o exec"
+alias exec="./exec"
+alias fc="comp && exec"
+
