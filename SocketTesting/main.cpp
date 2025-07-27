@@ -31,12 +31,11 @@ int main() {
     printf("raw socket created on fd: %i\n", socket_fd);
 
     // ifreq for interface index
-    struct ifreq InterfaceRequest;
-    strncpy(InterfaceRequest.ifr_name, "eth0", IFNAMSIZ - 1);
+    struct ifreq EthernetHandle_InterfaceRequest;
+    strncpy(EthernetHandle_InterfaceRequest.ifr_name, "eth0", IFNAMSIZ - 1);
 
     // interface index of eth0
-    int socket_ioctl = ioctl(socket_fd, SIOCGIFINDEX, );
-
+    int socket_ioctl = ioctl(socket_fd, SIOCGIFINDEX, &EthernetHandle_InterfaceRequest);
 
 
 
