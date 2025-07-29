@@ -1,0 +1,24 @@
+# /home/john/.config/tmuxinator/trade.yml
+
+name: trade
+root: ~/FinancialAccleration/
+
+windows:
+  - build:
+      layout: main-vertical
+      panes:
+          - source SocketTesting/.bashconfigs && clear && cd SocketTesting
+  - src:
+      # root: <%= @project_root %>
+      layout: main-vertical
+      panes:
+        - cd SocketTesting && vim main.cpp
+  - configs:
+      layout: main-vertical
+      panes:
+        - vim SocketTesting/.bashconfigs
+        - vim ~/.config/tmuxinator/trade.yml
+  - git:
+      layout: main-vertical
+      panes:
+        - cd SocketTesting

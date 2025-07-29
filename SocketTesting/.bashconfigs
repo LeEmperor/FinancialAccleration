@@ -1,4 +1,12 @@
-alias comp="clang++ main.cpp -o exec"
+# alias comp="clang++ main.cpp -o exec"
 alias exec="./exec"
-alias fc="comp && exec"
+# alias fc="comp && exec"
+
+comp () {
+  clang++ sender2.cpp -o sender2
+  clang++ listener3.cpp -o listener3
+}
+
+alias tcp="sudo tcpdump -i enp0s8 ether proto 0xBB85 -XX"
+alias listen="sudo ./listener3"
 
