@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/mnt/c/FPGA_stuff/FinancialAccleration/API_module/build",
+  "command": "/usr/bin/c++ -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS  -std=gnu++11 -o CMakeFiles/exec.dir/src/main.cpp.o -c /mnt/c/FPGA_stuff/FinancialAccleration/API_module/src/main.cpp",
+  "file": "/mnt/c/FPGA_stuff/FinancialAccleration/API_module/src/main.cpp",
+  "output": "CMakeFiles/exec.dir/src/main.cpp.o"
+}
+]

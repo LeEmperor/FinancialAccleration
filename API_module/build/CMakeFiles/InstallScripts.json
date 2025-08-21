@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/FPGA_stuff/FinancialAccleration/API_module/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

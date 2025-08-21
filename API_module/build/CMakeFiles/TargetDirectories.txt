@@ -1,0 +1,3 @@
+/mnt/c/FPGA_stuff/FinancialAccleration/API_module/build/CMakeFiles/exec.dir
+/mnt/c/FPGA_stuff/FinancialAccleration/API_module/build/CMakeFiles/edit_cache.dir
+/mnt/c/FPGA_stuff/FinancialAccleration/API_module/build/CMakeFiles/rebuild_cache.dir

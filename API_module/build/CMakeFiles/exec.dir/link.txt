@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/exec.dir/link.d CMakeFiles/exec.dir/src/main.cpp.o -o exec  /usr/lib/x86_64-linux-gnu/libcpprest.so.2.10 -lcrypto

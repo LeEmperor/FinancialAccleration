@@ -5,26 +5,15 @@
 
 #define nL "\n" 
 using namespace std;
-
+using namespace web;
+using namespace web::http;
+using namespace web::http::client;
 
 int main() {
   cout << "started" << nL;
-
   cout << "version:" << __cplusplus << nL;
 
-
-  using namespace web;
-  using namespace web::http;
-  using namespace web::http::client;
-
-  // std::string api_key = std::getenv("polygon_api_key");
-  // cout << "api_key: " << api_key << nL;
-  // if (!api_key) {
-  //   perror("api key not here lmao eat ballers");
-  //   exit(EXIT_FAILURE);
-  // }
-
-  std::string api_key = "";
+  std::string api_key = "XoqNKfiUjJtIHjd1dkOPhQ_qFtrLGiZ4";
   std::string symbol = "AAPL";
 
   // web::uri_builder builder(U("/v2/last/nbbo/" + symbol));
@@ -49,6 +38,9 @@ int main() {
         std::cout << "response: " << json_result.serialize() << nL;
       })
     .wait();
+
+
+
 
   return 0;
 }
