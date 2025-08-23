@@ -1,0 +1,1 @@
+D:/questa_install/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.main_tb -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt -id 1-24ee9a5f9e98-68a93df6-187-53f0

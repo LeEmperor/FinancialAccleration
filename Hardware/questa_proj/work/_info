@@ -1,0 +1,256 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt1
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+!s12c _opt
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 dC:/Users/kingp/AppData/Local/quartus
+T_opt
+!s110 1755921911
+VfS>k0SBA2EhQHleLgWO_J1
+Z4 04 7 4 work main_tb fast 0
+=1-24ee9a5f9e98-68a93df6-187-53f0
+R1
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM10U2 
+Z8 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2024.3;79
+R3
+T_opt1
+!s110 1755954671
+Vf;Pa]ze>77fjQT?=5VA;50
+R4
+=11-24ee9a5f9e98-68a9bdee-286-3dd4
+R1
+R5
+R6
+R7
+R8
+Z11 o-quiet -auto_acc_if_foreign -work work +acc
+R9
+n@_opt1
+R10
+R3
+T_opt2
+!s110 1755971407
+V;KR?7d=5X8QU_Hm874XDY1
+04 14 4 work ethernet_v1_tb fast 0
+=13-24ee9a5f9e98-68a9ff4e-3b3-6ab4
+R1
+R5
+R6
+R7
+R8
+R11
+R9
+n@_opt2
+R10
+R3
+vethernet
+Z12 2C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv
+Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z14 !s110 1755963982
+!i10b 1
+!s100 bX8aA`iKdAN;PGebAbk5:0
+INeM@Zn^@joW5jP=Ub:2^Q1
+S1
+Z15 dC:/FPGA_stuff/FinancialAccleration/Hardware/questa_proj
+w1755963973
+Z16 8C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv
+Z17 FC:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv
+!i122 41
+L0 5 83
+Z18 VDg1SIo80bB@j0V0VzS_@n1
+Z19 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z20 !s108 1755963982.000000
+Z21 !s107 C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv|
+Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv|
+!i113 0
+Z23 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vethernet_v1
+R12
+R13
+!s110 1755971406
+!i10b 1
+!s100 2m2EiRW65U5JHcnNfzJOP1
+I]FUEQZio<0PVLX;2T:X5D1
+S1
+R15
+w1755970858
+R16
+R17
+!i122 74
+Z24 L0 5 85
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755971406.000000
+R21
+R22
+!i113 0
+R23
+R9
+vethernet_v1_tb
+2C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
+R13
+!s110 1755972065
+!i10b 1
+!s100 `i49ocig5aEi2lBL7>2do3
+I2zM9GCJ]1bPPSFg;3U=Gb0
+S1
+R15
+w1755972030
+8C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
+!i122 77
+L0 8 64
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755972065.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv|
+!i113 0
+R23
+R9
+vmain
+2C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv
+R13
+R14
+!i10b 1
+!s100 L=Adb`?D1?`dB5VGG[_Fl2
+I^g]ChD?jK6z5@fS]DEfCc3
+S1
+R15
+w1755954889
+8C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv
+!i122 40
+L0 1 105
+R18
+R19
+r1
+!s85 0
+31
+R20
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv|
+!i113 0
+R23
+R9
+vmain_tb
+2C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv
+R13
+!s110 1755954669
+!i10b 1
+!s100 ahj86;W`9ao6eGC[h3>7K2
+I`U]OFhJBEUSI^ImBP9k041
+S1
+R15
+w1755954613
+8C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv
+!i122 32
+L0 7 69
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755954669.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv|
+!i113 0
+R23
+R9
+vrmii_v1
+2C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv
+R13
+!s110 1755972058
+!i10b 1
+!s100 1_h9RjdbjMB266HdcINAL1
+IMXN^=I^Xh6n:5[NICE5Gz0
+S1
+R15
+w1755972023
+8C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv
+!i122 76
+R24
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755972058.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv|
+!i113 0
+R23
+R9
