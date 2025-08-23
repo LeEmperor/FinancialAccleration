@@ -31,7 +31,7 @@ module cutthrough_v1 #(
 
   input  logic  pulse_ready,
   output logic  pulse_valid,
-  output header_t pulse_header 
+  output header_t pulse_header
 );
 
   // combinational bits
@@ -57,11 +57,10 @@ module cutthrough_v1 #(
     in_pkt = 1,
 
     // dropping,
-    forwarding
+    forwarding = 2
   } state_e;
 
   state_e current_state;
-  
 
   // packet state machine
   always_ff @(posedge clk, posedge rst) begin
@@ -73,14 +72,14 @@ module cutthrough_v1 #(
       if (slave_tvalid && slave_tready) begin
         current_state <= idle;
 
-        case (current_state)
+        unique case (current_state)
           idle : begin
             if (!slave_tlast) begin
               // quand pas packet première (premier packet, ou packet au milieu)
               if (
-                (msg_type == 8'h51) || 
+                (msg_type == 8'h51) ||
                 (msg_type == 8'h54) &&
-                (symbol == 32'h41_41_50_4C) || 
+                (symbol == 32'h41_41_50_4C) ||
                 (symbol == 32'h47_4F_4F_47)
               ) begin
                 dropping <= 0;
@@ -96,6 +95,10 @@ module cutthrough_v1 #(
             if (slave_tlast) begin
               dropping <= 0;
             end
+          end
+
+          dropping : begin
+
           end
         endcase
       end
