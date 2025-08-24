@@ -1,9 +1,24 @@
-C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
+C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv {2 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module RX_MAC_v1
+** Warning: C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv(72): (vlog-2182) 'buffer_index' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	RX_MAC_v1
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 -- Compiling module ethernet_v1_tb
 
 Top level modules:
 	ethernet_v1_tb
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module RX_MAC_v1_tb
+
+Top level modules:
+	RX_MAC_v1_tb
 
 } {} {}} C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024

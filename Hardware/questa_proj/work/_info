@@ -1,7 +1,7 @@
 m255
 K4
 z2
-Z0 !s12c _opt2
+Z0 !s12c _opt
 Z1 !s99 nomlopt
 R0
 R1
@@ -21,35 +21,55 @@ R0
 R1
 R0
 R1
+Z2 !s12c _opt2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
 R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt1
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-!s12c _opt
 R1
 !s11f vlog 2024.3 2024.09, Sep 10 2024
 13
@@ -58,37 +78,36 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 dC:/Users/kingp/AppData/Local/quartus
+Z4 dC:/Users/kingp/AppData/Local/quartus
 T_opt
-!s110 1755921911
-VfS>k0SBA2EhQHleLgWO_J1
-Z4 04 7 4 work main_tb fast 0
-=1-24ee9a5f9e98-68a93df6-187-53f0
+!s110 1755998359
+Vd17U?3?DAQ[aSXY@BfV3c2
+04 12 4 work RX_MAC_v1_tb fast 0
+=3-24ee9a5f9e98-68aa6896-31a-4924
 R1
 Z5 !s12f OEM100
 Z6 !s12b OEM100
 Z7 !s124 OEM10U2 
 Z8 !s135 nogc
-o-quiet -auto_acc_if_foreign -work work
-Z9 tCvgOpt 0
+Z9 o-quiet -auto_acc_if_foreign -work work +acc
+Z10 tCvgOpt 0
 n@_opt
-Z10 OL;O;2024.3;79
-R3
+Z11 OL;O;2024.3;79
 T_opt1
 !s110 1755954671
 Vf;Pa]ze>77fjQT?=5VA;50
-R4
+04 7 4 work main_tb fast 0
 =11-24ee9a5f9e98-68a9bdee-286-3dd4
 R1
 R5
 R6
 R7
 R8
-Z11 o-quiet -auto_acc_if_foreign -work work +acc
 R9
-n@_opt1
 R10
-R3
+n@_opt1
+R11
+R4
 T_opt2
 !s110 1755971407
 V;KR?7d=5X8QU_Hm874XDY1
@@ -99,11 +118,11 @@ R5
 R6
 R7
 R8
-R11
 R9
-n@_opt2
 R10
-R3
+n@_opt2
+R11
+R4
 vethernet
 Z12 2C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv
 Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
@@ -128,7 +147,7 @@ Z21 !s107 C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv|
 Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/ethernet_v1.sv|
 !i113 0
 Z23 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R9
+R10
 vethernet_v1
 R12
 R13
@@ -153,7 +172,7 @@ R21
 R22
 !i113 0
 R23
-R9
+R10
 vethernet_v1_tb
 2C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv
 R13
@@ -178,7 +197,7 @@ r1
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/rmii_v1_tb.sv|
 !i113 0
 R23
-R9
+R10
 vmain
 2C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv
 R13
@@ -203,7 +222,7 @@ R20
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/cutthroughFilter_v1.sv|
 !i113 0
 R23
-R9
+R10
 vmain_tb
 2C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv
 R13
@@ -228,7 +247,7 @@ r1
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/main_tb.sv|
 !i113 0
 R23
-R9
+R10
 vrmii_v1
 2C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv
 R13
@@ -253,4 +272,56 @@ r1
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/rmii_v1.sv|
 !i113 0
 R23
-R9
+R10
+vRX_MAC_v1
+2C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv
+R13
+Z25 !s110 1755998358
+!i10b 1
+!s100 >M[HRm?DA6GSHXcTnb?<L3
+I4EhIaVT6LW`mIEzYo^MYf1
+S1
+R15
+w1755996339
+8C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv
+!i122 120
+L0 5 102
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755998357.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/src/RX_MAC_v1.sv|
+!i113 0
+R23
+R10
+n@r@x_@m@a@c_v1
+vRX_MAC_v1_tb
+2C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv
+R13
+R25
+!i10b 1
+!s100 U[Ok=Tj8gm<XCz<;C4d=E1
+I6aXN[@hl9d4h7XkZmGTHh3
+S1
+R15
+w1755998352
+8C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv
+!i122 121
+L0 7 60
+R18
+R19
+r1
+!s85 0
+31
+!s108 1755998358.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/Hardware/testbenches/RX_MAC_v1_tb.sv|
+!i113 0
+R23
+R10
+n@r@x_@m@a@c_v1_tb
