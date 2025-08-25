@@ -1,0 +1,1 @@
+alias fc="clang++ main.cpp -o exec && ./exec"

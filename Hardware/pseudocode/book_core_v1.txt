@@ -1,0 +1,23 @@
+
+
+
+
+while(1) {
+  if (new_tick.type == bid) {
+    insert_location = bids.isBetter(new_tick.price);
+
+    if (insert_location < N) {
+      // comment faire le distinction entre insertions entre trucs et remplacements?
+    }
+
+  } else if (new_tick.type == ask) {
+    if (asks.isBetter(new_tick.price) {
+
+    }
+  }
+
+
+
+}
+
+
