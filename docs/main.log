@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.26)  26 AUG 2025 18:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.26)  26 AUG 2025 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -70,8 +70,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 65--71
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [1] [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
 
  []
 
@@ -80,20 +86,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--71
 ] [3
 
 ]
-Overfull \hbox (27.23672pt too wide) in paragraph at lines 102--103
-\OT1/cmr/m/n/12 Well we wouldn't be here if we thought that some part of this \
-OT1/cmr/m/it/12 wasn't \OT1/cmr/bx/n/12 un\OT1/cmr/m/n/12 achieveable. 
+Overfull \hbox (4.71613pt too wide) in paragraph at lines 120--121
+\OT1/cmr/m/n/12 We wouldn't be here if we thought that some part of this \OT1/c
+mr/m/it/12 wasn't \OT1/cmr/bx/n/12 un\OT1/cmr/m/n/12 achieveable.
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 127.
 [4
 
-] [5
+] [5] [6] [7] [8
 
-] [6
+] [9
 
-] [7
+] [10
 
-] [8
+] [11
 
 ] (./main.aux)
  ***********
@@ -102,23 +114,24 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1226 strings out of 476182
- 20780 string characters out of 5795595
+ 1252 strings out of 476182
+ 21063 string characters out of 5795595
  1928975 words of memory out of 5000000
- 23275 multiletter control sequences out of 15000+600000
- 561227 words of font info for 46 fonts, out of 8000000 for 9000
+ 23291 multiletter control sequences out of 15000+600000
+ 563972 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,5n,65p,518b,138s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,518b,138s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/wayne/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (9 pages, 76508 bytes).
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (13 pages, 100992 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

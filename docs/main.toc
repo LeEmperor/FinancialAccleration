@@ -1,0 +1,9 @@
+\contentsline {section}{Executive Summary}{1}{}%
+\contentsline {section}{Motivations}{2}{}%
+\contentsline {section}{Problem Statement}{3}{}%
+\contentsline {section}{Approach}{4}{}%
+\contentsline {paragraph}{1. An Exchange}{4}{}%
+\contentsline {paragraph}{2. A Network Card}{4}{}%
+\contentsline {paragraph}{3. Order Book}{5}{}%
+\contentsline {paragraph}{4. Software Interface}{5}{}%
+\contentsline {paragraph}{The Staging Area}{6}{}%
