@@ -126,7 +126,7 @@ begin
 end
 
 // ask mask logic
-always_comb 
+always_comb
 begin
   for (int i = 0; i < N; i++) begin
     better_mask_ask[i] = (new_tick_price <= asks[i].tick);
@@ -146,10 +146,10 @@ begin
     if (slave_tvalid) begin
       if (insert_pos_bid < N) begin
         // int last = (n_bids < N) ? n_bids : (N-1);
-        
-        splice_index = (n_bids < N) ? n_bids : (N-1);
 
-        // shift 
+        splice_index <= (n_bids < N) ? n_bids : (N-1);
+
+        // sh
         for (int j = splice_index; j < N; j++) begin
           bids[j] <= bids[j-1];
         end
