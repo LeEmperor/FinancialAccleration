@@ -32,6 +32,24 @@ module order_book_v1_tb();
       .bidquantities_out(t_bidquantities)
     );
 
+    typedef struct packed {
+      logic [31:0] price;
+      logic [31:0] volume;
+    } order_t;
+
+    function automatic order_t makeOrder(input int price, input int volume);
+       order_t order = '{price: $unsigned(price), volume: $unsigned(volume)};
+    endfunction
+
+    task automatic insertOrder(input int p, input int q);
+      t_valid <= 0;
+      t_datain <= {logic'(p), logic'(q)};
+      #10
+
+      t_valid <= 1;
+      #10
+    endtask
+
     initial begin : CLK_GEN
         t_clk = 0;
         forever #5 t_clk = ~t_clk & clk_en;
@@ -53,7 +71,10 @@ module order_book_v1_tb();
 
             t_datain = {32'd12304, 32'd27};
             // $display("slave_tdata [30:0] : %d", t_datain[30:0]);
+            order_t o1 = makeOrder();
             #20
+
+            // makeOrder(120, 10);
 
             t_datain = {32'd12702, 32'd71};
             #20
@@ -63,7 +84,7 @@ module order_book_v1_tb();
 
             #20
 
-            {32'dxx, 32'dxx};
+            // {32'dxx, 32'dxx}
 
             clk_en = 0;
             disable CLK_GEN;
