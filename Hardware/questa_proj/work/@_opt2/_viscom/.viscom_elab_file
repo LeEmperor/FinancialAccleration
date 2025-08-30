@@ -1,1 +1,1 @@
-D:/questa_install/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.ethernet_v1_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt2 -id 13-24ee9a5f9e98-68a9ff4e-3b3-6ab4 +__betafsm
+C:/altera/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.funky_v1_tb -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt2 -id 1-d03957782a7d-68b24073-23b-14a70

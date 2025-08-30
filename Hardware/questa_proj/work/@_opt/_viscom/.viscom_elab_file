@@ -1,1 +1,1 @@
-D:/questa_install/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.RX_MAC_v1_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 3-24ee9a5f9e98-68aa6896-31a-4924 +__betafsm
+C:/altera/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.funky_v1_tb -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 1-d03957782a7d-68b2408f-2d7-13c8c +__betafsm

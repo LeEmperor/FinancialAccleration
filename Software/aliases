@@ -1,1 +1,2 @@
-alias fc="clang++ main.cpp -o exec && ./exec"
+# alias fc="clang++ main.cpp -o exec && ./exec"
+alias fc="clang++ xor_reduction_test.cpp -o exec && ./exec"

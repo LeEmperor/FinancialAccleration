@@ -1,0 +1,463 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Aug 29 02:41:52 2025
+# Process ID         : 69596
+# Current directory  : C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/test_vivado_proj/alveo_test_1.runs/synth_1
+# Command line       : vivado.exe -log toplevel_v1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source toplevel_v1.tcl
+# Log file           : C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/test_vivado_proj/alveo_test_1.runs/synth_1/toplevel_v1.vds
+# Journal file       : C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/test_vivado_proj/alveo_test_1.runs/synth_1\vivado.jou
+# Running On         : GIGA_LAPTOP
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     
+# CPU Frequency      : 3993 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33518 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 45866 MB
+# Available Virtual  : 15356 MB
+#-----------------------------------------------------------
+source toplevel_v1.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 589.082 ; gain = 210.430
+Command: synth_design -top toplevel_v1 -part xcu50-fsvh2104-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu50'
+INFO: [Device 21-403] Loading part xcu50-fsvh2104-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 67696
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2291.062 ; gain = 342.094
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'toplevel_v1' [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/toplevel.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'toplevel_v1' (0#1) [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/toplevel.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2397.496 ; gain = 448.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2397.496 ; gain = 448.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2397.496 ; gain = 448.527
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2397.496 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK0_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK0_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK0_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK0_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK1_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK1_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK1_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK1_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYNCE_CLK_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYNCE_CLK_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_1588_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_1588_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK2_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:151]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports SYSCLK2_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:151]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'SYSCLK3_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:152]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports SYSCLK3_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:152]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK0_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:153]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports PCIE_REFCLK0_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:153]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK0_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:154]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports PCIE_SYSCLK0_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:154]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_REFCLK1_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:155]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports PCIE_REFCLK1_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:155]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_SYSCLK1_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:156]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports PCIE_SYSCLK1_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:156]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'SYNCE_CLK_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:157]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports SYNCE_CLK_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:157]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'CLK_1588_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:158]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK_1588_P]'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:158]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_PERSTN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PCIE_PERSTN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PEX_PWRBRKN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PEX_PWRBRKN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_RXD_MSP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_RXD_MSP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_TXD_MSP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_TXD_MSP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_SDA'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_SDA'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:185]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:185]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_SCL'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:186]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:186]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_SCL'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:187]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:187]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_ALRTN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:188]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:188]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SYSMON_ALRTN'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:189]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART0_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:195]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART0_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:196]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:196]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART0_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART0_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART1_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART1_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:200]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:200]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART1_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:201]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:201]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART1_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:202]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART2_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:203]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:203]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART2_RXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:204]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:204]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART2_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'FPGA_UART2_TXD'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:206]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:206]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_ACTIVITY_LED'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_ACTIVITY_LED'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:214]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:214]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_STATUS_LEDG'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:215]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:215]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_STATUS_LEDG'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_STATUS_LEDY'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:217]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:217]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSFP28_0_STATUS_LEDY'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:218]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:218]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_RSTB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:229]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:229]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_RSTB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_INTRB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:231]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_INTRB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:232]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:232]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_PLL_LOCKB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:233]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:233]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_PLL_LOCKB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:234]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:234]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_IN_LOSB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:235]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:235]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SI_IN_LOSB'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:236]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:236]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'I2C_SI5394_SCLK'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:237]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:237]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'I2C_SI5394_SCLK'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:238]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:238]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'I2C_SI5394_SDA'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'I2C_SI5394_SDA'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:240]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ETH_RECOVERED_CLK_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ETH_RECOVERED_CLK_N'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:242]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ETH_RECOVERED_CLK_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:243]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ETH_RECOVERED_CLK_P'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:244]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:244]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HBM_CATTRIP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HBM_CATTRIP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HBM_CATTRIP'. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:253]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc:253]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/alveo-u50-xdc_20210505/alveo-u50-xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_v1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_v1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2414.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2414.793 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2414.793 ; gain = 465.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu50-fsvh2104-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2414.793 ; gain = 465.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2414.793 ; gain = 465.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2414.793 ; gain = 465.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5952 (col length:93)
+BRAMs: 2688 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2440.656 ; gain = 491.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3029.668 ; gain = 1080.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3029.668 ; gain = 1080.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3039.215 ; gain = 1090.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     1|
+|2     |IBUF |     2|
+|3     |OBUF |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 3274.996 ; gain = 1308.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 3274.996 ; gain = 1326.027
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3274.996 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3274.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+
+Synth Design complete | Checksum: b3087504
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 82 Warnings, 81 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 3274.996 ; gain = 2685.914
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3274.996 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_stuff/FinancialAccleration/ALVEO_STUFF/test_vivado_proj/alveo_test_1.runs/synth_1/toplevel_v1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file toplevel_v1_utilization_synth.rpt -pb toplevel_v1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 29 02:43:00 2025...
