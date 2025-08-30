@@ -58,27 +58,79 @@ module de2_test_v1(
 
 
 wire user_clk = CLOCK_50;
+wire user_rst = SW[17];
+
+wire [31:0] wire_mac_data_in; // control -> MAC
+wire [31:0] wire_mac_data_out; // MAC -> control
+wire [7:0] wire_mac_addr; // control -> MAC control module addr
+
+wire wire_mac_busy;
+wire wire_mac_rd_en;
+wire wire_mac_wr_en;
+
+wire [31:0] wire_eth_avalon_data_out;
+wire [31:0] wire_eth_avalon_data_in;
+wire        wire_eth_avalon_valid;
+wire        wire_eth_avalon_ready;
+wire        wire_eth_avalon_sop;
+wire        wire_eth_avalon_eop;
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
+// tester module
 funky_v1 funky_instantiation (
   .a(SW[0]),
   .b(SW[1]),
   .c(LEDG[0])
 );
 
+// sink
+test_sink_v1 # (
+  .WIDTH(64)
+) test_sink1 (
+  .clk(user_clk),
+  .rst(user_rst),
+  .ready(wire_eth_avalon_ready),
+  .valid(wire_eth_avalon_valid),
+  .sop(wire_eth_avalon_sop),
+  .eop(wire_eth_avalon_eop),
+  .empty()
+);
+
+// configuration module
+tse_config_v1 # (
+  .WIDTH(64)
+) configurator (
+  .clk(user_clk),
+  .rst(user_rst),
+  .reg_data_out(wire_mac_data_out),
+  .reg_data_in(wire_mac_data_in),
+  .reg_busy(wire_mac_busy),
+  .reg_addr(wire_mac_addr),
+  .reg_rd(wire_mac_rd_en),
+  .reg_wr(wire_mac_wr_en),
+
+  // config bits
+  .data_mac(),
+  .addr_mac_lo(),
+  .addr_mac_hi(),
+  .addr_config(),
+  .data_config()
+);
+
+// eth ip MAC
 triple_eth_v1 eth0_instantiation (
   // control lines
   .clk(user_clk),
-  .reset(),
-  .reg_addr(),
-  .reg_data_out(),
-  .reg_rd(),
-  .reg_data_in(),
-  .reg_wr(),
-  .reg_busy(),
+  .reset(user_rst),
+  .reg_addr(wire_mac_addr),
+  .reg_data_out(wire_mac_data_out),
+  .reg_data_in(wire_mac_data_in),
+  .reg_rd(wire_mac_rd_en),
+  .reg_wr(wire_mac_wr_en),
+  .reg_busy(wire_mac_busy),
 
   // line clocks
   .tx_clk(ENET0_TX_CLK),
@@ -91,17 +143,17 @@ triple_eth_v1 eth0_instantiation (
   .ena_10(),
 
   // Megabit Interface to PHY pins
-  .m_rx_d(),
-  .m_rx_en(),
-  .m_rx_err(),
-  .m_tx_d(),
-  .m_tx_en(),
-  .m_tx_err(),
-  .m_rx_crs(),
-  .m_rx_col(),
+  .m_rx_d(ENET0_RX_DATA),
+  .m_rx_en(ENET0_RX_DV),
+  .m_rx_err(ENET0_RX_ER),
+  .m_tx_d(ENET0_TX_DATA),
+  .m_tx_en(ENET0_TX_DV),
+  .m_tx_err(ENET0_TX_ER),
+  .m_rx_crs(ENET0_RX_CRS),
+  .m_rx_col(ENET0_RX_COL),
 
   // Avalon Interface
-  .ff_rx_clk(),
+  .ff_rx_clk(user_clk),
   .ff_rx_data(),
   .ff_rx_eop(),
   .rx_err(),
@@ -111,7 +163,7 @@ triple_eth_v1 eth0_instantiation (
   .ff_rx_dval(),
   .ff_rx_data(),
 
-  .ff_tx_clk(),
+  .ff_tx_clk(user_clk),
   .ff_tx_data(),
   .ff_tx_eop(),
   .ff_tx_err(),

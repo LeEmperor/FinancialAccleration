@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2025.08.30.11:57:33"
+ date="2025.08.30.17:32:27"
  outputDirectory="C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/db/ip/sld7548dd3f/">
  <perimeter>
   <parameter
@@ -78,23 +78,23 @@
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_instrumentation_fabric/alt_sld_fab_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_instrumentation_fabric/alt_sld_fab_hw.tcl" />
    <file
-       path="D:/QUARTUS_INSTALL/ip/altera/sld/core/altera_instrumentation_fabric/com.altera.superfabric.jar" />
+       path="C:/intelFPGA_lite/19.1/ip/altera/sld/core/altera_instrumentation_fabric/com.altera.superfabric.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/com.altera.utilities.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/com.altera.utilities.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar" />
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="alt_sld_fab">queue size: 0 starting:alt_sld_fab "alt_sld_fab"</message>
@@ -188,25 +188,25 @@
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_instrumentation_fabric/alt_sld_fab_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_instrumentation_fabric/alt_sld_fab_hw.tcl" />
    <file
-       path="D:/QUARTUS_INSTALL/ip/altera/sld/core/altera_instrumentation_fabric/com.altera.superfabric.jar" />
+       path="C:/intelFPGA_lite/19.1/ip/altera/sld/core/altera_instrumentation_fabric/com.altera.superfabric.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/com.altera.utilities.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/com.altera.utilities.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar" />
    <file
-       path="D:/QUARTUS_INSTALL/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar" />
+       path="C:/intelFPGA_lite/19.1/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
   </childSourceFiles>
   <instantiator instantiator="alt_sld_fab" as="alt_sld_fab" />
   <messages>
@@ -257,7 +257,7 @@
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_super_splitter_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="alt_sld_fab_alt_sld_fab" as="presplit" />
@@ -287,7 +287,7 @@
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_super_splitter/altera_sld_splitter_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="alt_sld_fab_alt_sld_fab" as="splitter" />
@@ -328,7 +328,7 @@
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/jtag/altera_sld_jtag_hub/altera_sld_jtag_hub_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="alt_sld_fab_alt_sld_fab" as="sldfabric" />
@@ -356,7 +356,7 @@
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/quartus_install/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
+       path="C:/intelfpga_lite/19.1/ip/altera/sld/core/altera_connection_identification_hub/altera_connection_identification_hub_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="alt_sld_fab_alt_sld_fab" as="ident" />
