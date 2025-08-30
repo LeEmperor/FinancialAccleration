@@ -1,4 +1,13 @@
 .env
 docs/scratch.txt
 OrderbookSoftware/build
-
+*.rpt
+*.srf
+*.smsg
+*.bak
+*.chg
+*.rdb
+*.qar
+*.jdi
+*.rdr.flock
+*.lock
