@@ -1,0 +1,137 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s12c _opt
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/kingp/AppData/Local/quartus
+T_opt
+!s110 1756569475
+VeQWiMhJbM1:1E`HWJfgXA2
+Z3 04 9 4 work avalon_tb fast 0
+=1-24ee9a5f9e98-68b31f82-d4-415c
+R1
+Z4 !s12f OEM100
+Z5 !s12b OEM100
+Z6 !s124 OEM10U3 
+Z7 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2024.3;79
+R2
+T_opt1
+Z10 !s110 1756573182
+V_VSKa]zY[IGKo832UIj2@0
+R3
+=14-24ee9a5f9e98-68b32dfe-26b-19e0
+R1
+R4
+R5
+R6
+R7
+o-quiet -auto_acc_if_foreign -work work +acc
+R8
+n@_opt1
+R9
+vavalon_st_sink
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R10
+!i10b 1
+!s100 gi[B]YhceM;h@L_^n5JP=2
+I9oYD_fdkmHO5?O@Lggh913
+S1
+Z12 dC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/questa_proj
+w1756572798
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
+!i122 66
+L0 5 55
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z15 !s108 1756573182.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv|
+!i113 0
+Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+vavalon_st_source
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
+R11
+R10
+!i10b 1
+!s100 RWA:Q=K3dBaMO0K23OYA62
+IFoLW<Q=J@RA96?EPENnUo2
+S1
+R12
+w1756573113
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
+!i122 65
+L0 5 95
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv|
+!i113 0
+R16
+R8
+vavalon_tb
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
+R11
+R10
+!i10b 1
+!s100 Kf@iFa7;Y5[bc^94>ho`O0
+I=j>l03b98EIO=9cYHcESb1
+S1
+R12
+w1756573179
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
+!i122 67
+L0 8 77
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv|
+!i113 0
+R16
+R8
