@@ -11,3 +11,9 @@ OrderbookSoftware/build
 *.jdi
 *.rdr.flock
 *.lock
+*.done
+*.summary
+*.cdb
+*.dfp
+*.hdb
+
