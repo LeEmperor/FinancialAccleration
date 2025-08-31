@@ -1,25 +1,29 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
 R0
 R1
-R0
+Z2 !s12c _opt1
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
+R1
+R2
+R1
+R2
 R1
 !s12c _opt
 R1
@@ -30,159 +34,224 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dC:/Users/kingp/AppData/Local/quartus
+Z3 dC:/Users/kingp/AppData/Local/quartus
 T_opt
 !s110 1756569475
 VeQWiMhJbM1:1E`HWJfgXA2
-Z3 04 9 4 work avalon_tb fast 0
+Z4 04 9 4 work avalon_tb fast 0
 =1-24ee9a5f9e98-68b31f82-d4-415c
 R1
-Z4 !s12f OEM100
-Z5 !s12b OEM100
-Z6 !s124 OEM10U3 
-Z7 !s135 nogc
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM10U3 
+Z8 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work
-Z8 tCvgOpt 0
+Z9 tCvgOpt 0
 n@_opt
-Z9 OL;O;2024.3;79
-R2
-T_opt1
-Z10 !s110 1756573182
-V_VSKa]zY[IGKo832UIj2@0
+Z10 OL;O;2024.3;79
 R3
+T_opt1
+Z11 !s110 1756573182
+V_VSKa]zY[IGKo832UIj2@0
+R4
 =14-24ee9a5f9e98-68b32dfe-26b-19e0
 R1
-R4
 R5
 R6
 R7
-o-quiet -auto_acc_if_foreign -work work +acc
 R8
-n@_opt1
+Z12 o-quiet -auto_acc_if_foreign -work work +acc
 R9
-R2
+n@_opt1
+R10
+R3
+T_opt2
+!s110 1756594986
+VMf?BR@o81>Z4P>C6`haSF1
+04 9 4 work ram_v1_tb fast 0
+=2-24ee9a5f9e98-68b38329-2e3-45e4
+R1
+R5
+R6
+!s124 OEM10U2 
+R8
+R12
+R9
+n@_opt2
+R10
+R3
 vavalon_st_sink
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
-Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R10
+Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R11
 !i10b 1
 !s100 gi[B]YhceM;h@L_^n5JP=2
 I9oYD_fdkmHO5?O@Lggh913
 S1
-Z12 dC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/questa_proj
+Z14 dC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/questa_proj
 w1756572798
 8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
 FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv
 !i122 66
 L0 5 55
-Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OL;L;2024.3;79
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+Z16 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z15 !s108 1756573182.000000
+Z17 !s108 1756573182.000000
 !s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_sink.sv|
 !i113 0
-Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R8
+Z18 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
 vavalon_st_source
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
+R13
 R11
-R10
 !i10b 1
 !s100 RWA:Q=K3dBaMO0K23OYA62
 IFoLW<Q=J@RA96?EPENnUo2
 S1
-R12
+R14
 w1756573113
 8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
 FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv
 !i122 65
 L0 5 95
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_stream_source.sv|
 !i113 0
-R16
-R8
+R18
+R9
 vavalon_tb
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
+R13
 R11
-R10
 !i10b 1
 !s100 Kf@iFa7;Y5[bc^94>ho`O0
 I=j>l03b98EIO=9cYHcESb1
 S1
-R12
+R14
 w1756573179
 8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
 FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv
 !i122 67
 L0 8 77
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R15
+R17
 !s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/hw/avalon_tb.sv|
 !i113 0
-R16
-R8
-vtest_sink_v1
-2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
-R11
-Z17 !s110 1756588121
-!i10b 1
-!s100 AcUTQcac;zd_RBeGS_XDa2
-I3]zPRdUIVCC7OH@?_AQmV2
-S1
-R12
-w1756583438
-8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
-FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
-!i122 70
-L0 5 19
+R18
+R9
+vram_v1
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1.sv
 R13
+Z19 !s110 1756610000
+!i10b 1
+!s100 2?2D72dkNMNU4_n44UML`2
+I`n@PDS29igNZlaG1z0aF11
+S1
 R14
+w1756596599
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1.sv
+!i122 119
+L0 6 23
+R15
+R16
 r1
 !s85 0
 31
-Z18 !s108 1756588121.000000
+Z20 !s108 1756610000.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1.sv|
+!i113 0
+R18
+R9
+vram_v1_tb
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1_tb.sv
+R13
+R19
+!i10b 1
+!s100 cXEg3UTB_52f^]U_[1^CK1
+If28VA^O`P`o79WZk2@7Sh1
+S1
+R14
+w1756595200
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1_tb.sv
+!i122 120
+L0 9 62
+R15
+R16
+r1
+!s85 0
+31
+R20
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/ram_v1_tb.sv|
+!i113 0
+R18
+R9
+vtest_sink_v1
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
+R13
+R19
+!i10b 1
+!s100 alH;FHbbe?0GVDNB9oPD_3
+IO>z^3R:DTd`nO@hTBKFjI3
+S1
+R14
+w1756609996
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv
+!i122 117
+L0 5 69
+R15
+R16
+r1
+!s85 0
+31
+R20
 !s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/test_sink_v1.sv|
 !i113 0
-R16
-R8
+R18
+R9
 vtse_config_v1
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/tse_config_v1.sv
-R11
-R17
+R13
+R19
 !i10b 1
-!s100 kUPZKg1m41Wlz4QiUNN^f2
-IJSkid8U2mFE>k2M<mTI8Y3
+!s100 5kMo4j1DO:_lOZLQo@A_G2
+IX4VF^f:kAGeN=<G_Ia8z00
 S1
-R12
-w1756587931
+R14
+w1756609489
 8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/tse_config_v1.sv
 FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/tse_config_v1.sv
-!i122 71
-L0 5 106
-R13
-R14
+!i122 118
+L0 5 170
+R15
+R16
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/tse_config_v1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v1/tse_config_v1.sv|
 !i113 0
-R16
-R8
+R18
+R9

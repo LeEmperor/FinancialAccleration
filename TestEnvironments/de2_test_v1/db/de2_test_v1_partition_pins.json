@@ -8,6 +8,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[15]",
+					"strict" : false
+				},
+				{
 					"name" : "ENET0_TX_DATA[0]",
 					"strict" : false
 				},
@@ -24,6 +88,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ENET0_TX_EN",
+					"strict" : false
+				},
+				{
 					"name" : "ENET0_TX_ER",
 					"strict" : false
 				},
@@ -36,7 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENET0_TX_CLK",
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{
@@ -44,7 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "ENET0_TX_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "ENET0_RX_CLK",
 					"strict" : false
 				},
 				{

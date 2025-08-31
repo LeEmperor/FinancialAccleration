@@ -45,14 +45,14 @@ begin
     reg_out <= 0;
   end else if (valid && ready) begin
     if (sop) begin
-      $display("SINK: SOP");
+
     end
 
-    $diplay("SINK: DATA=0x%h", data);
+    // $diplay("SINK: DATA=0x%h", data);
     reg_out[cycle_counter] <= data;
 
     if (eop) begin
-      $display("SINK: EOP");
+
     end
   end
 end

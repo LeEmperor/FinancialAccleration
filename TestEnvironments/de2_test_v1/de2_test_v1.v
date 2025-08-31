@@ -56,6 +56,7 @@ module de2_test_v1(
 //  REG/WIRE declarations
 //=======================================================
 
+assign ENET0_GTX_CLK = 1'b0;
 
 wire user_clk = CLOCK_50;
 wire user_rst = SW[17];
@@ -88,10 +89,16 @@ funky_v1 funky_instantiation (
 
 // sink
 test_sink_v1 # (
-  .WIDTH(64)
+  .WIDTH(32)
 ) test_sink1 (
   .clk(user_clk),
   .rst(user_rst),
+
+  .button0(KEY[0]),
+  .button1(KEY[1]),
+  .LEDS(LEDR[15:0]),
+
+  .data(wire_eth_avalon_data_out),
   .ready(wire_eth_avalon_ready),
   .valid(wire_eth_avalon_valid),
   .sop(wire_eth_avalon_sop),
@@ -114,10 +121,10 @@ tse_config_v1 # (
 
   // config bits
   .data_mac(),
+  .data_config(),
   .addr_mac_lo(),
   .addr_mac_hi(),
-  .addr_config(),
-  .data_config()
+  .addr_config()
 );
 
 // eth ip MAC
@@ -137,37 +144,37 @@ triple_eth_v1 eth0_instantiation (
   .rx_clk(ENET0_RX_CLK),
 
   // speed hints / modes
-  .set_10(),
-  .set_1000(),
+  .set_10(1'b1),
+  .set_1000(1'b0),
   .eth_mode(),
   .ena_10(),
 
   // Megabit Interface to PHY pins
   .m_rx_d(ENET0_RX_DATA),
-  .m_rx_en(ENET0_RX_DV),
+  .m_rx_en(ENET0_RX_EN),
   .m_rx_err(ENET0_RX_ER),
-  .m_tx_d(ENET0_TX_DATA),
-  .m_tx_en(ENET0_TX_DV),
-  .m_tx_err(ENET0_TX_ER),
   .m_rx_crs(ENET0_RX_CRS),
   .m_rx_col(ENET0_RX_COL),
 
+  .m_tx_d(ENET0_TX_DATA),
+  .m_tx_en(ENET0_TX_EN),
+  .m_tx_err(ENET0_TX_ER),
+
   // Avalon Interface
   .ff_rx_clk(user_clk),
-  .ff_rx_data(),
-  .ff_rx_eop(),
-  .rx_err(),
-  .ff_rx_mod(),
-  .ff_rx_rdy(),
-  .ff_rx_sop(),
-  .ff_rx_dval(),
-  .ff_rx_data(),
+  .ff_rx_data(wire_eth_avalon_data_out),
+  .ff_rx_sop(wire_eth_avalon_sop),
+  .ff_rx_eop(wire_eth_avalon_eop),
+  .ff_rx_dval(wire_eth_avalon_valid),
+  .ff_rx_rdy(wire_eth_avalon_ready),
+  .ff_rx_err(),
+  .ff_rx_mod(),             // data coming out of the MAC (receiving from upstream)
 
   .ff_tx_clk(user_clk),
-  .ff_tx_data(),
+  .ff_tx_data(wire_eth_avalon_data_in),
   .ff_tx_eop(),
   .ff_tx_err(),
-  .ff_tx_mod(),
+  .ff_tx_mod(),               // data going to the MAC (going to upstream)
   .ff_tx_rdy(),
   .ff_tx_sop(),
   .ff_tx_wren(),
