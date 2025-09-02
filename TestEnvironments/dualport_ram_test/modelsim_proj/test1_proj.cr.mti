@@ -1,0 +1,22 @@
+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/dualport_ram_test/test1.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/dualport_ram_test/test1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module test1
+
+Top level modules:
+	test1
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v3/quartus24_proj/dualport_ram_v1.v {1 {vlog -work work -vopt -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v3/quartus24_proj/dualport_ram_v1.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module dualport_ram_v1
+
+Top level modules:
+	dualport_ram_v1
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v3/quartus24_proj/ram_v1.v {1 {vlog -work work -vopt -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/de2_test_v3/quartus24_proj/ram_v1.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module ram_v1
+
+Top level modules:
+	ram_v1
+
+} {} {}}
