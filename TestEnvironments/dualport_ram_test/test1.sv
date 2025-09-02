@@ -9,7 +9,8 @@ module test1 #(
 ) (
   // peripherals for bruh
   input logic button, // display / count
-  output logic [15:0] LEDS,
+  output logic [15:0] LEDS_RED,
+  output logic [7:0] LEDS_GREEN,
 
   // control
   input logic clk, rst, // tie rst à button1
@@ -76,13 +77,15 @@ begin
   end
 end
 
+assign LEDS_GREEN[7:0] = reg_ram_addr[7:0];
+
 // next state
 always_comb
 begin
   // defaults
   next_state = current_state;
   reg_ram_addr_next = reg_ram_addr;
-  LEDS = 0;
+  LEDS_RED = 0;
 
   unique case (current_state)
     IDLE : begin
@@ -91,14 +94,14 @@ begin
 
     WAITING : begin
       if (button) begin
-        LEDS[15:0] = wire_ram_data_out[15:0];
+        LEDS_RED[15:0] = wire_ram_data_out[15:0];
         next_state = BUTTON_DOWN;
       end
     end
 
     BUTTON_DOWN : begin
       if (button) begin
-        LEDS[15:0] = wire_ram_data_out[15:0];
+        LEDS_RED[15:0] = wire_ram_data_out[15:0];
         next_state = BUTTON_DOWN;
       end else begin
         reg_ram_addr_next = reg_ram_addr + 4;

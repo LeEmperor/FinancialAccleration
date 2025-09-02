@@ -89,19 +89,31 @@ wire user_clk = CLOCK_50;
 //  Structural coding
 //=======================================================
 
-test1 tester_uut (
+// test1 tester_uut (
+//   .clk(user_clk),
+//   .rst(KEY[0]),
+//
+//   .button(KEY[1]),
+//   .LEDS_RED(LEDR[15:0]),
+//   .LEDS_GREEN(LEDG[7:0]),
+//
+//   .ready(),
+//   .data(),
+//   .valid(),
+//   .sop(),
+//   .eop(),
+//   .empty()
+// );
+
+test2 tester_uut (
   .clk(user_clk),
-  .rst(KEY[1]),
+  .rst(SW[16]),
 
-  .button(KEY[0]),
-  .LEDS(LEDR[15:0]),
+  .BUTTONS(~KEY[3:0]),
+  .SWITCHES(SW[15:0]),
 
-  .ready(),
-  .data(),
-  .valid(),
-  .sop(),
-  .eop(),
-  .empty()
+  .LEDS_RED(LEDR[17:0]),
+  .LEDS_GREEN(LEDG[7:0])
 );
 
 
