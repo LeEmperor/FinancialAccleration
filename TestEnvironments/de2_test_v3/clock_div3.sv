@@ -1,24 +1,25 @@
 // Bohdan Purtell
 // University of Florida
-// Description: Clock Divider Circuit pour Testing
+// Clock Div 3s
 
-module clock_div_v1 (
-  input logic clk50, rst,
-  output logic clk1
+module clock_div3 (
+  input logic clk50,
+  input logic rst,
+  output logic clk3
 );
 
-localparam int DIV_COUNT = 25_000_000;
+localparam int DIV_COUNT = 16_666_666;
 logic [$clog2(DIV_COUNT):0] counter;
 
 always_ff @(posedge clk50)
 begin
   if (rst) begin
     counter <= 0;
-    clk1 <= 0;
+    clk3 <= 0;
   end else begin
     if (counter == DIV_COUNT) begin
       counter <= 0;
-      clk1 <= ~clk1;
+      clk3 <= ~clk3;
     end else begin
       counter <= counter + 1;
     end

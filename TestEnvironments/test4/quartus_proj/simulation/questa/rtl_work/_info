@@ -1,0 +1,179 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/simulation/questa
+T_opt
+!s110 1756870937
+VoJc;75U[0]`@B^Cm0MYGO0
+04 11 4 work toplevel_tb fast 0
+=1-d03957782a7d-68b7b918-1d3-1d27c
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U10 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vclk_div1
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1756870935
+!i10b 1
+!s100 c7N:3=<g0oE9MF;cNIAKQ2
+IQN:_5oFdQ[QkDP1WPWF0U3
+S1
+R1
+w1756869473
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv
+!i122 4
+L0 5 33
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z7 !s108 1756870935.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv|
+!i113 0
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work +incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdisplay
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/display.sv
+R3
+Z10 !s110 1756870934
+!i10b 1
+!s100 KcOMhn;^aIzOmnSY2C[ej3
+IOR`Rk2e0GZjJab13CJb^53
+S1
+R1
+w1756869520
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/display.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/display.sv
+!i122 3
+L0 4 50
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1756870934.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/display.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/display.sv|
+!i113 0
+R8
+R9
+R2
+vram_v2
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2.v
+R10
+!i10b 1
+!s100 _oMiBQ==ERW>Ea0mcKX:F0
+IETT]TRGhaS1Lc1`Z3cF_E2
+R1
+w1756867722
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2.v
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2.v
+!i122 1
+L0 40 66
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2.v|
+!i113 0
+Z12 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vsource
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv
+R3
+R10
+!i10b 1
+!s100 L[Z:GQCHFPY0IJK=KMEPI1
+Iah71:8DNdJDV]i=hBc>;[0
+S1
+R1
+w1756869368
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv
+!i122 2
+L0 5 38
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv|
+!i113 0
+R8
+R9
+R2
+vtoplevel_tb
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches/toplevel_tb.sv
+R3
+R4
+!i10b 1
+!s100 lnGR]Qz21`IG3PW2jGDzQ2
+I5bXBz342OB;F0b7^L14Tk2
+S1
+R1
+w1756870458
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches/toplevel_tb.sv
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches/toplevel_tb.sv
+!i122 5
+L0 8 69
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches/toplevel_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches/toplevel_tb.sv|
+!i113 0
+R8
+!s92 -sv -work work +incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/../testbenches -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtoplevel_test4
+2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v
+!s110 1756870933
+!i10b 1
+!s100 gjzP3Yn`@;dQ[@3PF[[360
+I[MCQdCAolDbYK`e`a<;d`0
+R1
+w1756868545
+8C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v
+FC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v
+!i122 0
+L0 6 126
+R5
+R6
+r1
+!s85 0
+31
+!s108 1756870933.000000
+!s107 C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4|C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v|
+!i113 0
+R12
+!s92 -vlog01compat -work work +incdir+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

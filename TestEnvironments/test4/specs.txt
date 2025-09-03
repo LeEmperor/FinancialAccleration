@@ -1,0 +1,6 @@
+
+
+principal: verifier que le Avalon-ST bus fonctionner
+
+chaque second, lire un value de le ram (et counter)
+

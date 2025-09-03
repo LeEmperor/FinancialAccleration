@@ -5,7 +5,7 @@
 module debounce_circuit_v1 (
   input logic clk_hifreq, rst,
   input logic button,
-  output logic out1
+  output logic pulse
 );
 
 typedef enum {
@@ -27,28 +27,28 @@ begin
 end
 
 // next state
-always_comb 
+always_comb
 begin
-  next_state <= current_state;
+  next_state = current_state;
+  pulse = 0;
 
-  case (current_state) 
+  unique case (current_state)
     IDLE : begin
-      next_state <= WAITING;
+      next_state = WAITING;
     end
 
     WAITING : begin
       if (button) begin
-        out1 <= 1;
-        next_state <= BUTTON_DOWN;
+        pulse = 1;
+        next_state = BUTTON_DOWN;
       end
     end
 
     BUTTON_DOWN : begin
       if (button) begin
-        out1 <= 1;
-        next_state <= BUTTON_DOWN;
+        next_state = BUTTON_DOWN;
       end else begin
-        next_state <= WAITING;
+        next_state = WAITING;
       end
     end
   endcase

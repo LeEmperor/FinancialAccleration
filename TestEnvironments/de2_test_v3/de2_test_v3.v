@@ -84,6 +84,9 @@ module de2_test_v3(
 
 
 wire user_clk = CLOCK_50;
+wire wire_valid;
+wire wire_ready;
+wire [31:0] wire_data_31_0;
 
 //=======================================================
 //  Structural coding
@@ -105,17 +108,45 @@ wire user_clk = CLOCK_50;
 //   .empty()
 // );
 
-test2 tester_uut (
-  .clk(user_clk),
+// test2 tester_uut (
+//   .clk(user_clk),
+//   .rst(SW[16]),
+//
+//   .BUTTONS(~KEY[3:0]),
+//   .SWITCHES(SW[15:0]),
+//
+//   .LEDS_RED(LEDR[17:0]),
+//   .LEDS_GREEN(LEDG[7:0])
+// );
+
+test3 uut (
+  .clk_hifreq(user_clk),
   .rst(SW[16]),
-
-  .BUTTONS(~KEY[3:0]),
-  .SWITCHES(SW[15:0]),
-
-  .LEDS_RED(LEDR[17:0]),
-  .LEDS_GREEN(LEDG[7:0])
+  .valid(wire_valid),
+  .ready(wire_ready),
+  .data_out(wire_data_31_0)
 );
 
+display_v1 display1 (
+  .clk_hifreq(user_clk),
+  .rst(SW[16]),
+  .data_in(wire_data_31_0),
+  .valid(wire_valid),
+  .ready(wire_ready),
+  .switches(SW[15:0]),
+  .buttons(KEY[3:0]),
+  .leds_green(LEDG[7:0]),
+  .leds_red(LEDR[17:0]),
+
+  .hex0(),
+  .hex1(),
+  .hex2(),
+  .hex3(),
+  .hex4(),
+  .hex5(),
+  .hex6(),
+  .hex7()
+);
 
 endmodule
 

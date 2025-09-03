@@ -7,3 +7,4 @@
 \contentsline {paragraph}{3. Order Book}{5}{}%
 \contentsline {paragraph}{4. Software Interface}{5}{}%
 \contentsline {paragraph}{The Staging Area}{6}{}%
+\contentsline {paragraph}{Lab Area}{7}{}%
