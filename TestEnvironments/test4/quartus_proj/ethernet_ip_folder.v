@@ -26,16 +26,21 @@ module ethernet_ip_folder (
 		output wire [7:0]  gm_tx_d,       //                              .gmii_tx_d
 		output wire        gm_tx_en,      //                              .gmii_tx_en
 		output wire        gm_tx_err,     //                              .gmii_tx_err
+
 		input  wire [3:0]  m_rx_d,        //            mac_mii_connection.mii_rx_d
 		input  wire        m_rx_en,       //                              .mii_rx_dv
 		input  wire        m_rx_err,      //                              .mii_rx_err
+
 		output wire [3:0]  m_tx_d,        //                              .mii_tx_d
 		output wire        m_tx_en,       //                              .mii_tx_en
 		output wire        m_tx_err,      //                              .mii_tx_err
+
 		input  wire        m_rx_crs,      //                              .mii_crs
 		input  wire        m_rx_col,      //                              .mii_col
+
 		input  wire        ff_rx_clk,     //      receive_clock_connection.clk
 		input  wire        ff_tx_clk,     //     transmit_clock_connection.clk
+
 		output wire [31:0] ff_rx_data,    //                       receive.data
 		output wire        ff_rx_eop,     //                              .endofpacket
 		output wire [5:0]  rx_err,        //                              .error
@@ -43,6 +48,7 @@ module ethernet_ip_folder (
 		input  wire        ff_rx_rdy,     //                              .ready
 		output wire        ff_rx_sop,     //                              .startofpacket
 		output wire        ff_rx_dval,    //                              .valid
+
 		input  wire [31:0] ff_tx_data,    //                      transmit.data
 		input  wire        ff_tx_eop,     //                              .endofpacket
 		input  wire        ff_tx_err,     //                              .error
@@ -50,6 +56,7 @@ module ethernet_ip_folder (
 		output wire        ff_tx_rdy,     //                              .ready
 		input  wire        ff_tx_sop,     //                              .startofpacket
 		input  wire        ff_tx_wren,    //                              .valid
+
 		output wire        mdc,           //           mac_mdio_connection.mdc
 		input  wire        mdio_in,       //                              .mdio_in
 		output wire        mdio_out,      //                              .mdio_out

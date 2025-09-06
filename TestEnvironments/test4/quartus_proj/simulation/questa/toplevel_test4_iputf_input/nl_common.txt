@@ -1,0 +1,4 @@
+family_language_pairs
+cycloneive verilog
+cycloneive verilog
+end family_language pairs

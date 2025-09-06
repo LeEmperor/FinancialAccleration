@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/simulation/questa
 vcycloneive_and1
 Z1 2c:/intelfpga_lite/24.1std/quartus/eda/sim_lib/cycloneive_atoms.v
-Z2 !s110 1756870932
+Z2 !s110 1757010724
 !i10b 1
 !s100 =h7Vb7ekRaFeN>1<ZN_in1
 IcnEP9AL4PnSNReYUZ0VWX3
@@ -19,14 +19,14 @@ R0
 Z3 w1741260728
 Z4 8c:/intelfpga_lite/24.1std/quartus/eda/sim_lib/cycloneive_atoms.v
 Z5 Fc:/intelfpga_lite/24.1std/quartus/eda/sim_lib/cycloneive_atoms.v
-!i122 3
+!i122 5
 L0 294 10
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z8 !s108 1756870932.000000
+Z8 !s108 1757010724.000000
 !s107 c:/intelfpga_lite/24.1std/quartus/eda/sim_lib/cycloneive_atoms.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|cycloneive_ver|c:/intelfpga_lite/24.1std/quartus/eda/sim_lib/cycloneive_atoms.v|
 !i113 0
@@ -42,7 +42,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 307 26
 R6
 R7
@@ -57,7 +57,7 @@ R10
 R11
 vcycloneive_apfcontroller
 R1
-Z13 !s110 1756870933
+R2
 !i10b 1
 !s100 <cohN1c7?0gbPK;iZcQho2
 I8LIT6UDWQl@^:M_Dghdj_3
@@ -65,7 +65,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7268 12
 R6
 R7
@@ -80,7 +80,7 @@ R10
 R11
 vcycloneive_asmiblock
 R1
-R13
+R2
 !i10b 1
 !s100 B=8`]8X]5:RB8ljTA]cah1
 IMF<o;U_ADAKz^o>cSC6Ez2
@@ -88,7 +88,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7017 30
 R6
 R7
@@ -111,7 +111,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 347 8
 R6
 R7
@@ -134,7 +134,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 368 8
 R6
 R7
@@ -157,7 +157,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 336 8
 R6
 R7
@@ -172,7 +172,7 @@ R10
 R11
 vcycloneive_clkctrl
 R1
-R13
+R2
 !i10b 1
 !s100 7[=Q0ffXZjS_4Q[UDAZYi2
 ILGFg;=h]SjKQX?dndgD9X3
@@ -180,7 +180,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7146 80
 R6
 R7
@@ -195,7 +195,7 @@ R10
 R11
 vcycloneive_crcblock
 R1
-R13
+R2
 !i10b 1
 !s100 H4z2PaZF0U?4[_bdH?C<i2
 IPV7bT[Z0YjJaE^D>[ofbS0
@@ -203,7 +203,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7961 21
 R6
 R7
@@ -218,7 +218,7 @@ R10
 R11
 vcycloneive_ddio_oe
 R1
-R13
+R2
 !i10b 1
 !s100 Uh_=H_UHmPGL97C9MPG1P0
 IK@ZQzL:H]:DZfLnDQ6a[i1
@@ -226,7 +226,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6775 143
 R6
 R7
@@ -241,7 +241,7 @@ R10
 R11
 vcycloneive_ddio_out
 R1
-R13
+R2
 !i10b 1
 !s100 <WdIcnQGaVVMQ88G^Ef582
 IX0m2X^h[B=agI5Z]A^8Om3
@@ -249,7 +249,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6554 215
 R6
 R7
@@ -272,7 +272,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 176 46
 R6
 R7
@@ -287,7 +287,7 @@ R10
 R11
 vcycloneive_ena_reg
 R1
-R13
+R2
 !i10b 1
 !s100 eQCIP5FSIFW<Cc9=c]3AE0
 IB`<4I4C1dNc>6XebWLn8d1
@@ -295,7 +295,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7059 76
 R6
 R7
@@ -310,7 +310,7 @@ R10
 R11
 vcycloneive_ff
 R1
-R13
+R2
 !i10b 1
 !s100 THf;lMfl@H_:dRcCI3`8S1
 I:G8Hi4jcS81`Wm@HB4_b;3
@@ -318,7 +318,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 4282 154
 R6
 R7
@@ -333,7 +333,7 @@ R10
 R11
 vcycloneive_io_ibuf
 R1
-R13
+R2
 !i10b 1
 !s100 <SmQUeJAmOWX;J^zOXnU=2
 IQFzgJA:BM1We>kSGgfbk;1
@@ -341,7 +341,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6346 83
 R6
 R7
@@ -356,7 +356,7 @@ R10
 R11
 vcycloneive_io_obuf
 R1
-R13
+R2
 !i10b 1
 !s100 z>?lz=4jhGRF`TNQ4GWDh3
 IH^m`Y8H`<R6UA?EkbT19[0
@@ -364,7 +364,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6436 111
 R6
 R7
@@ -379,7 +379,7 @@ R10
 R11
 vcycloneive_io_pad
 R1
-R13
+R2
 !i10b 1
 !s100 HghGh1a9KTFKQM]JW?:Ba1
 IDgQMLXMzU^_^o;HO;Vj272
@@ -387,7 +387,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6982 26
 R6
 R7
@@ -402,7 +402,7 @@ R10
 R11
 vcycloneive_jtag
 R1
-R13
+R2
 !i10b 1
 !s100 6:M]^PGLjJ8mP88SjDG6S0
 I>ZIKP0DW2::PQLz_^0?<K2
@@ -410,7 +410,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7916 35
 R6
 R7
@@ -425,7 +425,7 @@ R10
 R11
 vcycloneive_latch
 R1
-R13
+R2
 !i10b 1
 !s100 [P`DO3IJ2zjdDVGFW3a>B0
 I74VnQT^A[]F:JSWTRhHXn3
@@ -433,7 +433,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 387 55
 R6
 R7
@@ -448,7 +448,7 @@ R10
 R11
 vcycloneive_lcell_comb
 R1
-R13
+R2
 !i10b 1
 !s100 k6=S2S25XS9]nCc[;A9<R0
 Ig8<zXd[3WIMBRHN7gN0za0
@@ -456,7 +456,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 4159 113
 R6
 R7
@@ -471,7 +471,7 @@ R10
 R11
 vcycloneive_m_cntr
 R1
-R13
+R2
 !i10b 1
 !s100 9Xe2@g7ba93N0DT?AzM_S1
 I7[:?5ng^8EhRC>@DGi3[`3
@@ -479,7 +479,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 492 70
 R6
 R7
@@ -494,7 +494,7 @@ R10
 R11
 vcycloneive_mac_data_reg
 R1
-R13
+R2
 !i10b 1
 !s100 h;j;6j[4P>FQzZP0VFaoe2
 IA]36R:M6nEOzC;LQQ__Ao0
@@ -502,7 +502,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 5770 120
 R6
 R7
@@ -517,7 +517,7 @@ R10
 R11
 vcycloneive_mac_mult
 R1
-R13
+R2
 !i10b 1
 !s100 GheN3OFgXo799@G1mcbMn2
 IVdccO3I8>7CZFTR3;f?8G0
@@ -525,7 +525,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6075 142
 R6
 R7
@@ -540,7 +540,7 @@ R10
 R11
 vcycloneive_mac_mult_internal
 R1
-R13
+R2
 !i10b 1
 !s100 Kh5o085S]ozonFK5e[]:_3
 IX7VcTedX?;h?PIRZlJDT70
@@ -548,7 +548,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 5990 74
 R6
 R7
@@ -563,7 +563,7 @@ R10
 R11
 vcycloneive_mac_out
 R1
-R13
+R2
 !i10b 1
 !s100 z`C;?BkmFFTkcfCI;NDEZ0
 I2C0ORd<WLF5;RYo^oC32_0
@@ -571,7 +571,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6228 100
 R6
 R7
@@ -586,7 +586,7 @@ R10
 R11
 vcycloneive_mac_sign_reg
 R1
-R13
+R2
 !i10b 1
 !s100 ]i4MLl;lI=U9H^dd5<noT3
 IcMB^0QMhV?AX>0bXoe1f12
@@ -594,7 +594,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 5902 77
 R6
 R7
@@ -617,7 +617,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 226 24
 R6
 R7
@@ -640,7 +640,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 253 38
 R6
 R7
@@ -655,7 +655,7 @@ R10
 R11
 vcycloneive_n_cntr
 R1
-R13
+R2
 !i10b 1
 !s100 nH_`aOiG>f^]QAn;MET<c1
 I5OPdJ5V>D2[04h5I38gz33
@@ -663,7 +663,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 573 59
 R6
 R7
@@ -686,7 +686,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 358 7
 R6
 R7
@@ -701,7 +701,7 @@ R10
 R11
 vcycloneive_oscillator
 R1
-R13
+R2
 !i10b 1
 !s100 U1=P6SJU86QnPD`L8;dU^2
 IG=[Xg2S>:eh;^M?G_AYo62
@@ -709,7 +709,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7990 37
 R6
 R7
@@ -724,7 +724,7 @@ R10
 R11
 vcycloneive_pll
 R1
-R13
+R2
 !i10b 1
 !s100 H1fELIg3j[e6KCioh@VkB1
 IR^Ge7`iA2Q:;Gbe6[f60Z2
@@ -732,7 +732,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 825 3324
 R6
 R7
@@ -747,7 +747,7 @@ R10
 R11
 vcycloneive_pll_reg
 R1
-R13
+R2
 !i10b 1
 !s100 RII?[Z;3R7I:O3@`hk4`h2
 I5GSkaibLYQdDgg7dKlmz21
@@ -755,7 +755,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 757 39
 R6
 R7
@@ -778,7 +778,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 27 0
 R6
 R7
@@ -802,7 +802,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 100 0
 R6
 R7
@@ -826,7 +826,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 138 0
 R6
 R7
@@ -842,7 +842,7 @@ R11
 n@c@y@c@l@o@n@e@i@v@e_@p@r@i@m_@d@f@f@e@a@s_@h@i@g@h
 vcycloneive_pseudo_diff_out
 R1
-R13
+R2
 !i10b 1
 !s100 JcYJEE2[[ZVo8zkgLOS6l1
 IfZ`RH=LVNPN08b=TjC55F1
@@ -850,7 +850,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 6936 36
 R6
 R7
@@ -865,7 +865,7 @@ R10
 R11
 vcycloneive_ram_block
 R1
-R13
+R2
 !i10b 1
 !s100 kjYTzdzBbCSUIenYB@AT40
 I?0^F2?WH_V22<VXH:Q9M:0
@@ -873,7 +873,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 4576 1180
 R6
 R7
@@ -888,7 +888,7 @@ R10
 R11
 vcycloneive_ram_pulse_generator
 R1
-R13
+R2
 !i10b 1
 !s100 ]hb[Y;kBY6Xo^8SkQ7mfJ1
 I7=HYJg>FDdPEI]lF?JEV61
@@ -896,7 +896,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 4445 40
 R6
 R7
@@ -911,7 +911,7 @@ R10
 R11
 vcycloneive_ram_register
 R1
-R13
+R2
 !i10b 1
 !s100 MS^9^h24GEMGzah`::<YN3
 I`zeiF8ma?ZoHf]hHeRjgn2
@@ -919,7 +919,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 4493 72
 R6
 R7
@@ -934,7 +934,7 @@ R10
 R11
 vcycloneive_routing_wire
 R1
-R13
+R2
 !i10b 1
 !s100 >>OP]`;_A9<_Si;kINfiM3
 I5C7Neg@hDl>j0meLYLGBX1
@@ -942,7 +942,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 457 25
 R6
 R7
@@ -957,7 +957,7 @@ R10
 R11
 vcycloneive_rublock
 R1
-R13
+R2
 !i10b 1
 !s100 UACF9[ZFo9C==37dUecn_0
 IbVa_cHCVUSnE>a:YY1jMN1
@@ -965,7 +965,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7234 26
 R6
 R7
@@ -980,7 +980,7 @@ R10
 R11
 vcycloneive_scale_cntr
 R1
-R13
+R2
 !i10b 1
 !s100 ?Ea0Fg9>FD8EHLl6F:iX13
 Ig^zc7UR`[cMblH6nlL5=E1
@@ -988,7 +988,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 644 100
 R6
 R7
@@ -1003,7 +1003,7 @@ R10
 R11
 vcycloneive_termination
 R1
-R13
+R2
 !i10b 1
 !s100 VISnPPN8LInH<^XRFOFfL1
 Im;KD]iXCgRYF]nANAMgad2
@@ -1011,7 +1011,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7695 212
 R6
 R7
@@ -1026,7 +1026,7 @@ R10
 R11
 vcycloneive_termination_ctrl
 R1
-R13
+R2
 !i10b 1
 !s100 @fV[L9?a<H]K@^6FGIFif0
 IN[17Mc7?^HUWLQNIQZbV`1
@@ -1034,7 +1034,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7291 200
 R6
 R7
@@ -1049,7 +1049,7 @@ R10
 R11
 vcycloneive_termination_rupdn
 R1
-R13
+R2
 !i10b 1
 !s100 X:VcD6g:VAoanIGo1<X6O1
 Ij3V@>=kR]5Ze``T[S1U650
@@ -1057,7 +1057,7 @@ R0
 R3
 R4
 R5
-!i122 3
+!i122 5
 L0 7502 182
 R6
 R7

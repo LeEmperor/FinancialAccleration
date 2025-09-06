@@ -5,8 +5,36 @@ Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 Top level modules:
 	display
 
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2_bb.v {1 {vlog -work work -vopt -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2_bb.v
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module ram_v2
+
+Top level modules:
+	ram_v2
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module source
+
+Top level modules:
+	source
+
 } {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/test2.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/test2.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module clk_div1
+
+Top level modules:
+	clk_div1
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/memory_source_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/memory_source_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module memory_source_tb
+
+Top level modules:
+	memory_source_tb
 
 } {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/toplevel_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/toplevel_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
@@ -15,12 +43,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 Top level modules:
 	toplevel_tb
 
-} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2_bb.v {1 {vlog -work work -vopt -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/quartus_proj/ram_ip_folder/ram_v2_bb.v
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/clk_div1_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/clk_div1_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module ram_v2
+-- Compiling module clk_div1_tb
 
 Top level modules:
-	ram_v2
+	clk_div1_tb
 
 } {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v {1 {vlog -work work -vopt -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/toplevel_test4.v
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
@@ -35,26 +63,5 @@ Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 
 Top level modules:
 	ram_v2
-
-} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/source.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module source
-
-Top level modules:
-	source
-
-} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/clk_div1.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module clk_div1
-
-Top level modules:
-	clk_div1
-
-} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/clk_div1_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test4/testbenches/clk_div1_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module clk_div1_tb
-
-Top level modules:
-	clk_div1_tb
 
 } {} {}}

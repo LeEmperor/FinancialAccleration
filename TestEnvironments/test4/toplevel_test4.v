@@ -128,5 +128,21 @@ source u_source (
 //  Structural coding
 //=======================================================
 
+master_source source (
+
+  // eth0 connections
+  .eth0
+
+	input 		          		ENET0_TX_CLK,
+	output		     [3:0]		ENET0_TX_DATA,
+	output		          		ENET0_TX_EN,
+	output		          		ENET0_TX_ER,
+
+);
+
+master_sink sink (
+
+);
+
 endmodule
 

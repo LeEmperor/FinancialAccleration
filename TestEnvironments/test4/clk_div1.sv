@@ -8,10 +8,10 @@ module clk_div1 (
   output logic pulse
 );
 
-localparam int DIV_COUNT = 35_000_000;
-localparam int SPECIAL_VAL = 25_000_000;
-// localparam int DIV_COUNT = 25;
-// localparam int SPECIAL_VAL = 15;
+// localparam int DIV_COUNT = 35_000_000;
+// localparam int SPECIAL_VAL = 25_000_000;
+localparam int DIV_COUNT = 25;
+localparam int SPECIAL_VAL = 15;
 logic [$clog2(DIV_COUNT):0] counter;
 
 always_ff @(posedge clk50)
