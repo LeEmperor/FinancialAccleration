@@ -45,12 +45,14 @@ module toplevel_test4(
 	output		          		ENET0_MDC,
 	inout 		          		ENET0_MDIO,
 	output		          		ENET0_RST_N,
+
 	input 		          		ENET0_RX_CLK,
 	input 		          		ENET0_RX_COL,
 	input 		          		ENET0_RX_CRS,
 	input 		     [3:0]		ENET0_RX_DATA,
 	input 		          		ENET0_RX_DV,
 	input 		          		ENET0_RX_ER,
+
 	input 		          		ENET0_TX_CLK,
 	output		     [3:0]		ENET0_TX_DATA,
 	output		          		ENET0_TX_EN,
@@ -64,12 +66,14 @@ module toplevel_test4(
 	output		          		ENET1_MDC,
 	inout 		          		ENET1_MDIO,
 	output		          		ENET1_RST_N,
+
 	input 		          		ENET1_RX_CLK,
 	input 		          		ENET1_RX_COL,
 	input 		          		ENET1_RX_CRS,
 	input 		     [3:0]		ENET1_RX_DATA,
 	input 		          		ENET1_RX_DV,
 	input 		          		ENET1_RX_ER,
+
 	input 		          		ENET1_TX_CLK,
 	output		     [3:0]		ENET1_TX_DATA,
 	output		          		ENET1_TX_EN,
@@ -82,66 +86,39 @@ module toplevel_test4(
 //  REG/WIRE declarations
 //=======================================================
 
-// test1 (
-//   .a(SW[15]),
-//   .b(SW[14]),
-//   .c(LEDR[7])
-// );
-
-wire [15:0] wire_data;
-wire wire_valid;
-wire wire_ready;
-
-display u_display (
-    .clk_hifreq (CLOCK_50),
-    .rst        (SW[17]),
-
-    .data_in    (wire_data),
-    .valid      (wire_valid),
-    .ready      (wire_ready),
-
-    .switches   (SW[16:0]),
-    .buttons    (KEY[3:0]),
-    .leds_green (LEDG[7:0]),
-    .leds_red   (LEDR[17:0]),
-
-    .hex0       (),
-    .hex1       (),
-    .hex2       (),
-    .hex3       (),
-    .hex4       (),
-    .hex5       (),
-    .hex6       (),
-    .hex7       ()
-);
-
-source u_source (
-  .clk_hifreq (CLOCK_50),
-  .rst        (SW[17]),
-
-  .data_out   (wire_data),  // source is 16 bits, map into lower 16
-  .valid      (wire_valid),
-  .ready      (wire_ready)
-);
+wire user_clk = CLOCK_50;
 
 //=======================================================
 //  Structural coding
 //=======================================================
 
 master_source source (
+  // clk
+  .clk_hifreq(user_clk),
+  .rst(SW[17]),
 
   // eth0 connections
-  .eth0
-
-	input 		          		ENET0_TX_CLK,
-	output		     [3:0]		ENET0_TX_DATA,
-	output		          		ENET0_TX_EN,
-	output		          		ENET0_TX_ER,
-
+  .tx_d(ENET0_TX_DATA),
+  .tx_en(ENET0_TX_EN),
+  .tx_err(ENET0_TX_ER)
 );
 
 master_sink sink (
+  // clk
+  .clk_hifreq(user_clk),
+  .rst(SW[17]),
 
+  // eth pins
+  .rx_d(ENET1_RX_DATA),
+  // .rx_en(ENET1_RX_E),
+  .rx_err(ENET1_RX_ER),
+  .rx_valid(ENET1_RX_DV),
+
+  // peripheral pins
+  .switches(SW[16:0]),
+  .buttons(KEY[3:0]),
+  .leds_green(LEDG[7:0]),
+  .leds_red(LEDR[17:0])
 );
 
 endmodule

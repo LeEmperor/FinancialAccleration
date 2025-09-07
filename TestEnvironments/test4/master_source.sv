@@ -5,11 +5,6 @@ module master_source (
   // clk and rst
   input logic clk_hifreq, rst,
 
-  // avalon ports
-  input logic avalon_ready,
-  output logic [31:0] avalon_data,
-  output logic avalon_valid,
-
   // eth connectivity
   output logic [3:0] tx_d,
   output logic tx_en,
@@ -32,7 +27,6 @@ memory_source mem (
   .data_out(wire_memdata_out),
 );
 
-// chaque half-second, mettre un value nouveau dans le data_bus
 clk_div2 half_second (
   .clk50(clk_hifreq),
   .rst(rst),
@@ -49,7 +43,7 @@ eth0_config ise0 (
   .wren(wire_avalonMM_wren)
 );
 
-eth_ip_folder eth0_ip (
+ethernet_ip_folder eth0_ip (
   .reg_addr(wire_avalonMM_addr),
   .reg_data_in(wire_avalonMM_data),
   .reg_wr(wire_avalonMM_wren),
@@ -67,18 +61,6 @@ eth_ip_folder eth0_ip (
   .ff_tx_sop(),
   .ff_tx_wren()
 );
-
-always_ff @(posedge wire_pulse)
-begin
-  if (rst) begin
-    wire_memdata_out <= 0;
-  end else begin
-    if (wire_ready) begin
-      //handshake
-
-    end
-  end
-end
 
 endmodule
 
