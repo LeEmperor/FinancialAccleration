@@ -52,14 +52,14 @@ ethernet_ip_folder eth0_ip (
   .m_tx_en(tx_en),
   .m_tx_err(tx_err),
 
-  .ff_tx_clk(), // ?
+  .ff_tx_clk(clk_hifreq), // ?
   .ff_tx_data(wire_memdata_out),
-  .ff_tx_eop(),
-  .ff_tx_err(),
-  .ff_tx_mod(),
-  .ff_tx_rdy(), // de eth à ça
   .ff_tx_sop(),
-  .ff_tx_wren()
+  .ff_tx_eop(),
+  .ff_tx_wren(),
+  .ff_tx_err(), //
+  .ff_tx_mod(), //
+  .ff_tx_rdy() // de eth à ça
 );
 
 endmodule
