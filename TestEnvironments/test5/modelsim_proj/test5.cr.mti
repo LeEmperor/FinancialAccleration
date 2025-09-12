@@ -1,0 +1,15 @@
+C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/reg.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/reg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module reg_v1
+
+Top level modules:
+	reg_v1
+
+} {} {}} C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/testbenches/test1.sv {1 {vlog -work work -vopt -sv -stats=none C:/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/testbenches/test1.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module test1
+
+Top level modules:
+	test1
+
+} {} {}}
