@@ -94,7 +94,8 @@ toplevel top (
   .en(SW[16]),
   .tx_d(ENET0_TX_DATA),
   .tx_err(ENET0_TX_ER),
-  .tx_en(ENET0_TX_EN)
+  .tx_en(ENET0_TX_EN),
+  .tx_clk(ENET0_TX_CLK)
 );
 
 endmodule

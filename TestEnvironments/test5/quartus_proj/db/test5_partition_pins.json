@@ -8,11 +8,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[16]",
+					"strict" : false
+				},
+				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "SW[16]",
+					"name" : "ENET0_TX_CLK",
 					"strict" : false
 				},
 				{

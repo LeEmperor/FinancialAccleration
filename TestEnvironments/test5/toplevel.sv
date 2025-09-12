@@ -4,7 +4,8 @@ module toplevel (
   input logic en,
   output logic [31:0] tx_d,
   output logic tx_err,
-  output logic tx_en
+  output logic tx_en,
+  input logic tx_clk
 );
 
 // wires
@@ -51,7 +52,7 @@ clk_div1 clk1 (
   .pulse()
 );
 
-eth_ip transmit_ip (
+eth2 transmit_ip (
   .clk(clk),
   .reset(rst),
 
@@ -63,6 +64,7 @@ eth_ip transmit_ip (
   .m_tx_en(tx_en),
   .m_tx_err(tx_err),
 
+  .ff_tx_clk(tx_clk),
   .ff_tx_data(wire_data),
   .ff_tx_sop(wire_sop),
   .ff_tx_eop(wire_eop),
@@ -83,7 +85,7 @@ controller control (
   .sop(wire_sop),
   .eop(wire_eop),
   .wren(wire_wren),
-  
+
   .rd_en(wire_rden)
 );
 
