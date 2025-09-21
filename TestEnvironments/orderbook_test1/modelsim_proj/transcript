@@ -1,0 +1,816 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project orderbook2
+do compile_script.do
+# Compile of orderbook.sv failed with 2 errors.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 1 failed with 2 errors.
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+dosim
+# invalid command name "dosim"
+do sim_script.do
+# vsim -voptargs="+acc" work.orderbook_tb 
+# Start time: 21:04:21 on Sep 20,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'occupied_mask'. The port definition is at: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv(30).
+#    Time: 0 ps  Iteration: 0  Instance: /orderbook_tb/dut File: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv Line: 24
+# A time value could not be extracted from the current line
+add wave -r *
+do run_script.do
+# 0 ps
+# 105 ns
+do compile_script.dop
+# Cannot open macro file: compile_script.dop
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'occupied_mask'. The port definition is at: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv(30).
+#    Time: 0 ps  Iteration: 0  Instance: /orderbook_tb/dut File: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv Line: 24
+# 0 ps
+# 105 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'new_price'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'occupied_mask'. The port definition is at: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv(30).
+#    Time: 0 ps  Iteration: 0  Instance: /orderbook_tb/dut File: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv Line: 24
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'occupied_mask'. The port definition is at: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv(30).
+#    Time: 0 ps  Iteration: 0  Instance: /orderbook_tb/dut File: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv Line: 24
+# Warning in wave window restart: (vish-4014) No objects found matching '/orderbook_tb/dut/new_item'. 
+# 0 ps
+# 126 ns
+quit -sim
+# End time: 21:09:33 on Sep 20,2025, Elapsed time: 0:05:12
+# Errors: 0, Warnings: 6
+do sim_script.do
+# vsim -voptargs="+acc" work.orderbook_tb 
+# Start time: 21:09:35 on Sep 20,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'occupied_mask'. The port definition is at: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv(30).
+#    Time: 0 ps  Iteration: 0  Instance: /orderbook_tb/dut File: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv Line: 24
+add wave -r *
+do run_script.don
+# Cannot open macro file: run_script.don
+do run_script.don
+# Cannot open macro file: run_script.don
+do run_script.do
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# num: 1
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# num: 0
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# num:    1
+# num:    2
+# num:    4
+# num:    8
+# num:   16
+# num:   32
+# num:   64
+# num:  128
+# num:  256
+# num:  512
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask:    X
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 126 ns
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 73500 ps
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+dp bruh_script.do
+# invalid command name "dp"
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+.main clear
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: x0xxx0x00x
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# replacing at           8
+# occupied mask: x0xxx0x00x
+# replacing at           8
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# replacing at           8
+# thing at currente:           9
+# occupied mask: x0xxx0x00x
+# replacing at           8
+# thing at currente:           9
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# replacing at           8
+# thing at insertion_index:           9, is          0
+# occupied mask: x0xxx0x00x
+# replacing at           8
+# thing at insertion_index:           9, is         32
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# orderbook [          9] is          0
+# occupied mask: x0xxx0x00x
+# orderbook [          9] is         32
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# orderbook [          9] is          0
+# orderbook [          9] is          0
+# orderbook [          9] is          0
+# occupied mask: x0xxx0x00x
+# orderbook [          9] is         32
+# orderbook [          9] is         32
+# orderbook [          9] is         32
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# orderbook [          9] is          0
+# orderbook [          9] is          0
+# orderbook [          9] is          0
+# orderbook-1 [          8] is          0
+# occupied mask: x0xxx0x00x
+# orderbook [          9] is         32
+# orderbook [          9] is         32
+# orderbook [          9] is         32
+# orderbook-1 [          8] is          0
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 84 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 105 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 105 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 105 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 126 ns
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 157500 ps
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 136500 ps
+d compile_script.do
+# ambiguous command name "d": dataset datasetOf dataset_open dataset_parse_filename datasetcheck dbgecho debugVersionString deflate deicon_all delEditCurActiveWin delete deleteEditCursor delete_helper descendenvdialog describe destroy destroy_kernel dfAddDataflow df_Copy df_Cut df_Delete df_GetSel df_HighlightNet df_HighlightSelection df_InRegionCommand df_NumDataflowWindows df_Paste df_PointToPoint df_Redo df_ShowWave df_Undo df_causeReset df_causeSet df_context_type df_defineToolbar df_doSearchBarSearch df_findCause df_findDrivingInsts df_findcause df_findx df_gen_all df_gen_region df_removeToolbars df_select_env df_selectedXNets df_showNetsOfInstInWave dict directory_image disable disablebp disablebp_image divTime dmtcp_coord_quit dmtcp_restore_mode dnd do down downarrow draw_source_lines drivers dumpDataflow dumpDataflowInputs dumpDataflowOutputs dumpFileToTranscript dumpObjTypes dump_win_hier dumpcov dumpcov_source dumpcov_srcobj dumplog64 dumpmsgloghash dumpnl dw
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 136500 ps
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 136500 ps
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 136500 ps
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 18, found 16.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'in_data'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 157500 ps
+do compile_script.do
+# Compile of orderbook.sv failed with 3 errors.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 1 failed with 3 errors.
+do compile_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of orderbook.sv was successful.
+# Compile of orderbook_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.orderbook_tb(fast)
+# Loading work.orderbook(fast)
+# occupied mask: 1000000000
+# 0 ps
+# 157500 ps
+quit -sim
+# End time: 23:22:07 on Sep 20,2025, Elapsed time: 2:12:32
+# Errors: 0, Warnings: 2
+quit -f
