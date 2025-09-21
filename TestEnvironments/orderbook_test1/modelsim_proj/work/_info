@@ -77,6 +77,10 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
 Z2 !s12c _opt
 R1
 R2
@@ -111,10 +115,10 @@ n@_opt
 Z10 OL;O;2024.3;79
 R3
 T_opt2
-Z11 !s110 1758424266
-Vb7]MFd?CR`W`3K@>]LfQQ1
+!s110 1758470995
+VQBLE47OfCeCCG<a2LflkX1
 04 12 4 work orderbook_tb fast 0
-=36-000ae431a4f1-68cf6cca-5d531-d410
+=3-000ae431a4f1-68d02353-404-cf5
 R1
 R4
 R5
@@ -126,24 +130,24 @@ n@_opt2
 R10
 vorderbook
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv
-Z12 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R11
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1758470994
 !i10b 1
 !s100 [Sa=KK;7n9nF906ie;fo<2
 IUC2KGe9NX4N920R8Gmc8e0
 S1
 Z13 d/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/modelsim_proj
-w1758424262
+w1758424932
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv
-!i122 175
+!i122 219
 L0 5 103
 Z14 VDg1SIo80bB@j0V0VzS_@n1
 Z15 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z16 !s108 1758424266.000000
+Z16 !s108 1758470994.000000
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv|
 !i113 0
@@ -151,18 +155,18 @@ Z17 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R9
 vorderbook_tb
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv
-R12
 R11
+R12
 !i10b 1
-!s100 kIejWzBDoeFmJ^4ea2eU@2
-I9?CHM;Xbk8iTfHY1ZoIQn0
+!s100 E=JCOYPc4f3XE?37Z46d:3
+IW^>ACInmCO7MHXo878FYl3
 S1
 R13
-w1758424048
+w1758470991
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_tb.sv
-!i122 176
-L0 7 106
+!i122 220
+L0 7 92
 R14
 R15
 r1
@@ -176,7 +180,7 @@ R17
 R9
 vorderbook_v2
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook_v2.sv
-R12
+R11
 Z18 !s110 1757710839
 !i10b 1
 !s100 L<@fU:_o2nGho>hYIDH6_0
@@ -201,7 +205,7 @@ R17
 R9
 vorderbook_v2_tb
 2C:/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/orderbook_v2_tb.sv
-R12
+R11
 R18
 !i10b 1
 !s100 R78Lif:C`@FZ;6`POhf;h2

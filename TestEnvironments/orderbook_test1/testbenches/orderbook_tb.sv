@@ -42,6 +42,26 @@ module orderbook_tb();
       .occupied_mask(t_occupiedmask)
     );
 
+    // typedef struct {
+    //
+    // } Order_t;
+
+    // function pendOrder (string order_name, int price, int quantity);
+    //   $display("inserting \"%s\" - %d orders @ %d USD", order_name, quantity, price);
+    // endfunction
+
+    task Task_Order (string order_name, int price, int quantity);
+      $display("inserting \"%s\" - %d orders @ %d USD", order_name, quantity, price);
+      t_indata = price;
+      t_valid = 1;
+      #10
+
+      t_valid = 0;
+      #10
+
+      $display("order inserted!");
+    endtask
+
     initial begin : CLK_GEN
         t_clk = 0;
         forever #5 t_clk = ~t_clk & clk_en;
@@ -53,52 +73,18 @@ module orderbook_tb();
             t_rst = 0;
             clk_en = 1;
             #10
-
             t_rst = 1;
             #10
-
             t_rst = 0;
             #10
+            // end reset cycle
 
-            t_indata = 32'd32;
-            t_valid = 1;
-            #10
-            $display("occupied mask: %b", t_occupiedmask);
+            Task_Order("test 1", 9, 20);
+            Task_Order("test 2", 10, 20);
+            Task_Order("test 3", 3, 20);
+            Task_Order("test 4", 20, 20);
 
-            t_valid = 0;
-            #10
-
-            t_indata = 32'd21;
-            t_valid = 1;
-            #10
-            //
-            t_valid = 0;
-            #10
-
-            t_indata = 32'd22;
-            t_valid = 1;
-            #10
-
-            t_valid = 0;
-            #10
-
-            t_indata = 32'd23;
-            t_valid = 1;
-            #10
-
-            t_valid = 0;
-            #10
-
-            t_indata = 32'd10;
-            t_valid = 1;
-            #10
-            t_valid = 0;
-            #10
-
-            // t_indata = 32'h24;
-            // t_valid = 1;
-            // #10
-
+            // ending assertions
             t_valid = 0;
             #20
 
