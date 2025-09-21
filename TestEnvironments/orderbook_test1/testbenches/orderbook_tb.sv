@@ -56,6 +56,8 @@ module orderbook_tb();
       t_valid = 1;
       #10
 
+      $display("occupied mask: %b", t_occupiedmask);
+
       t_valid = 0;
       #10
 

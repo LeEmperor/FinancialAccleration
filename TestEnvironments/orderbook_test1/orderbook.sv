@@ -82,14 +82,6 @@ begin
       orderbook[i] <= 0;
     end
   end else if (valid) begin
-    // $display("orderbook [%d] is %d", insertion_index, orderbook[insertion_index]);
-    // orderbook[insertion_index - 1] <= orderbook[insertion_index];
-    // $display("orderbook [%d] is %d", insertion_index, orderbook[insertion_index]);
-    // $display("replacing at %d", insertion_index - 1);
-    // $display("thing at insertion_index: %d, is %d", insertion_index, orderbook[insertion_index]);
-    // orderbook[insertion_index] <= new_price;
-    // $display("orderbook [%d] is %d", insertion_index, orderbook[insertion_index]);
-    // $display("orderbook-1 [%d] is %d", insertion_index - 1, orderbook[insertion_index - 1]);
     for (int i = 0; i < insertion_index; i++) begin
       orderbook[i] <= orderbook[i + 1];
       // 1 process modele pour ća, mais un 2 process avec current et next état
@@ -97,10 +89,6 @@ begin
     end
 
     orderbook[insertion_index] <= new_price;
-
-    // for (int i = 0; i < 10; i++) begin
-    //   $display();
-    // end
   end
 end
 

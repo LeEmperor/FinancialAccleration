@@ -1,2 +1,2 @@
 onerror resume
-add mem /orderbook_tb/dut/orderbook -a decimal -d decimal -wo 1
+add mem /fifo_tb/dut/fifo_storage -a decimal -d decimal -wo 1
