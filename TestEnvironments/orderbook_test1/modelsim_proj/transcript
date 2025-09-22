@@ -19,5 +19,3 @@ do compile_script.do
 # Compile of fifo.sv was successful.
 # Compile of fifo_tb.sv was successful.
 # 4 compiles, 0 failed with no errors.
-# Break key hit
-quit -f
