@@ -22,7 +22,7 @@ module orderbook_tb();
 
     // dut
     orderbook dut (
-      .clk_hifreq(t_clk),
+      .clk(t_clk),
       .rst(t_rst),
       .en(t_en),
       .new_price(t_indata),

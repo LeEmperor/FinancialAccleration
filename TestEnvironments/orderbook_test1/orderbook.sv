@@ -2,9 +2,12 @@
 // University of Florida
 // Description: Orderbook
 
-module orderbook (
+module orderbook # (
+  parameter int data_width, 
+  parameter int book_depth
+) (
   // clk, rst, en
-  input logic clk_hifreq,
+  input logic clk,
   input logic rst,
   input logic en,
 
@@ -75,7 +78,7 @@ end
 
 // description: 1 process model??
 // vs 2 process model pour ça
-always_ff @(posedge clk_hifreq)
+always_ff @(posedge clk)
 begin
   if (rst) begin
     for (int i = 0; i < 5; i++) begin
