@@ -1,1 +1,15 @@
+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/fifo_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/fifo_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module fifo_tb
 
+Top level modules:
+	fifo_tb
+
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/fifo.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/fifo.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+} {} {}}
