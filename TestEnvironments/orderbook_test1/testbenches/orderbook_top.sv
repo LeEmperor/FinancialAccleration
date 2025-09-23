@@ -1,18 +1,17 @@
 // Bohdan Purtell
 // University of Florida
 
-module orderbook_top # (
-  parameter int data_width = 32 
+module orderbook # (
+  parameter int data_width = 32
 ) (
   input logic clk, rst, en
-  output logic valid
-
+  output logic [data_width - 1 : 0] dataout
 );
 
-orderbook_storage #(
-  .data_width(32),
+orderbook_storage # (
+  .data_width(data_width)
   .book_depth(5)
-) buy ( 
+) storage1 (
   .clk(),
   .rst(),
   .en(),
@@ -21,21 +20,10 @@ orderbook_storage #(
   .rdy(),
 
   .new_price(),
-
   .occupied_mask()
 );
 
-orderbook_storage #(
 
-) sell (
-
-);
-
-book_controller #(
-
-) control (
-
-);
 
 endmodule
 
