@@ -13,15 +13,4 @@
 # // and may not be used in any way not expressly authorized by SISW.
 # //
 # Loading project orderbook2
-do compile_script.do
-# Compile of orderbook.sv was successful.
-# Compile of orderbook_tb.sv was successful.
-# Compile of fifo.sv was successful.
-# Compile of fifo_tb.sv was successful.
-# Compile of controller.sv was successful with warnings.
-# Compile of toplevel.sv was successful.
-# Compile of book_controller.sv failed with 2 errors.
-# 7 compiles, 1 failed with 2 errors.
-qui t-f
-# ambiguous command name "qui": quietly quit
 quit -f
