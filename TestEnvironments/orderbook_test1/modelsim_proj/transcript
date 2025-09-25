@@ -13,4 +13,28 @@
 # // and may not be used in any way not expressly authorized by SISW.
 # //
 # Loading project orderbook2
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 2 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 2 errors.
+do cmop
+# Cannot open macro file: cmop
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+do compile_script.do
+# Compile of locator_generator.sv was successful.
+jdo compile_script.do
+# invalid command name "jdo"
+do compile_script.do
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+quit 0f
+# unknown switch: 0f
 quit -f

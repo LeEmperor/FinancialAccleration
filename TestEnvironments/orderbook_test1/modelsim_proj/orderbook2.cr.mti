@@ -1,1 +1,14 @@
+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv {0 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module free_list
+** Error: (vlog-13069) /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(16): near "level_t": syntax error, unexpected IDENTIFIER.
+** Error: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(17): (vlog-13205) Syntax error found in the scope following 'level_t'. Is there a missing '::'?
 
+} {4.0 6.0} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module locator_generator
+
+Top level modules:
+	locator_generator
+
+} {} {}}

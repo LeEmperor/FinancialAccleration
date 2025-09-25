@@ -267,6 +267,31 @@ R17
 !i113 0
 R15
 R9
+vlocator_generator
+2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+R11
+!s110 1758757466
+!i10b 1
+!s100 YHVB<R3<@Pjj1@>[lA1591
+Io3^Yc<^JjNgin2VY;WNFj0
+S1
+R12
+w1758757072
+8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+!i122 545
+L0 4 69
+R13
+R14
+r1
+!s85 0
+31
+!s108 1758757466.000000
+!s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv|
+!i113 0
+R15
+R9
 vorderbook
 Z19 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/orderbook.sv
 R11
