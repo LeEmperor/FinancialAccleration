@@ -33,6 +33,12 @@ module free_list_tb();
   logic [width2 - 1 : 0] t_in2;
   logic [width3 - 1 : 0] t_in3;
 
+  logic t_alloc_req;
+  logic t_free_req;
+
+  logic [9:0] t_alloc_idx;
+  logic [9:0] t_rendre_idx;
+
   function example_func (int x, int b);
     return x + b;
   endfunction
@@ -43,19 +49,20 @@ module free_list_tb();
     $display("task complete");
   endtask
 
-  // test dut # (
-  //   .width(32)
-  // ) (
-  //
-  // );
-
-  test dut (
+  free_list # (
+    .width(32),
+    .bruh(32),
+    .command_width(32)
+  ) dut (
     .clk(t_clk1),
     .rst(t_rst),
     .en(t_en),
 
-    .BRUH1(t_in1),
-    .BRUH2(t_out1)
+    .alloc_req(t_alloc_req),
+    .alloc_slot_idx(t_alloc_idx),
+
+    .free_req(t_free_req),
+    .free_slot_idx(t_rendre_idx)
   );
 
   // clock proc
@@ -68,10 +75,14 @@ module free_list_tb();
   initial begin : MAIN
     clk1_en = 1;
     t_rst = 1;
+    t_en = 1;
     #10
 
     t_rst = 0;
     #10
+
+    #50
+    // t_alloc_req 
 
     // mettre les truc voici
 

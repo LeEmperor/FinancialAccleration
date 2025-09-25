@@ -14,27 +14,157 @@
 # //
 # Loading project orderbook2
 do compile_script.do
-# Compile of locator_generator.sv failed with 1 errors.
-do compile_script.do
-# Compile of locator_generator.sv failed with 2 errors.
-do compile_script.do
-# Compile of locator_generator.sv failed with 2 errors.
-do cmop
-# Cannot open macro file: cmop
-do compile_script.do
-# Compile of locator_generator.sv failed with 1 errors.
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv was successful.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+do sim_script.do
+# vsim -voptargs="+acc" work.free_list_tb 
+# Start time: 13:18:35 on Sep 25,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.free_list_tb(fast)
+# Loading work.free_list(fast)
+# Loading work.stack(fast)
+add wave -r *
+do run_script.do
+# 0 ps
+# 126 ns
 do compile_script.do
 # Compile of locator_generator.sv was successful.
-jdo compile_script.do
-# invalid command name "jdo"
+# Compile of free_list.sv was successful with warnings.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+do bruh_script.do
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv was successful with warnings.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error (suppressible): /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(86): (vopt-7033) Variable 'preload_counter' driven in a combinational block, may not be driven by any other process. See /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(58).
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(81): (vopt-2182) 'preload_counter' might be read before written in always_comb or always @* block.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# ** Error: No Design Loaded!
+# Error in macro ./bruh_script.do line 3
+# No Design Loaded!
+#     while executing
+# "run -all"
 do compile_script.do
 # Compile of locator_generator.sv was successful.
-# Compile of free_list.sv failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
+# Compile of free_list.sv was successful with warnings.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+do bruasdf
+# Cannot open macro file: bruasdf
+dobruh
+# invalid command name "dobruh"
+do bruh_script.do
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv was successful with warnings.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# ** Error: No Design Loaded!
+# Error in macro ./bruh_script.do line 2
+# No Design Loaded!
+#     while executing
+# "restartCmd -f"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval restartCmd $args"
+#     (procedure "restart" line 18)
+#     invoked from within
+# "restart -f"
+quit -sim
+# End time: 13:20:46 on Sep 25,2025, Elapsed time: 0:02:11
+# Errors: 4, Warnings: 5
+.main clear
+do sim_script.do
+# vsim -voptargs="+acc" work.free_list_tb 
+# Start time: 13:20:50 on Sep 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error (suppressible): /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(86): (vopt-7033) Variable 'preload_counter' driven in a combinational block, may not be driven by any other process. See /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(58).
+# ** Warning: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv(81): (vopt-2182) 'preload_counter' might be read before written in always_comb or always @* block.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim_script.do PAUSED at line 1
 do compile_script.do
 # Compile of locator_generator.sv was successful.
-# Compile of free_list.sv failed with 2 errors.
-# 2 compiles, 1 failed with 2 errors.
-quit 0f
-# unknown switch: 0f
+# Compile of free_list.sv was successful.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+do sim_script.do
+# vsim -voptargs="+acc" work.free_list_tb 
+# Start time: 13:20:50 on Sep 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-143) Recognized 1 FSM in module "free_list(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=3.
+# Loading sv_std.std
+# Loading work.free_list_tb(fast)
+# Loading work.free_list(fast)
+# Loading work.stack(fast)
+do run_script.do
+# 0 ps
+# 126 ns
+remove wave all
+# invalid command name "remove"
+wave  collapse all
+# wave collapse all: must be in a valid wave expand mode (deltas or events) before that operation.
+# 
+qui t-sim
+# ambiguous command name "qui": quietly quit
+quit -sim
+# End time: 13:22:30 on Sep 25,2025, Elapsed time: 0:01:40
+# Errors: 2, Warnings: 5
+.mmain clear
+# invalid command name ".mmain"
+.main clear
+do sim_script.do
+# vsim -voptargs="+acc" work.free_list_tb 
+# Start time: 13:22:35 on Sep 25,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.free_list_tb(fast)
+# Loading work.free_list(fast)
+# Loading work.stack(fast)
+add wave -r *
+do run_script.do
+# 0 ps
+# 126 ns
+do compile_script.doasd
+# Cannot open macro file: compile_script.doasd
+do bruh_script.do
+# Compile of locator_generator.sv was successful.
+# Compile of free_list.sv was successful.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-143) Recognized 1 FSM in module "free_list(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.free_list_tb(fast)
+# Loading work.free_list(fast)
+# Loading work.stack(fast)
+# 0 ps
+# 126 ns
 quit -f
+# End time: 13:26:38 on Sep 25,2025, Elapsed time: 0:04:03
+# Errors: 0, Warnings: 2

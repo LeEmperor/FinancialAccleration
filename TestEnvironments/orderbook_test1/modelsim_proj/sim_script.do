@@ -1,2 +1,2 @@
-vsim -voptargs=+acc work.fifo_tb
+vsim -voptargs=+acc work.free_list_tb
 

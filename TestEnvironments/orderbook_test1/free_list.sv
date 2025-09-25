@@ -1,42 +1,102 @@
 module free_list # (
   parameter int width = 32,
   parameter int bruh = 32,
-  parameter int command_width = 32
+  parameter int command_width = 32,
+
+  parameter int levels = 5, 
+  parameter int slots = 8,
+  parameter int level_width = $clog2(levels),
+  parameter int slot_width = $clog2(slots)
 ) (  
   input logic clk, rst, en,
 
-  input logic [command_width - 1 : 0] command,
-  input logic [3:0] pop_which,
-  input logic [3:0] push_which,
-  output logic out1
+  input logic alloc_req, // me donner un neu slot
+  output logic [9:0] alloc_slot_idx, // le slot qu'on donner
+
+  input logic free_req, // on va rendre un slot (signal)
+  input logic [9:0] free_slot_idx // slot de rendre 
 );
 
-typedef struct packed {
-  logic [1:0] bruh;
-  level_t* next;
-  level_t* prev;
-} level_t;
+  logic wire_push;
+  logic wire_pop;
+  logic [31:0] wire_indata;
+  logic [31:0] wire_outdata;
 
-level_t levels[10];
+  stack # (
+    .depth(20),
+    .width(16)
+  ) main_stack (
+    .clk(clk),
+    .rst(rst),
+    .en(en),
 
-logic [31:0] example_storage [10]; 
+    .push(wire_push),
+    .pop(),
 
-always_ff @(posedge clk)
-begin
-  case (command)
-    'h10 : begin // pop
-      // levels[pop_which].
+    .indata(wire_indata),
+    .outdata(wire_outdata),
+
+    .empty(),
+    .full()
+  );
+
+  typedef enum {
+    idle,
+    preload,
+    run
+  } state_t;
+
+  state_t current_state, next_state;
+
+  logic [3:0] preload_counter;
+  logic [3:0] preload_counter_next;
+
+// reg proc
+  always_ff @(posedge clk)
+  begin
+    if (rst) begin
+      current_state <= idle;
+      preload_counter <= 0;
+    end else if (en) begin
+      current_state <= next_state;
+      preload_counter <= preload_counter_next;
     end
+  end
 
-    'h11 : begin // push
-      levels[push_which - 1].next = levels[push_which];
-    end
+  // next state logic
+  always_comb
+  begin
+    // defaults
+    next_state = current_state;
+    preload_counter_next = preload_counter;
+    wire_push = 0;
+    wire_pop = 0;
+    wire_indata = 0;
 
-    default : begin
-      out1 <= 0;
-    end
-  endcase
-end
+    unique case (current_state)
+      (idle) : begin
+        if (en) begin
+          next_state = preload;
+        end
+      end
+
+      (preload) : begin
+        wire_indata = preload_counter;
+        wire_push = 1;
+        if (preload_counter == 4'b1111) begin
+          next_state = run;
+        end else begin
+          preload_counter_next = preload_counter + 1;
+        end
+      end
+
+      (run) : begin
+        wire_indata[9:0] = free_slot_idx;
+        alloc_slot_idx = wire_outdata[9:0];
+      end
+    endcase
+
+  end
 
 endmodule
 
