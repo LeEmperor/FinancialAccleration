@@ -4,38 +4,27 @@
 module orderbook_top # (
   parameter int data_width = 32 
 ) (
-  input logic clk, rst, en
-  output logic valid
+  input logic clk, rst, en,
+
+  input  logic valid,
+  output logic rdy,
+  input logic sop,
+  input logic eop,
+
+  input logic [data_widtha - 1 : 0] indata,
+
+
 
 );
 
-orderbook_storage #(
-  .data_width(32),
-  .book_depth(5)
-) buy ( 
-  .clk(),
-  .rst(),
-  .en(),
+free_list # (
 
-  .valid(),
-  .rdy(),
-
-  .new_price(),
-
-  .occupied_mask()
-);
-
-orderbook_storage #(
-
-) sell (
+) free_list (
 
 );
 
-book_controller #(
 
-) control (
 
-);
 
 endmodule
 

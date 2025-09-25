@@ -23,7 +23,7 @@ logic [$clog2(width) : 0] stack_pointer; // size considerations?
 
 assign outdata = mem[stack_pointer];
 
-always_ff @(posedge clk or rst)
+always_ff @(posedge clk or posedge rst)
 begin
   if (rst) begin
     stack_pointer <= 0;

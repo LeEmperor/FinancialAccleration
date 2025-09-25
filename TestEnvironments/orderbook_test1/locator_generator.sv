@@ -2,16 +2,7 @@
 // University of Florida
 
 module locator_generator # (
-  parameter int data_width = 32,
-  parameter int addr_width = 10,
-  parameter int level_width = 3,
-  parameter int slot_width = 3,
-  parameter int orderid_width = 10,
-  parameter int price_width = 32,
-  parameter int version_width = 5,
-
-  parameter int n_levels = 8,  
-  parameter int n_slots = 5
+  parameter int width = 32
 ) (
   input logic clk, rst, en,
 
@@ -28,46 +19,11 @@ module locator_generator # (
   output logic [31:0] locator_entry
 );
 
-// typedef struct packed {
-//   logic valid;
-//   logic [version_width - 1 : 0] version;
-//   logic [orderid_width - 1 : 0] order_id;
-//   logic [31:0] qty;
-//   logic [5:0] next;
-//   logic [5:0] prev;
-// } slot_t;
-//
-// slot_t slots[10][10];
+free_list # (
 
-typedef struct packed {
-  logic [31:0] price;
-  logic [31:0] quantity;
-  logic [63:0] epoch;
-} order_t;
+) free_list (
 
-order_t orders[n_levels * n_slots];
-
-logic [31:0] fast_locator_table [];
-// assign locator_entry = fast_locator_table[order_id];
-
-// logic [price_width - 1 : 0] level_idx = price_data;
-
-always_comb
-begin
-
-  // locator_entry = {};
-
-
-  // locator_entry = {};
-
-end
-
-// always_ff @(posedge bruh)
-// begin
-//   if (bruh) begin
-//
-//   end
-// end
+);
 
 endmodule
 
