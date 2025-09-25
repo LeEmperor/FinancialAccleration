@@ -1,2 +1,2 @@
 onerror resume
-add mem /fifo_tb/dut/fifo_storage -a decimal -d decimal -wo 1
+add mem /free_list_tb/dut/main_stack/mem -a decimal -d hexadecimal -wo 1

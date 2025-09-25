@@ -1,23 +1,9 @@
-/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module free_list
+-- Compiling module stack_tb
 
 Top level modules:
-	free_list
-
-} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module free_list_tb
-
-Top level modules:
-	free_list_tb
-
-} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module locator_generator
-
-Top level modules:
-	locator_generator
+	stack_tb
 
 } {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
@@ -25,5 +11,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 
 Top level modules:
 	stack
+
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module locator_generator
+
+Top level modules:
+	locator_generator
 
 } {} {}}

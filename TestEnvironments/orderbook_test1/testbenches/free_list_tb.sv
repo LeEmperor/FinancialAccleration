@@ -27,17 +27,16 @@ module free_list_tb();
   wire [width1 - 1 : 0] t_out1;
   wire [width2 - 1 : 0] t_out2;
   wire [width3 - 1 : 0] t_out3;
+  wire [15:0] t_alloc_idx;
+
+  logic [15:0] indexes [10];
+  int index_index;
 
   // stim
-  logic [width1 - 1 : 0] t_in1;
-  logic [width2 - 1 : 0] t_in2;
-  logic [width3 - 1 : 0] t_in3;
-
   logic t_alloc_req;
   logic t_free_req;
 
-  logic [9:0] t_alloc_idx;
-  logic [9:0] t_rendre_idx;
+  logic [15:0] t_rendre_idx;
 
   function example_func (int x, int b);
     return x + b;
@@ -50,9 +49,8 @@ module free_list_tb();
   endtask
 
   free_list # (
-    .width(32),
-    .bruh(32),
-    .command_width(32)
+    .levels(5),
+    .slots(8)
   ) dut (
     .clk(t_clk1),
     .rst(t_rst),
@@ -76,17 +74,70 @@ module free_list_tb();
     clk1_en = 1;
     t_rst = 1;
     t_en = 1;
+
+    t_alloc_req = 0;
+    t_free_req = 0;
+
+    index_index = 0;
     #10
 
     t_rst = 0;
     #10
 
-    #50
-    // t_alloc_req 
+    #150
+
+    t_alloc_req = 1;
+    // t_
+    #10
+    #10 // c'est pourquoi?
+    indexes[index_index] = t_alloc_idx;
+    index_index++;
+
+    t_alloc_req = 0;
+    #10
+
+    t_alloc_req = 1;
+    #10
+    indexes[index_index] = t_alloc_idx;
+    index_index++;
+
+    t_alloc_req = 0;
+    #10
+
+    t_alloc_req = 1;
+    #10
+    indexes[index_index] = t_alloc_idx;
+    index_index++;
+
+    t_alloc_req = 0;
+    #10
+
+    t_free_req = 1;
+    t_rendre_idx = 'd14;
+    #10
+
+    t_free_req = 0;
+    #10
+
+    t_alloc_req = 0;
+    #10
+
+    t_alloc_req = 1;
+    #10
+
+    indexes[index_index] = t_alloc_idx;
+    index_index++;
+
+    t_alloc_req = 0;
+    #10
+
+    // display whole
+    for (int i = 0; i < 10; i++) begin
+      $display("allocated index (what was popped): %d", indexes[i]);
+    end
 
     // mettre les truc voici
-
-    #50
+    #10
     clk1_en = 0;
     disable CLK_GEN;
   end

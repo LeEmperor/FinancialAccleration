@@ -1,8 +1,4 @@
 module free_list # (
-  parameter int width = 32,
-  parameter int bruh = 32,
-  parameter int command_width = 32,
-
   parameter int levels = 5, 
   parameter int slots = 8,
   parameter int level_width = $clog2(levels),
@@ -11,27 +7,27 @@ module free_list # (
   input logic clk, rst, en,
 
   input logic alloc_req, // me donner un neu slot
-  output logic [9:0] alloc_slot_idx, // le slot qu'on donner
+  output logic [15:0] alloc_slot_idx, // le slot qu'on donner
 
   input logic free_req, // on va rendre un slot (signal)
-  input logic [9:0] free_slot_idx // slot de rendre 
+  input logic [15:0] free_slot_idx // slot de rendre 
 );
 
   logic wire_push;
   logic wire_pop;
-  logic [31:0] wire_indata;
-  logic [31:0] wire_outdata;
+  logic [15:0] wire_indata;
+  logic [15:0] wire_outdata;
 
   stack # (
-    .depth(20),
-    .width(16)
+    .depth(16),
+    .width(5) // quand c'est 5??????????? (4 voudrait fonctionner, mais pas)
   ) main_stack (
     .clk(clk),
     .rst(rst),
     .en(en),
 
     .push(wire_push),
-    .pop(),
+    .pop(wire_pop),
 
     .indata(wire_indata),
     .outdata(wire_outdata),
@@ -91,8 +87,10 @@ module free_list # (
       end
 
       (run) : begin
-        wire_indata[9:0] = free_slot_idx;
-        alloc_slot_idx = wire_outdata[9:0];
+        wire_indata = free_slot_idx;
+        wire_pop = alloc_req;
+        wire_push = free_req;
+        alloc_slot_idx = wire_outdata;
       end
     endcase
 
