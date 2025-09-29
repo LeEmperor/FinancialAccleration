@@ -278,23 +278,23 @@ R3
 vbook_controller
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv
 Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1758566701
+!s110 1759021161
 !i10b 1
-!s100 ^R]aan[@X_6a67:RgAlCf0
-IfVSc@O_Pn28C^2Rb:XFVF3
+!s100 jPEJTcQhbS<eXQ_TO3?4Q3
+IX0ScokoUC3_QQ[RZZQGSJ2
 S1
 Z11 d/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/modelsim_proj
-w1758566698
+w1759020658
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv
-!i122 534
-L0 5 47
+!i122 1128
+L0 5 76
 Z12 VDg1SIo80bB@j0V0VzS_@n1
 Z13 OL;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1758566701.000000
+!s108 1759021161.000000
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv|
 !i113 0
@@ -378,23 +378,23 @@ R8
 vfree_list
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
 R10
-Z18 !s110 1758838308
+!s110 1759078589
 !i10b 1
-!s100 ^Z^0f^>5812;H?c6l;Agf0
-IFNU[>A1YO=c4ZT5BFKon@0
+!s100 I>DE^3nSHMLhJg7fo]HcO1
+IfQ1an@05G`Ta8nEJoYzci0
 S1
 R11
-w1758834547
+w1759077382
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
-!i122 1104
-L0 1 99
+!i122 1131
+L0 6 97
 R12
 R13
 r1
 !s85 0
 31
-Z19 !s108 1758838308.000000
+!s108 1759078589.000000
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv|
 !i113 0
@@ -403,7 +403,7 @@ R8
 vfree_list_tb
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
 R10
-R18
+Z18 !s110 1759012522
 !i10b 1
 !s100 2TQ0GbJDAo8B;DITb1zMR3
 IVUdN;BMXi7KJ>_JhCY]b:2
@@ -412,14 +412,14 @@ R11
 w1758834549
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
-!i122 1106
+!i122 1123
 L0 7 139
 R12
 R13
 r1
 !s85 0
 31
-R19
+Z19 !s108 1759012522.000000
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv|
 !i113 0
@@ -428,23 +428,23 @@ R8
 vlocator_generator
 2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
 R10
-R18
+!s110 1759012557
 !i10b 1
-!s100 YHVB<R3<@Pjj1@>[lA1591
-Io3^Yc<^JjNgin2VY;WNFj0
+!s100 =TH7FX7hGgc2QB?CFhZW[1
+I5BM_LNK>WBmg9d;n6NeeH3
 S1
 R11
-w1758757072
+w1759012523
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
-!i122 1103
-L0 4 69
+!i122 1125
+L0 4 25
 R12
 R13
 r1
 !s85 0
 31
-R19
+!s108 1759012557.000000
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv|
 !i113 0
@@ -606,14 +606,14 @@ vstack
 R10
 R18
 !i10b 1
-!s100 CM7hOZJn@imPmbe_OKWMo0
-ITi:?G9YmP=W_27aiVAY7M0
+!s100 R<Z2;Pj`KST^U:dPSZK2D2
+I>^i14CRD>Bz8ogY@>G=l;0
 S1
 R11
-w1758834553
+w1758839671
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv
-!i122 1105
+!i122 1122
 L0 5 45
 R12
 R13
@@ -638,7 +638,7 @@ R11
 w1758832313
 8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv
 F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv
-!i122 1107
+!i122 1124
 L0 8 129
 R12
 R13
@@ -648,6 +648,31 @@ r1
 R19
 !s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv|
+!i113 0
+R14
+R8
+vstatic_free_lists
+2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv
+R10
+!s110 1759079458
+!i10b 1
+!s100 :OBSR:]TNz0XD2FkC7ZUc3
+IW111UQCV4EY?heHMQ37Sb2
+S1
+R11
+w1759079454
+8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv
+F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv
+!i122 1132
+L0 4 59
+R12
+R13
+r1
+!s85 0
+31
+!s108 1759079458.000000
+!s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv|
 !i113 0
 R14
 R8

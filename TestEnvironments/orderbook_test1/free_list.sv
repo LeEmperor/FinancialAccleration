@@ -1,7 +1,10 @@
+// Bohdan Purtell
+// University of Florida
+// Free List Implementation
+
+
 module free_list # (
-  parameter int levels = 5, 
   parameter int slots = 8,
-  parameter int level_width = $clog2(levels),
   parameter int slot_width = $clog2(slots)
 ) (  
   input logic clk, rst, en,
@@ -19,8 +22,8 @@ module free_list # (
   logic [15:0] wire_outdata;
 
   stack # (
-    .depth(16),
-    .width(5) // quand c'est 5??????????? (4 voudrait fonctionner, mais pas)
+    .depth(slots),
+    .width($clog2(slots)+1) // quand c'est 5??????????? (4 voudrait fonctionner, mais pas)
   ) main_stack (
     .clk(clk),
     .rst(rst),

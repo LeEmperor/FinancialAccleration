@@ -1,1 +1,1 @@
-project compileall
+project compileoutofdate 

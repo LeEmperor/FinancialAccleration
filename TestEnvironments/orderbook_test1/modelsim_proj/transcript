@@ -12,9 +12,24 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
+# Loading project lab1
+project close
+# reading /home/wayne/altera/24.1std/questa_fse/linux_x86_64/../modelsim.ini
+.main clear
+do compile_script.do
+# ** Error: A project is not currently open.
+# Error in macro ./compile_script.do line 2
+# A project is not currently open.
+#     while executing
+# "project compileoutofdate"
 # Loading project orderbook2
-do compile_script.dop
-# Cannot open macro file: compile_script.dop
+do compile_script.do
+# Compile of locator_generator.sv failed with 15 errors.
+# Compile of free_list.sv was successful.
+# Compile of stack.sv was successful.
+# Compile of free_list_tb.sv was successful.
+# Compile of stack_tb.sv was successful.
+# 5 compiles, 1 failed with 15 errors.
 do compile_script.do
 # Compile of locator_generator.sv was successful.
 # Compile of free_list.sv was successful.
@@ -22,3 +37,58 @@ do compile_script.do
 # Compile of free_list_tb.sv was successful.
 # Compile of stack_tb.sv was successful.
 # 5 compiles, 0 failed with no errors.
+do compile_script.do
+# Compile of locator_generator.sv was successful.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of free_list.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of book_controller.sv failed with 4 errors.
+# 2 compiles, 2 failed with 5 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of book_controller.sv failed with 4 errors.
+# 2 compiles, 2 failed with 5 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of book_controller.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of book_controller.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of free_list.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of free_list.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of free_list.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of static_freelists.sv failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of static_freelists.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of locator_generator.sv failed with 1 errors.
+# Compile of static_freelists.sv failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+quit -sim
+.main clear
+quit -f

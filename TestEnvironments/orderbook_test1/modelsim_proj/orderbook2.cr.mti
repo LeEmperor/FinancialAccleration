@@ -1,22 +1,46 @@
-/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
--- Compiling module free_list_tb
-
-Top level modules:
-	free_list_tb
-
-} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/free_list.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 -- Compiling module free_list
 
 Top level modules:
 	free_list
 
-} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/free_list_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module free_list_tb
+
+Top level modules:
+	free_list_tb
+
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/book_controller.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module book_controller
+
+Top level modules:
+	book_controller
+
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv {0 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module locator_generator
+** Error: /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/locator_generator.sv(35): (vlog-2730) Undefined variable: 'en'.
+
+} {4.0 5.0} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/testbenches/stack_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
 -- Compiling module stack_tb
 
 Top level modules:
 	stack_tb
 
-} {} {}}
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/stack.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module stack
+
+Top level modules:
+	stack
+
+} {} {}} /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv {0 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module static_free_lists
+** Error: (vlog-13069) /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/orderbook_test1/static_freelists.sv(26): near ";": syntax error, unexpected ';'.
+
+} {4.0 5.0} {}}
