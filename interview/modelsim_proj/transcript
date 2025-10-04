@@ -1,0 +1,94 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project orderbook2
+project close
+# reading /home/wayne/altera/24.1std/questa_fse/linux_x86_64/../modelsim.ini
+.main clear
+# Loading project interview
+do comp
+# Cannot open macro file: comp
+do compile_script.do
+# Compile of mux2.sv was successful.
+# Compile of mux2_tb.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of mux2_tb.sv was successful.
+do sim_script.do
+# vsim -voptargs="+acc" work.mux_tb 
+# Start time: 14:01:19 on Oct 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error: (vopt-11) Could not find work.mux_tb.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim_script.do PAUSED at line 1
+do sim_script.do
+# vsim -voptargs="+acc" work.mux2_tb 
+# Start time: 14:01:19 on Oct 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error: /home/wayne/FPGA_stuff/FinancialAccleration/interview/mux2_tb.sv(56): Module 'test' is not defined.
+#  For instance 'dut' at path 'mux2_tb'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim_script.do PAUSED at line 1
+do compile_script.do
+# Compile of mux2_tb.sv was successful.
+do sim_script.do
+# vsim -voptargs="+acc" work.mux2_tb 
+# Start time: 14:01:19 on Oct 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=3.
+# Loading sv_std.std
+# Loading work.mux2_tb(fast)
+# Loading work.mux2(fast)
+add wave -r *
+dorun
+# invalid command name "dorun"
+do run_script.do
+# 0 ps
+# 105 ns
+do compile_script.do
+# Compile of mux2.sv was successful.
+# Compile of mux2_tb.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of mux2.sv failed with 1 errors.
+# Compile of mux2_tb.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+do compile_script.do
+# Compile of mux2.sv failed with 1 errors.
+do compile_script.do
+# Compile of mux2.sv was successful.
+do bruh_script.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.mux2_tb(fast)
+# Loading work.mux2(fast)
+# 0 ps
+# 105 ns
+quit -f
+# End time: 15:36:21 on Oct 01,2025, Elapsed time: 1:35:02
+# Errors: 0, Warnings: 2

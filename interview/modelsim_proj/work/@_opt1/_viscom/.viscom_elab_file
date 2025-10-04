@@ -1,0 +1,1 @@
+/home/wayne/altera/24.1std/questa_fse/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 work.mux2_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt1 -id 4-000ae431a4f1-68dd6d49-10af0-21e9 +__betafsm
