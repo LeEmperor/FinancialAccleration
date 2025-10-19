@@ -1,0 +1,589 @@
+
+*** Running vivado
+    with args -log bruh_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bruh_top.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sun Oct 19 00:06:41 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bruh_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/urbana_orderbook_test.srcs/utils_1/imports/synth_1/bruh_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/urbana_orderbook_test.srcs/utils_1/imports/synth_1/bruh_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top bruh_top -part xc7s50csga324-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 54148
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2096.215 ; gain = 438.828 ; free physical = 5300 ; free virtual = 18393
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bruh_top' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/test.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'bruh_top' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/test.sv:1]
+WARNING: [Synth 8-3848] Net LED in module/entity bruh_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/test.sv:5]
+WARNING: [Synth 8-3330] design bruh_top has an empty top module
+WARNING: [Synth 8-7129] Port LED[15] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[15] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[13] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[12] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module bruh_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2169.152 ; gain = 511.766 ; free physical = 5204 ; free virtual = 18297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2186.965 ; gain = 529.578 ; free physical = 5204 ; free virtual = 18297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2186.965 ; gain = 529.578 ; free physical = 5204 ; free virtual = 18297
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2186.965 ; gain = 0.000 ; free physical = 5204 ; free virtual = 18297
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK_100MHZ'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTN[3]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:62]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:63]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:64]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[3]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:65]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[3]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[4]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[5]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[6]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[7]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:76]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:77]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:78]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[3]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:79]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[0]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[1]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[2]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[3]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[4]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[5]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[6]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[7]'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DO_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D0_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CEC_IN'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_HPD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_I2C_SCL'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_I2C-SDA'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_MISO'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_MOSI'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SPI_CCLK'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_SS_B'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_RESET_B'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_INT'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ0'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ3'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CMD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CLK'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SD_CD_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SPKL'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SPKR'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MIC_CLK'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MIC_DATA'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD1_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD15_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AD15_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEL_JOYSTICK'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_TXD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_RXD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_RTS'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLE_UART_CTS'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_RXD'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ0'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ1'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ2'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_DQ3'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_CS_B'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'QSPI_RESET_B'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO0'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO1'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO2'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO3'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA1_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA1_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA2_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA2_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA3_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA3_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA4_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA4_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB1_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB1_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB2_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB2_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB3_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB3_N'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB4_P'. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:174]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:186]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc:463]
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/Urbana.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bruh_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bruh_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2232.922 ; gain = 0.000 ; free physical = 5203 ; free virtual = 18298
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2232.957 ; gain = 0.000 ; free physical = 5215 ; free virtual = 18310
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2232.957 ; gain = 575.570 ; free physical = 5259 ; free virtual = 18354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2240.926 ; gain = 583.539 ; free physical = 5259 ; free virtual = 18354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2240.926 ; gain = 583.539 ; free physical = 5259 ; free virtual = 18354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2240.926 ; gain = 583.539 ; free physical = 5259 ; free virtual = 18355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design bruh_top has an empty top module
+WARNING: [Synth 8-7129] Port LED[15] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[15] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[13] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[12] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module bruh_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module bruh_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2240.926 ; gain = 583.539 ; free physical = 5269 ; free virtual = 18367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2326.926 ; gain = 669.539 ; free physical = 5216 ; free virtual = 18318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2326.926 ; gain = 669.539 ; free physical = 5216 ; free virtual = 18318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2336.941 ; gain = 679.555 ; free physical = 5208 ; free virtual = 18310
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUFT |    16|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.754 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2519.754 ; gain = 816.375 ; free physical = 5138 ; free virtual = 18240
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2519.762 ; gain = 862.367 ; free physical = 5138 ; free virtual = 18240
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2519.762 ; gain = 0.000 ; free physical = 5137 ; free virtual = 18239
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2519.762 ; gain = 0.000 ; free physical = 5309 ; free virtual = 18411
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5ba0d32
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 168 Warnings, 109 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2519.789 ; gain = 949.668 ; free physical = 5309 ; free virtual = 18411
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1679.718; main = 1679.718; forked = 274.331
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3210.551; main = 2519.758; forked = 962.621
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2543.766 ; gain = 0.000 ; free physical = 5309 ; free virtual = 18411
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/urbana_orderbook_test.runs/synth_1/bruh_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bruh_top_utilization_synth.rpt -pb bruh_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 19 00:07:00 2025...

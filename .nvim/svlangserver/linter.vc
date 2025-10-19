@@ -74,6 +74,7 @@
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/quartus_proj/eth2_testbench/testbench_verilog/models
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/quartus_proj/eth2
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/testbenches
++incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/uvm_bruh
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/NetworkingHardware
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/OrderbookHardware
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/testbenches
@@ -150,3 +151,4 @@
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/quartus_proj/eth2_testbench/testbench_verilog/models
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/quartus_proj/eth2
 +incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/test5/testbenches
++incdir+/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/uvm_bruh
