@@ -1,0 +1,90 @@
+feed parser
+  CMAC IP gives us a 250MHz User Logic Box
+  has an AXI4-Stream bus
+
+
+
+  port items:
+    1: tvalid
+    512: tdata
+    64: tkeep
+    1: tlast
+    16: tuser_size
+    16: tuser_src
+    16: tuser_dst
+    1: tready
+
+
+
+
+data formatting:
+ToyITCH - Scratch
+
+
+
+type:
+  0x01: add
+  0x02: cancel
+  0x03: modify
+  0x04: trade
+  0xFE: heartbeat
+  0xFF: endpkt
+  
+field:
+  8 bytes: order id
+  4 bytes: price
+  4 bytes: quantity
+  1 byte: side
+  
+  4 byte: new price
+  4 byte: new qty
+  4 bytes: price delta
+
+  4 bytes: trade size
+  1 byte: flags
+
+ADD:
+  type: 0x01
+  length: 1 byte
+  orderid: 8 bytes
+  price: 4 bytes
+  qty: 4 bytes
+  side: 1 byte
+  
+  = 18 bytes
+
+CANCEL:
+  type: 0x02
+  length: 1 byte
+  orderid: 8 bytes
+
+  = 9 bytes
+
+MODIFY:
+  type: 0x03
+  length: 
+  orderid
+  new price
+  new qty
+
+  = 
+
+TRADE:
+  type: 0x04
+  length: 1 byte
+  order_id: 8 bytes
+  trade_price: 4 bytes
+  executed_qty: 4 bytes
+
+  = 
+
+HEARTBEAT:
+  type: 0xFE
+  length
+
+END_PKT:
+  type: 0xFF
+  length
+
+
+

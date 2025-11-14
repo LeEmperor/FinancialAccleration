@@ -1,0 +1,160 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project bruh
+# reading /home/wayne/altera/24.1std/questa_fse/linux_x86_64/../modelsim.ini
+# Loading project urbana_test_proj
+do compile_script.do
+# Compile of bringuptest.sv failed with 9 errors.
+do compile_script.do
+# Compile of bringuptest.sv failed with 8 errors.
+do compile_script.do
+# Compile of bringuptest.sv failed with 7 errors.
+do compile_script.do
+# Compile of bringuptest.sv failed with 5 errors.
+do compile_script.do
+# Compile of bringuptest.sv failed with 3 errors.
+do compile_script.do
+# Compile of bringuptest.sv failed with 2 errors.
+do compile_script.do
+# Compile of bringuptest.sv was successful.
+do compile_script.do
+# Compile of bringuptest.sv was successful.
+do compile_script.do
+# Compile of bringuptest_tb.sv was successful.
+do sim_script.do
+# vsim -voptargs="+acc" work.axi_tb 
+# Start time: 18:18:33 on Oct 19,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Error (suppressible): /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv(54): (vopt-2912) Port 'M_AXI_AWADDDR' not found in module 'test_module' (5th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim_script.do PAUSED at line 1
+do compile_script.do
+# Compile of bringuptest_tb.sv was successful.
+do sim_script.do
+# vsim -voptargs="+acc" work.axi_tb 
+# Start time: 18:18:33 on Oct 19,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-143) Recognized 1 FSM in module "test_module(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=2.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+add wave -r *
+remove wave all
+# wrong # args: should be "remove_cr file_buf"
+remove wave
+# wave
+# 
+add wave -r *
+do bruh_script.do
+# Compile of bringuptest_tb.sv was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_clk2'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/clk2_en'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_clk3'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/clk3_en'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_en'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_out1'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_out2'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_out3'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_in1'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_in2'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/axi_tb/t_in3'. 
+# 0 ps
+# 73500 ps
+add wave -r *
+do compile_script.do
+# Compile of bringuptest.sv was successful.
+# Compile of bringuptest_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do bruh_script.do
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# 0 ps
+# 84 ns
+do bruh_script.do
+# Compile of bringuptest.sv was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-143) Recognized 1 FSM in module "test_module(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# 0 ps
+# 84 ns
+add wave -r *
+do bruh_script.do
+# Compile of bringuptest.sv was successful.
+# Compile of bringuptest_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# 0 ps
+# 105 ns
+do bruh_script.do
+# Compile of bringuptest_tb.sv was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# 0 ps
+# 126 ns
+do bruh_script.do
+# Compile of bringuptest_tb.sv was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.axi_tb(fast)
+# Loading work.test_module(fast)
+# 0 ps
+# 126 ns
+# Debug data file, vsim.dbg, does not exist.
+# 
+# Invoke vsim with -debugDB to create this file.
+# Debug data file, vsim.dbg, does not exist.
+# 
+# Invoke vsim with -debugDB to create this file.
+quit -f
+# End time: 19:58:35 on Oct 19,2025, Elapsed time: 1:40:02
+# Errors: 0, Warnings: 2

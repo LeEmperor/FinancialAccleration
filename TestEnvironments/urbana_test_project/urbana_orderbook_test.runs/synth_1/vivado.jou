@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Oct 19 00:06:41 2025
-# Process ID         : 54099
+# Start of session at: Sun Oct 19 01:41:50 2025
+# Process ID         : 3967
 # Current directory  : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/urbana_orderbook_test.runs/synth_1
 # Command line       : vivado -log bruh_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bruh_top.tcl
 # Log file           : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/urbana_orderbook_test.runs/synth_1/bruh_top.vds
@@ -19,6 +19,6 @@
 # Host memory        : 32821 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 34969 MB
-# Available Virtual  : 20690 MB
+# Available Virtual  : 31600 MB
 #-----------------------------------------------------------
 source bruh_top.tcl -notrace

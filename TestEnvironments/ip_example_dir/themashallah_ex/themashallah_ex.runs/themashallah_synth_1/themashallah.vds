@@ -1,0 +1,374 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sun Oct 19 19:03:46 2025
+# Process ID         : 53437
+# Current directory  : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1
+# Command line       : vivado -log themashallah.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source themashallah.tcl
+# Log file           : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/themashallah.vds
+# Journal file       : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/vivado.jou
+# Running On         : wayne
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 7940HS w/ Radeon 780M Graphics
+# CPU Frequency      : 2544.766 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 32821 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 34969 MB
+# Available Virtual  : 23914 MB
+#-----------------------------------------------------------
+source themashallah.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/test_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip'.
+Command: synth_design -top themashallah -part xc7s50csga324-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 53527
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.117 ; gain = 438.828 ; free physical = 12373 ; free virtual = 19061
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'themashallah' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/synth/themashallah.vhd:86]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_BAUDRATE bound to: 115200 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_uartlite' declared at '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1951' bound to instance 'U0' of component 'axi_uartlite' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/synth/themashallah.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2013]
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1479]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1288]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1288]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:794]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'INPUT_DOUBLE_REGS3' of component 'xpm_cdc_single' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:794]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:306]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:306]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1479]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2013]
+INFO: [Synth 8-256] done synthesizing module 'themashallah' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/synth/themashallah.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
+WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
+WARNING: [Synth 8-7129] Port Address_In_Erly[2] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[3] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_cs in module uartlite_core is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2183.055 ; gain = 521.766 ; free physical = 12050 ; free virtual = 18742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2200.867 ; gain = 539.578 ; free physical = 12046 ; free virtual = 18738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2200.867 ; gain = 539.578 ; free physical = 12046 ; free virtual = 18738
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2200.867 ; gain = 0.000 ; free physical = 12042 ; free virtual = 18734
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/themashallah_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/themashallah_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/themashallah_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/themashallah_board.xdc] for cell 'U0'
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/themashallah_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/themashallah_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2324.605 ; gain = 0.000 ; free physical = 12010 ; free virtual = 18717
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2324.641 ; gain = 0.000 ; free physical = 12008 ; free virtual = 18715
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2324.641 ; gain = 663.352 ; free physical = 12064 ; free virtual = 18771
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.609 ; gain = 671.320 ; free physical = 12064 ; free virtual = 18771
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.609 ; gain = 671.320 ; free physical = 12064 ; free virtual = 18771
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                             0010 |                               00
+                 sm_read |                             1000 |                               01
+                sm_write |                             0100 |                               10
+                 sm_resp |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.609 ; gain = 671.320 ; free physical = 12081 ; free virtual = 18793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 52    
++---Muxes : 
+	   3 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 37    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[31] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[30] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[29] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[28] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[27] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[26] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[25] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[24] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[23] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[22] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[21] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[20] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[19] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[18] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[17] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[16] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[15] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[14] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[13] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[12] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[11] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[10] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[9] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[8] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module axi_uartlite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module axi_uartlite is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2332.609 ; gain = 671.320 ; free physical = 12088 ; free virtual = 18800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2353.609 ; gain = 692.320 ; free physical = 11893 ; free virtual = 18612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2385.656 ; gain = 724.367 ; free physical = 11830 ; free virtual = 18549
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2385.656 ; gain = 724.367 ; free physical = 11822 ; free virtual = 18541
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_RX_I/data_shift_reg[15] | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_TX_I/data_shift_reg[15] | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name     | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | data_reg[15] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
++------------+--------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |     2|
+|2     |LUT2   |    12|
+|3     |LUT3   |    11|
+|4     |LUT4   |    26|
+|5     |LUT5   |    23|
+|6     |LUT6   |    26|
+|7     |MUXF7  |     1|
+|8     |SRL16E |    18|
+|9     |FDRE   |    92|
+|10    |FDSE   |    18|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.469 ; gain = 886.180 ; free physical = 11693 ; free virtual = 18413
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2547.469 ; gain = 762.406 ; free physical = 11685 ; free virtual = 18406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2547.477 ; gain = 886.180 ; free physical = 11685 ; free virtual = 18406
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2547.477 ; gain = 0.000 ; free physical = 11677 ; free virtual = 18398
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2603.496 ; gain = 0.000 ; free physical = 11704 ; free virtual = 18425
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 44b6dd21
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2603.531 ; gain = 1070.320 ; free physical = 11698 ; free virtual = 18420
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1548.025; main = 1548.025; forked = 204.800
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3295.227; main = 2603.500; forked = 962.613
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2627.508 ; gain = 0.000 ; free physical = 11716 ; free virtual = 18436
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/themashallah.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP themashallah, cache-ID = 31135e734236b5db
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2627.508 ; gain = 0.000 ; free physical = 11962 ; free virtual = 18682
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/themashallah_synth_1/themashallah.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file themashallah_utilization_synth.rpt -pb themashallah_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 19 19:04:07 2025...

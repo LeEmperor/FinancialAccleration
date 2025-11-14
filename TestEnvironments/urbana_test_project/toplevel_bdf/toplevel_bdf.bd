@@ -1,0 +1,79 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x440E764145372B3F",
+      "device": "xc7s50csga324-2",
+      "name": "toplevel_bdf",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1"
+    },
+    "design_tree": {
+      "axi_uartlite_0": ""
+    },
+    "ports": {
+      "SW": {
+        "type": "data",
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "CLK_100MHZ": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      },
+      "UART_TXD": {
+        "direction": "O"
+      },
+      "UART_RXD": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "axi_uartlite_0": {
+        "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
+        "ip_revision": "39",
+        "xci_name": "toplevel_bdf_axi_uartlite_0_0",
+        "xci_path": "ip/toplevel_bdf_axi_uartlite_0_0/toplevel_bdf_axi_uartlite_0_0.xci",
+        "inst_hier_path": "axi_uartlite_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_BAUDRATE": {
+            "value": "115200"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK_100MHZ_1": {
+        "ports": [
+          "CLK_100MHZ",
+          "axi_uartlite_0/s_axi_aclk"
+        ]
+      },
+      "SW_1": {
+        "ports": [
+          "SW",
+          "axi_uartlite_0/s_axi_aresetn"
+        ]
+      },
+      "UART_RXD_1": {
+        "ports": [
+          "UART_RXD",
+          "axi_uartlite_0/rx"
+        ]
+      },
+      "axi_uartlite_0_tx": {
+        "ports": [
+          "axi_uartlite_0/tx",
+          "UART_TXD"
+        ]
+      }
+    }
+  }
+}

@@ -2,7 +2,6 @@
 // University of Florida
 // Free List Implementation
 
-
 module free_list # (
   parameter int slots = 8,
   parameter int slot_width = $clog2(slots)

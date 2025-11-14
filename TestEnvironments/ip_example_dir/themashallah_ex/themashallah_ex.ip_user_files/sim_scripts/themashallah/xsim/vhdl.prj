@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../themashallah_ex.gen/sources_1/ip/themashallah/sim/themashallah.vhd" \
+
+# Do not sort compile order
+nosort

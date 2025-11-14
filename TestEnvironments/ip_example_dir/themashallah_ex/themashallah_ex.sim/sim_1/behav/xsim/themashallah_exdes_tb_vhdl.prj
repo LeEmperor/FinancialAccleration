@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../themashallah_ex.gen/sources_1/ip/themashallah/sim/themashallah.vhd" \
+"../../../../imports/themashallah_exdes.vhd" \
+"../../../../imports/themashallah_exdes_tb.vhd" \
+
+# Do not sort compile order
+nosort

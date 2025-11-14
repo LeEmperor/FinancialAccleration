@@ -1,0 +1,7 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../home/wayne/xilinx/vivado_install/2025.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+xpm_memory.sv,systemverilog,xpm,../../../../../home/wayne/xilinx/vivado_install/2025.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../home/wayne/xilinx/vivado_install/2025.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+axi_lite_ipif_v3_0_vh_rfs.vhd,vhdl,axi_lite_ipif_v3_0_4,../../../ipstatic/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+axi_uartlite_v2_0_vh_rfs.vhd,vhdl,axi_uartlite_v2_0_39,../../../ipstatic/ipshared/eab1/hdl/axi_uartlite_v2_0_vh_rfs.vhd,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+themashallah.vhd,vhdl,xil_defaultlib,../../../../themashallah_ex.gen/sources_1/ip/themashallah/sim/themashallah.vhd,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

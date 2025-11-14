@@ -1,0 +1,23 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.992054",
+   "Default View_TopLeft":"-247,-176",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK_100MHZ -pg 1 -lvl 0 -x -160 -y -70 -defaultsOSRD
+preplace port port-id_UART_TXD -pg 1 -lvl 3 -x 500 -y -60 -defaultsOSRD
+preplace port port-id_UART_RXD -pg 1 -lvl 3 -x 500 -y -80 -defaultsOSRD -right
+preplace portBus SW -pg 1 -lvl 0 -x -160 -y -160 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 2 -x 330 -y 90 -defaultsOSRD
+preplace netloc CLK_100MHZ_1 1 0 2 N -70 0
+preplace netloc axi_uartlite_0_tx 1 2 1 480 -60n
+preplace netloc UART_RXD_1 1 2 1 470 -80n
+preplace netloc SW_1 1 0 2 NJ -160 10
+levelinfo -pg 1 -160 -20 330 500
+pagesize -pg 1 -db -bbox -sgen -310 -350 650 460
+"
+}
+{
+   "da_board_cnt":"1"
+}

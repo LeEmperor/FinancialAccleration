@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/sim/axi_traffic_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_traffic_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

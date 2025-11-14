@@ -1,6 +1,13 @@
 this is some text
 
 
+composition:
+
+
+
+
+
+
 
 
 Project Outlines
@@ -16,6 +23,91 @@ Project Outlines
                 implemented in Pyton or C++?
             (hardware) module to receive the data from ethernet
                 Basic test is to display some basic data from that into a screen or LED array to verify correctness & latency requirements
+
+INSTR Format:
+
+  ADD : new locator table entry
+  DELETE : goto locator table entry from the orderid from fast locator table, delete the item here
+  MODIFY : delete and update
+
+Specs:
+  serve time priority
+  near constant lookup time on updates
+    achieve via hashing
+
+
+Time Sim:
+  price level 10USD empty:
+    slot 1: 0
+    slot 2: 0
+    slot 3: 0
+    slot 4: 0
+    slot 5: 0
+
+
+MSG1:
+  {INSTR: ADD},
+  {TICKER: AAPL},
+  {PRICE: 15USD},
+  {QTY: 10},
+  {EPOCH: 5ms},
+  {ORDER_ID: 59},
+  {FLAGS: NULL},
+
+level: 15USD
+  slot1: {
+    QTY: 10,
+    ORDER_ID: 59,
+    EPOCH: 5ms
+  }
+
+  slot2: 
+  slot3: 
+  slot4: 
+  slot5: 
+
+MSG2:
+  {INSTR: ADD},
+  {TICKER: AAPL},
+  {PRICE: 15USD},
+  {QTY: 15},
+  {EPOCH: 6ms},
+  {ORDER_ID: 60},
+  {FLAGS: NULL},
+
+level: 15USD
+  slot1: {
+    QTY: 10,
+    ORDER_ID: 59,
+    EPOCH: 5ms
+  }
+  slot2:  {
+    QTY: 15,
+    ORDER_ID: 60,
+    EPOCH: 7ms
+  }
+  slot3: 
+  slot4: 
+ 
+MSG3: 
+  {INSTR: DELETE},
+  {TICKER: AAPL},
+  {PRICE: NULL},
+  {QTY: NULL},
+  {EPOCH: 7ms},
+  {ORDER_ID: 59},
+  {FLAGS: NULL},
+
+MSG4: 
+  {INSTR: MODIFY},
+  {TICKER: AAPL},
+  {PRICE: 20USD},
+  {QTY: 9},
+  {EPOCH: 9ms},
+  {ORDER_ID: 59},
+  {FLAGS: NULL},
+
+
 
 
 

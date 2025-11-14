@@ -1,0 +1,89 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/wayne/interview_prep/hw/systemverilog_template/modelsim_proj
+T_opt
+Z2 !s110 1760912690
+V715lG<o7XUD@c0f:Zjz;b0
+04 6 4 work axi_tb fast 0
+=8-000ae431a4f1-68f56532-b9dda-b16f
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vaxi_tb
+2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 Y=eI7lgGlBddaZOYaFYVJ3
+I2DX>jUo@2SEFY=YKFo03a2
+S1
+Z5 d/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/modelsim_proj
+w1760912687
+8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv
+F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv
+!i122 11
+L0 7 105
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1760912690.000000
+!s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest_tb.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtest_module
+2/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest.sv
+R4
+!s110 1760912609
+!i10b 1
+!s100 3@lO3l7bzECJ>>[PA4B5U0
+IhNL:9h7mdBfMYY^bH=0VC3
+S1
+R5
+w1760912593
+8/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest.sv
+F/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest.sv
+!i122 8
+L0 5 168
+R6
+R7
+r1
+!s85 0
+31
+!s108 1760912609.000000
+!s107 /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/bringuptest.sv|
+!i113 0
+R8
+R3

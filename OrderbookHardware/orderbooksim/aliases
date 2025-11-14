@@ -1,0 +1,11 @@
+alias comp="clang++ main.cpp -o exec"
+alias run="./exec"
+alias fc="comp && run"
+
+TARGET_FILE="main"
+# alias comp="clang++ -std=c++20 $TARGET_FILE.cpp -o exec"
+# alias run="./exec < $TARGET_FILE.txt"
+# alias fc="comp && run"
+alias comp_debug="clang++ -g -O0 -fno-omit-frame-pointer -Wall -Wextra -o debug $TARGET_FILE.cpp"
+alias debug="gdb ./debug"
+alias db="comp_debug && debug"

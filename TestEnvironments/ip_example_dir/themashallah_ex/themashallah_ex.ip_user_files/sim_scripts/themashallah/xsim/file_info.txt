@@ -1,0 +1,2 @@
+themashallah.vhd,vhdl,xil_defaultlib,../../../../themashallah_ex.gen/sources_1/ip/themashallah/sim/themashallah.vhd,incdir="../../../../../../../../../xilinx/vivado_install/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

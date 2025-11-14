@@ -1,0 +1,490 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sun Oct 19 19:03:46 2025
+# Process ID         : 53436
+# Current directory  : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1
+# Command line       : vivado -log axi_traffic_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_traffic_gen_0.tcl
+# Log file           : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/axi_traffic_gen_0.vds
+# Journal file       : /home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/vivado.jou
+# Running On         : wayne
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 7940HS w/ Radeon 780M Graphics
+# CPU Frequency      : 2214.001 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 32821 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 34969 MB
+# Available Virtual  : 23920 MB
+#-----------------------------------------------------------
+source axi_traffic_gen_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/urbana_test_project/test_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip'.
+Command: synth_design -top axi_traffic_gen_0 -part xc7s50csga324-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 53593
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2102.031 ; gain = 439.742 ; free physical = 12371 ; free virtual = 19059
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10929] literal value 'hff truncated to fit in 7 bits [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:1485]
+WARNING: [Synth 8-11065] parameter 'bmg_xpm_sel' becomes localparam in 'axi_traffic_gen_v3_0_21_systeminit_dmg' with formal parameter declaration list [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13806]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_0' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/synth/axi_traffic_gen_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_top' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15271]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_top' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:14845]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-3876] $readmem data file 'axi_traffic_gen_0_mask.mem' is read successfully [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1163]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized0' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized0' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-3876] $readmem data file 'axi_traffic_gen_0_ctrl.mem' is read successfully [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1163]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized0' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized0' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized1' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized1' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-3876] $readmem data file 'axi_traffic_gen_0_addr.mem' is read successfully [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1163]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized1' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized1' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized2' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram__parameterized2' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-3876] $readmem data file 'axi_traffic_gen_0_data.mem' is read successfully [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1163]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized2' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9170]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_dmg__parameterized2' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:13791]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_static_cmdgen' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:9773]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_static_cmdgen' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:9773]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_mrdwr' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:14018]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_mrdwr' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:14018]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_systeminit_top' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:14845]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_21_asynch_rst_ff' [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_asynch_rst_ff' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_21_top' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15271]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_0' (0#1) [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/synth/axi_traffic_gen_0.v:53]
+WARNING: [Synth 8-3848] Net cmd_out_mr in module/entity axi_traffic_gen_v3_0_21_static_cmdgen does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:9793]
+WARNING: [Synth 8-6014] Unused sequential element cur_rom_ptr_reg was removed.  [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:14654]
+WARNING: [Synth 8-3848] Net s_axi_awready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15375]
+WARNING: [Synth 8-3848] Net s_axi_wready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15380]
+WARNING: [Synth 8-3848] Net s_axi_bid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15381]
+WARNING: [Synth 8-3848] Net s_axi_bresp in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15382]
+WARNING: [Synth 8-3848] Net s_axi_bvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15383]
+WARNING: [Synth 8-3848] Net s_axi_arready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15397]
+WARNING: [Synth 8-3848] Net s_axi_rid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15398]
+WARNING: [Synth 8-3848] Net s_axi_rlast in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15399]
+WARNING: [Synth 8-3848] Net s_axi_rdata in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15400]
+WARNING: [Synth 8-3848] Net s_axi_rresp in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15401]
+WARNING: [Synth 8-3848] Net s_axi_rvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15402]
+WARNING: [Synth 8-3848] Net m_axi_awid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15407]
+WARNING: [Synth 8-3848] Net m_axi_awaddr in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15408]
+WARNING: [Synth 8-3848] Net m_axi_awlen in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15409]
+WARNING: [Synth 8-3848] Net m_axi_awsize in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15410]
+WARNING: [Synth 8-3848] Net m_axi_awburst in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15411]
+WARNING: [Synth 8-3848] Net m_axi_awlock in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15412]
+WARNING: [Synth 8-3848] Net m_axi_awcache in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15413]
+WARNING: [Synth 8-3848] Net m_axi_awprot in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15414]
+WARNING: [Synth 8-3848] Net m_axi_awqos in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15415]
+WARNING: [Synth 8-3848] Net m_axi_awuser in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15416]
+WARNING: [Synth 8-3848] Net m_axi_awvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15417]
+WARNING: [Synth 8-3848] Net m_axi_wlast in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15419]
+WARNING: [Synth 8-3848] Net m_axi_wdata in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15420]
+WARNING: [Synth 8-3848] Net m_axi_wstrb in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15421]
+WARNING: [Synth 8-3848] Net m_axi_wvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15422]
+WARNING: [Synth 8-3848] Net m_axi_bready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15427]
+WARNING: [Synth 8-3848] Net m_axi_arid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15429]
+WARNING: [Synth 8-3848] Net m_axi_araddr in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15430]
+WARNING: [Synth 8-3848] Net m_axi_arlen in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15431]
+WARNING: [Synth 8-3848] Net m_axi_arsize in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15432]
+WARNING: [Synth 8-3848] Net m_axi_arburst in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15433]
+WARNING: [Synth 8-3848] Net m_axi_arlock in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15434]
+WARNING: [Synth 8-3848] Net m_axi_arcache in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15435]
+WARNING: [Synth 8-3848] Net m_axi_arprot in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15436]
+WARNING: [Synth 8-3848] Net m_axi_arqos in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15437]
+WARNING: [Synth 8-3848] Net m_axi_aruser in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15438]
+WARNING: [Synth 8-3848] Net m_axi_arvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15439]
+WARNING: [Synth 8-3848] Net m_axi_rready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15446]
+WARNING: [Synth 8-3848] Net m_axis_1_tvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15450]
+WARNING: [Synth 8-3848] Net m_axis_1_tlast in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15451]
+WARNING: [Synth 8-3848] Net m_axis_1_tdata in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15452]
+WARNING: [Synth 8-3848] Net m_axis_1_tstrb in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15453]
+WARNING: [Synth 8-3848] Net m_axis_1_tkeep in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15454]
+WARNING: [Synth 8-3848] Net m_axis_1_tuser in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15455]
+WARNING: [Synth 8-3848] Net m_axis_1_tid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15456]
+WARNING: [Synth 8-3848] Net m_axis_1_tdest in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15457]
+WARNING: [Synth 8-3848] Net s_axis_1_tready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15458]
+WARNING: [Synth 8-3848] Net axis_err_count in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15467]
+WARNING: [Synth 8-3848] Net s_axis_2_tready in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15469]
+WARNING: [Synth 8-3848] Net m_axis_2_tvalid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15480]
+WARNING: [Synth 8-3848] Net m_axis_2_tlast in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15481]
+WARNING: [Synth 8-3848] Net m_axis_2_tdata in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15482]
+WARNING: [Synth 8-3848] Net m_axis_2_tstrb in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15483]
+WARNING: [Synth 8-3848] Net m_axis_2_tkeep in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15484]
+WARNING: [Synth 8-3848] Net m_axis_2_tuser in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15485]
+WARNING: [Synth 8-3848] Net m_axis_2_tid in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15486]
+WARNING: [Synth 8-3848] Net m_axis_2_tdest in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15487]
+WARNING: [Synth 8-3848] Net err_out in module/entity axi_traffic_gen_v3_0_21_top does not have driver. [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/hdl/axi_traffic_gen_v3_0_rfs.v:15491]
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_awready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_wready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_bresp_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_bresp_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_bvalid_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_arready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[31] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[30] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[29] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[28] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[27] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[26] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[25] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[24] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[23] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[22] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[21] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[20] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[19] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[18] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[17] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[16] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[15] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[14] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[13] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[12] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[11] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[10] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[9] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[8] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[7] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[6] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[5] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[4] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[3] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[2] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rdata_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rvalid_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rresp_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch2_rresp_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_awready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_wready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_bresp_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_bresp_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_bvalid_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_arready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[31] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[30] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[29] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[28] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[27] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[26] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[25] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[24] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[23] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[22] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[21] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[20] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[19] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[18] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[17] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[16] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[15] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[14] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[13] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[12] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[11] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[10] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[9] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[8] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[7] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[6] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[5] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[4] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[3] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[2] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rdata_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rvalid_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rresp_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch3_rresp_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_awready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_wready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_bresp_m[1] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_bresp_m[0] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_bvalid_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_arready_m in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[31] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[30] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[29] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[28] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[27] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[26] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[25] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[24] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[23] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[22] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ch4_rdata_m[21] in module axi_traffic_gen_v3_0_21_systeminit_mrdwr is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2191.969 ; gain = 529.680 ; free physical = 12024 ; free virtual = 18718
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2217.781 ; gain = 555.492 ; free physical = 12032 ; free virtual = 18725
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2217.781 ; gain = 555.492 ; free physical = 12032 ; free virtual = 18725
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2217.781 ; gain = 0.000 ; free physical = 12040 ; free virtual = 18734
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/axi_traffic_gen_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/axi_traffic_gen_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wayne/xilinx/vivado_install/2025.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_traffic_gen_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/axi_traffic_gen_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2347.520 ; gain = 0.000 ; free physical = 12032 ; free virtual = 18739
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2347.555 ; gain = 0.000 ; free physical = 12032 ; free virtual = 18739
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2347.555 ; gain = 685.266 ; free physical = 12081 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2355.523 ; gain = 693.234 ; free physical = 12081 ; free virtual = 18790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2355.523 ; gain = 693.234 ; free physical = 12082 ; free virtual = 18791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2355.523 ; gain = 693.234 ; free physical = 12081 ; free virtual = 18791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 10    
+	                9 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 19    
+	   4 Input   16 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2355.523 ; gain = 693.234 ; free physical = 12081 ; free virtual = 18800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+|Module Name                                                                                                                    | RTL Object                                       | Inference      | Size (Depth x Width) | Primitives     | 
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/ATG_SYSINIT_DMG.systeminit_dmg_mask/xpm_memory_spram_inst/xpm_memory_base_inst  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/ATG_SYSINIT_DMG.systeminit_dmg_ctrl/xpm_memory_spram_inst/xpm_memory_base_inst  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/systeminit_dmg_addr/xpm_memory_spram_inst/xpm_memory_base_inst                  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/systeminit_dmg_data/xpm_memory_spram_inst/xpm_memory_base_inst                  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2368.523 ; gain = 706.234 ; free physical = 11712 ; free virtual = 18431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2397.555 ; gain = 735.266 ; free physical = 11629 ; free virtual = 18348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+|Module Name                                                                                                                    | RTL Object                                       | Inference      | Size (Depth x Width) | Primitives     | 
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/ATG_SYSINIT_DMG.systeminit_dmg_mask/xpm_memory_spram_inst/xpm_memory_base_inst  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/ATG_SYSINIT_DMG.systeminit_dmg_ctrl/xpm_memory_spram_inst/xpm_memory_base_inst  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/systeminit_dmg_addr/xpm_memory_spram_inst/xpm_memory_base_inst                  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
+|inst/\ATG_MODE_SYSTEM_INIT_TEST.systeminit_top/systeminit_dmg_data/xpm_memory_spram_inst/xpm_memory_base_inst                  | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | User Attribute | 16 x 32              | RAM16X1S x 32  | 
++-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+----------------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2405.562 ; gain = 743.273 ; free physical = 11590 ; free virtual = 18308
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11729 ; free virtual = 18449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11728 ; free virtual = 18448
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11726 ; free virtual = 18446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11726 ; free virtual = 18446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11724 ; free virtual = 18444
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11718 ; free virtual = 18438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    38|
+|2     |LUT1     |     4|
+|3     |LUT2     |     8|
+|4     |LUT3     |    11|
+|5     |LUT4     |    79|
+|6     |LUT5     |    26|
+|7     |LUT6     |   101|
+|8     |RAM16X1S |   116|
+|9     |FDPE     |     4|
+|10    |FDRE     |   443|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.375 ; gain = 898.086 ; free physical = 11718 ; free virtual = 18438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1072 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2560.375 ; gain = 768.312 ; free physical = 11726 ; free virtual = 18446
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.383 ; gain = 898.086 ; free physical = 11726 ; free virtual = 18446
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2560.383 ; gain = 0.000 ; free physical = 11919 ; free virtual = 18639
+INFO: [Netlist 29-17] Analyzing 154 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2616.402 ; gain = 0.000 ; free physical = 11962 ; free virtual = 18681
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 116 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 116 instances
+
+Synth Design complete | Checksum: 212a8a02
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.438 ; gain = 1085.258 ; free physical = 11962 ; free virtual = 18681
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1576.058; main = 1576.058; forked = 205.677
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3318.141; main = 2616.406; forked = 962.613
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.414 ; gain = 0.000 ; free physical = 11962 ; free virtual = 18681
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/axi_traffic_gen_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axi_traffic_gen_0, cache-ID = 9cafb264154a13e3
+INFO: [Coretcl 2-1174] Renamed 21 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.414 ; gain = 0.000 ; free physical = 11957 ; free virtual = 18678
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.runs/axi_traffic_gen_0_synth_1/axi_traffic_gen_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file axi_traffic_gen_0_utilization_synth.rpt -pb axi_traffic_gen_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 19 19:04:09 2025...

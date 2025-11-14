@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/axi_traffic_gen_0/sim/axi_traffic_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_traffic_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/themashallah_ex.gen/sources_1/ip/themashallah/sim/themashallah.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'themashallah'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/imports/themashallah_exdes.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'themashallah_exdes'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/wayne/FPGA_stuff/FinancialAccleration/TestEnvironments/ip_example_dir/themashallah_ex/imports/themashallah_exdes_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'themashallah_exdes_tb'
