@@ -2,8 +2,6 @@ feed parser
   CMAC IP gives us a 250MHz User Logic Box
   has an AXI4-Stream bus
 
-
-
   port items:
     1: tvalid
     512: tdata
@@ -14,13 +12,8 @@ feed parser
     16: tuser_dst
     1: tready
 
-
-
-
 data formatting:
 ToyITCH - Scratch
-
-
 
 type:
   0x01: add
@@ -87,4 +80,31 @@ END_PKT:
   length
 
 
+
+
+Packet Encoding:
+  (14 bytes) Ethernet header: -> hardware targetting
+    6 bytes: dest MAC
+    6 bytes: source MAC
+    2 bytes: eth_type (= 0x0800)
+
+  in theory this is completely useless unless im doing multiple device streaming, which is not occuring
+
+  (4 bytes) IP header: -> 
+    dst IP: 239.192.1.1 A-F
+    dst IP: 239.192.1.2 G-M
+    dst IP: 239.192.1.3 N-T
+    dst IP: 239.192.1.4 U-Z
+
+  UDP header: -> 
+    payload length
+
+Local Format: (Unified Internal Market Data Event)
+  1 byte: type
+  1 byte: side
+  2 bytes: ticker ID
+  8 bytes: orderid
+  4 bytes: price
+  4 bytes: qty
+  8 bytes: timestamp
 
