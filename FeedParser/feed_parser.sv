@@ -118,18 +118,32 @@ function automatic void parse_byte(
   inout event_t           event_buf [10],
   inout logic [2:0]       event_count,
 
+  inout logic [63:0]      test_vector,
+  inout logic [7:0]       test_idx,
+  inout logic [7:0]       test_idx2,
+
   inout logic [7:0] bytes_left
 );
 
+  test_vector[test_idx] = 1;
+
   case (state)
     WAIT_TYPE : begin
-      msg_type_accumulator = in_byte;
-      state = WAIT_LEN;
+      $display("wait type state ----------byte: %0d--------------------", in_byte);
+      if (in_byte != 0) begin
+        msg_type_accumulator = in_byte;
+        state = WAIT_LEN;
+      end else begin
+        state = WAIT_TYPE;
+      end
     end
 
     WAIT_LEN : begin
       msg_len_accumulator = in_byte;
-      if (msg_type_accumulator == '1) begin
+      // if (msg_type_accumulator == '1) begin
+      $display("in wait len case, in_byte: %0d", in_byte);
+      $display("msg_type_accumulator: %0d", msg_type_accumulator);
+      if (msg_type_accumulator == 1) begin
         state = READ_ID;
         bytes_left = 4;
       end else begin
@@ -138,12 +152,12 @@ function automatic void parse_byte(
     end
 
     READ_ID : begin
-      // $display("read id loop");
+      $display("in read ID case -------------------%0d--------------------", bytes_left);
       orderid_accumulator = {orderid_accumulator[23:0], in_byte};
       bytes_left--;
 
       if (bytes_left == 0) begin
-        if (msg_type_accumulator == '1) begin
+        if (msg_type_accumulator == 1) begin
           state = READ_PRICE;
           bytes_left = 4;
         end else begin
@@ -153,25 +167,28 @@ function automatic void parse_byte(
     end
 
     READ_PRICE : begin
+      $display("in read PRICE case -------------------%0d--------------------", bytes_left);
       price_accumulator = {price_accumulator[23:0], in_byte};
       bytes_left--;
 
       if (bytes_left == 0) begin
-        if (msg_type_accumulator == '1) begin
+        if (msg_type_accumulator == 1) begin
           state = READ_QTY;
           bytes_left = 4;
         end
       end else begin
-        state = WAIT_TYPE;
+        state = READ_PRICE;
       end
     end
 
     READ_QTY : begin
       qty_accumulator = {qty_accumulator[23:0], in_byte};
       bytes_left--;
+      // test_idx2 = 'd7;
 
       if (bytes_left == 0) begin
-        if (msg_type_accumulator == '1) begin
+        // test_idx2 = 'd7;
+        if (msg_type_accumulator == 1) begin
           // if (event_count < 10) begin
             event_buf[event_count].event_type = 'd1;
             event_buf[event_count].id = orderid_accumulator;
@@ -184,6 +201,8 @@ function automatic void parse_byte(
         end else begin
           state = WAIT_TYPE;
         end
+      end else begin
+        state = READ_QTY;
       end
     end
 
@@ -208,6 +227,11 @@ endfunction
 
 byte bytes [0:63];
 // assign bytes = s_axis_tdata[511:0];
+
+logic [63:0] test_vector;
+logic [7:0] test_idx;
+logic [7:0] test_idx2;
+logic [7:0] test_idx3;
 
 always_comb 
 begin
@@ -236,20 +260,32 @@ begin
   if (rst) begin
     // event_buffer <= '0;
     event_count <= '0;
+    test_idx3 <= 0;
   end else begin
     event_buffer <= event_buffer_next;
     event_count <= event_count_next;
+    test_idx3 <= test_idx2;
   end
 end
+
+logic [31:0] debug_id [64];
+logic [31:0] debug_price;
+logic [31:0] debug_qty;
 
 always_comb
 begin
   event_count_next = 0;
+  debug_id[0] = order_id;
+  debug_price[0] = price;
+  debug_qty[0] =qty;
+  parser_state = WAIT_TYPE;
+
   for(int i = 0; i < 64; i++) begin
     // if (s_axis_tkeep[i]) begin
     //   // next_state = parse_byte(next_state, s_axis_tdata[i]);
     //
     // end
+    $display("reading byte: %0d", bytes[i]);
     parse_byte(
       bytes[i],
       parser_state,
@@ -262,8 +298,16 @@ begin
       event_buffer_next,
       event_count_next,
 
+      test_vector,
+      i,
+      test_idx2,
+
       bytes_left
     );
+
+    debug_id[i+1] = order_id;
+    // $display("byte %0d", i);
+    $display("after parse: state: %10d, id: %10d, price: %10d, qty: %10d", parser_state, order_id, price, qty);
   end
 end
 
