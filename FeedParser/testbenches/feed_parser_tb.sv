@@ -118,7 +118,36 @@ module feed_parser_tb();
 
     // s_axis_tdata[511 : 510] = 0;
 
+    // t_s_axis_tdata[511 : 504] = 'd1;
+    // t_s_axis_tdata[503 : 496] = 'd2;
+    // t_s_axis_tdata[495 : 488] = 'd20;
+    // t_s_axis_tdata[487 : 480] = 'd30;
+    // t_s_axis_tdata[479 : 472] = 'd10;
+    // t_s_axis_tdata[471 : 464] = 'd50;
+    // t_s_axis_tdata[463 : 0] = 0;
 
+    // type ADD, length 2
+    t_s_axis_tdata[7 : 0] = 'd1;
+    t_s_axis_tdata[15 : 8] = 'd2;
+
+    // 4 bytes of ID = 20.25.23.17
+    t_s_axis_tdata[23 : 16] = 'd20;
+    t_s_axis_tdata[31 : 24] = 'd25;
+    t_s_axis_tdata[39 : 32] = 'd23;
+    t_s_axis_tdata[47 : 40] = 'd17;
+
+    // 4 bytes of Price = 15
+    t_s_axis_tdata[55 : 48] = 'd0;
+    t_s_axis_tdata[63 : 56] = 'd0;
+    t_s_axis_tdata[71 : 64] = 'd0;
+    t_s_axis_tdata[79 : 72] = 'd15;
+
+    // 4 bytes of Quantity = USD 20.00
+    t_s_axis_tdata[87 : 80] = 'd0;
+    t_s_axis_tdata[95 : 88] = 'd0;
+    t_s_axis_tdata[103 : 96] = 'd0;
+    t_s_axis_tdata[111 : 104] = 'd20;
+   
     #50
     clk1_en = 0;
     disable CLK_GEN;

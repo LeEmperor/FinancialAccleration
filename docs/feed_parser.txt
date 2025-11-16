@@ -108,3 +108,57 @@ Local Format: (Unified Internal Market Data Event)
   4 bytes: qty
   8 bytes: timestamp
 
+
+typedef enum logic [2:0] {
+  WAIT_TYPE,
+  WAIT_LEN,
+  READ_ID,
+  READ_PRICE,
+  READ_QTY,
+  READ_SIDE,
+  READ_NEW_PRICE,
+  READ_NEW_QTY
+} parser_state_t;
+
+ADD test:
+1 byte: ADD type = 01
+1 byte: length = 4
+4 bytes: orderid
+4 bytes: price
+4 bytes: qty
+
+
+function automatic void parse_byte(
+  input byte in_byte,
+  inout parser_state_t state,
+  inout logic [7:0] msg_type,
+  inout logic [7:0] msg_len,
+
+  inout logic [31:0] orderid,
+  inout logic [31:0] price,
+  inout logic [31:0] qty,
+
+  inout logic [7:0] bytes_left
+);
+
+consume until you finish a message,
+when you finish a message, commit said message into the event buffer
+at the end of a clock cycle, you register the state of the machine so that it can capture events that are spliced between beats
+
+
+function automatic void parse_byte(
+  input byte in_byte,
+  inout parser_state_t state,
+  inout logic [7:0]       msg_type_accumulator,
+  inout logic [7:0]       msg_len_accumulator,
+
+  inout logic [31:0]      orderid_accumulator,
+  inout logic [31:0]      price_accumulator,
+  inout logic [31:0]      qty_accumulator,
+
+  inout event_t           event_buffer [10],
+  inout logic [2:0]       event_count
+
+  inout logic [7:0] bytes_left
+);
+

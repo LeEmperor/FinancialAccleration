@@ -1,2 +1,2 @@
-1 11 feed_parser 4 fast 65 /home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/work 0 0 0 0 225 0
-1 14 feed_parser_tb 4 fast 65 /home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/work 0 0 0 0 65 0
+1 11 feed_parser 4 fast 65 /home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/work 0 0 131072 0 404 0
+2 14 feed_parser_tb 4 fast 65 /home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/work 0 0 0 0 133 0
