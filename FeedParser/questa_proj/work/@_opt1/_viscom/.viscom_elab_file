@@ -1,0 +1,1 @@
+/opt/altera_lite/25.1std/questa_fse/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 934320 work.demo2 -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt1 -id 1-00e04c1c2998-691d0256-35534-8ebe +__betafsm

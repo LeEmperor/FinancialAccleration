@@ -1,2 +1,2 @@
-vsim -voptargs=+acc work.feed_parser_tb
+vsim -voptargs=+acc work.struct_pipeline_test_tb
 

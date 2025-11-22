@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Nov 17 22:27:03 2025
+# Process ID: 9697
+# Current directory: /home/wayne/FPGA/FinancialAccleration/FeedParser/vivado21rtl_proj/FeedParser.runs/synth_1
+# Command line: vivado -log feed_parser.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source feed_parser.tcl
+# Log file: /home/wayne/FPGA/FinancialAccleration/FeedParser/vivado21rtl_proj/FeedParser.runs/synth_1/feed_parser.vds
+# Journal file: /home/wayne/FPGA/FinancialAccleration/FeedParser/vivado21rtl_proj/FeedParser.runs/synth_1/vivado.jou
+# Running On: wayne, OS: Linux, CPU Frequency: 400.000 MHz, CPU Physical cores: 16, Host memory: 32821 MB
+#-----------------------------------------------------------
+source feed_parser.tcl -notrace

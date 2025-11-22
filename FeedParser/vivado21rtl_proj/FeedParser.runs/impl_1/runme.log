@@ -1,0 +1,282 @@
+
+*** Running vivado
+    with args -log feed_parser.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source feed_parser.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source feed_parser.tcl -notrace
+Command: link_design -top feed_parser -part xcu50-fsvh2104-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcu50-fsvh2104-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3004.453 ; gain = 0.000 ; free physical = 14306 ; free virtual = 20120
+INFO: [Netlist 29-17] Analyzing 370 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'feed_parser' is not ideal for floorplanning, since the cellview 'feed_parser' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/wayne/FPGA/FinancialAccleration/FeedParser/test_constraints.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [/home/wayne/FPGA/FinancialAccleration/FeedParser/test_constraints.xdc:13]
+CRITICAL WARNING: [Common 17-69] Command failed: Invalid I/O Standard 'NONE'. Default I/O Standard is used instead [/home/wayne/FPGA/FinancialAccleration/FeedParser/test_constraints.xdc:14]
+Finished Parsing XDC File [/home/wayne/FPGA/FinancialAccleration/FeedParser/test_constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3147.539 ; gain = 0.000 ; free physical = 14184 ; free virtual = 19998
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 354 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 354 instances
+
+7 Infos, 1 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3147.539 ; gain = 534.516 ; free physical = 14184 ; free virtual = 19998
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xcu50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.73 . Memory (MB): peak = 3240.289 ; gain = 92.750 ; free physical = 14164 ; free virtual = 19978
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13728 ; free virtual = 19542
+INFO: [Opt 31-389] Phase Retarget created 2 cells and removed 2 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13728 ; free virtual = 19542
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13720 ; free virtual = 19535
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 4 BUFG optimization | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13720 ; free virtual = 19534
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13720 ; free virtual = 19534
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13720 ; free virtual = 19534
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               2  |               2  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3746.711 ; gain = 0.000 ; free physical = 13720 ; free virtual = 19534
+Ending Logic Optimization Task | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3746.711 ; gain = 327.328 ; free physical = 13720 ; free virtual = 19534
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3746.711 ; gain = 0.000 ; free physical = 13720 ; free virtual = 19534
+Ending Netlist Obfuscation Task | Checksum: 1c57585e7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3746.711 ; gain = 0.000 ; free physical = 13720 ; free virtual = 19534
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 1 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/wayne/FPGA/FinancialAccleration/FeedParser/vivado21rtl_proj/FeedParser.runs/impl_1/feed_parser_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file feed_parser_drc_opted.rpt -pb feed_parser_drc_opted.pb -rpx feed_parser_drc_opted.rpx
+Command: report_drc -file feed_parser_drc_opted.rpt -pb feed_parser_drc_opted.pb -rpx feed_parser_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/wayne/FPGA/FinancialAccleration/FeedParser/vivado21rtl_proj/FeedParser.runs/impl_1/feed_parser_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 5036.047 ; gain = 1233.309 ; free physical = 12434 ; free virtual = 18254
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xcu50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu50'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12416 ; free virtual = 18237
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fa959aa5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12416 ; free virtual = 18237
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12416 ; free virtual = 18237
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 1357 I/O ports
+ while the target  device: xcu50 package: fsvh2104, contains only 518 available user I/O. The target device has 518 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+ERROR: [Place 30-68] Instance clk_IBUF_BUFG_inst (BUFGCE) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst/IBUFCTRL_INST (IBUFCTRL) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst/INBUF_INST (INBUF) is not placed
+ERROR: [Place 30-68] Instance event10[event_type]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][16]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][17]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][18]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][19]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][20]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][21]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][22]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][23]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][24]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][25]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][26]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][27]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][28]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][29]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][30]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][31]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[id][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][16]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][17]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][18]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][19]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][20]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][21]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][22]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][23]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][24]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][25]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][26]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][27]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][28]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][29]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][30]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][31]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[price][9]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][0]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][10]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][11]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][12]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][13]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][14]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][15]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][16]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][17]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][18]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][19]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][1]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][20]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][21]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][22]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][23]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][24]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][25]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][26]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][27]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][28]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][29]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][2]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][30]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][31]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][3]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][4]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][5]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][6]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][7]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][8]_INST_0 (OBUF) is not placed
+ERROR: [Place 30-68] Instance event10[qty][9]_INST_0 (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: fa959aa5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12475 ; free virtual = 18295
+Phase 1 Placer Initialization | Checksum: fa959aa5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12475 ; free virtual = 18295
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: fa959aa5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5036.047 ; gain = 0.000 ; free physical = 12475 ; free virtual = 18295
+INFO: [Common 17-83] Releasing license: Implementation
+45 Infos, 1 Warnings, 2 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 17 22:33:33 2025...

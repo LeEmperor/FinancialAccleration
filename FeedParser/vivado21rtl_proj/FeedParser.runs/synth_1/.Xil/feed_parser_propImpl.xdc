@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/home/wayne/FPGA/FinancialAccleration/FeedParser/test_constraints.xdc rfile:../../../../test_constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_clock_uncertainty 0.1 [get_clocks sys_clk]
+set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN NA [get_ports *]
+set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD NONE [get_ports *]

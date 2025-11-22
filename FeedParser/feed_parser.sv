@@ -2,6 +2,13 @@
 // University of Florida
 // Feed Parser CMAC Interactive Layer
 
+typedef struct packed {
+  logic event_type;
+  logic [31:0] id;
+  logic [31:0] price;
+  logic [31:0] qty;
+} event_t;
+
 module feed_parser # (
   parameter int DATA_WIDTH = 512,
   parameter int KEEP_WIDTH = DATA_WIDTH / 8,
@@ -10,6 +17,9 @@ module feed_parser # (
   parameter int USER_DST_WIDTH = 16
 ) (
   // clk and rst
+
+  input logic status,
+
   input logic clk, rst,
   input logic tx_clk,
   input logic rx_clk,
@@ -27,7 +37,18 @@ module feed_parser # (
 
   // feed parser internals
   
-  output logic [31:0] order_id
+  output logic [31:0] order_id,
+
+  output event_t event1,
+  output event_t event2,
+  output event_t event3,
+  output event_t event4,
+  output event_t event5,
+  output event_t event6,
+  output event_t event7,
+  output event_t event8,
+  output event_t event9,
+  output event_t event10
 );
 
 localparam int PAYLOAD_OFFSET = 0;
@@ -39,15 +60,22 @@ localparam logic [IP_WIDTH - 1 : 0] SUBSCRIBED_IPS [NUM_SUBSCRIPTIONS] = '{
   48'h0100_5E00_0001
 };
 
-typedef enum logic [2:0] {
-  WAIT_TYPE,
-  WAIT_LEN,
-  READ_ID,
-  READ_PRICE,
-  READ_QTY,
-  READ_SIDE,
-  READ_NEW_PRICE,
-  READ_NEW_QTY
+typedef enum logic [5:0] {
+  READ_ETH_DST_MAC,
+  READ_ETH_SRC_MAC,
+  READ_ETH_TYPE,
+
+  READ_IP_HEADER,
+  READ_UDP_HEADER,
+
+  READ_MESSAGE_TYPE,
+  READ_MESSAGE_LEN,
+  READ_MESSAGE_ID,
+  READ_MESSAGE_PRICE,
+  READ_MESSAGE_QTY,
+  READ_MESSAGE_SIDE,
+  READ_MESSAGE_NEW_PRICE,
+  READ_MESSAGE_NEW_QTY
 } parser_state_t;
 
 parser_state_t parser_state;
@@ -55,32 +83,32 @@ parser_state_t parser_state;
 // 64 bytes (512 bits) width of the data bus, this serves as an offset to
 // where we are inside it
 
-typedef struct packed {
-  logic [47:0] dst_mac; // 6 bytes 
-  logic [47:0] src_mac; // 6 bytes
-  logic [15:0] ether_type; // 2 bytes
-} eth_header_t;
+// typedef struct packed {
+//   logic [47:0] dst_mac; // 6 bytes 
+//   logic [47:0] src_mac; // 6 bytes
+//   logic [15:0] ether_type; // 2 bytes
+// } eth_header_t;
+//
+// typedef struct packed {
+//   logic [47:0] src_ip;
+//   logic [47:0] dst_ip;
+// } ip_header_t;
+//
+// typedef struct packed {
+//   logic [7:0] payload_byte_length;
+// } udp_header_t;
+//
+// typedef struct packed {
+//   logic price;
+// } generic_message_t;
+//
+// typedef struct packed {
+//   logic price;
+// } add_message_t;
 
-typedef struct packed {
-  logic [47:0] src_ip;
-  logic [47:0] dst_ip;
-} ip_header_t;
-
-typedef struct packed {
-  logic [7:0] payload_byte_length;
-} udp_header_t;
-
-typedef struct packed {
-  logic price;
-} generic_message_t;
-
-typedef struct packed {
-  logic price;
-} add_message_t;
-
-eth_header_t eth_header;
-ip_header_t ip_header;
-udp_header_t udp_header;
+// eth_header_t eth_header;
+// ip_header_t ip_header;
+// udp_header_t udp_header;
 
 // always_comb
 // begin
@@ -89,12 +117,12 @@ udp_header_t udp_header;
 //   eth_header.ether_type = s_axis_tdata[DATA_WIDTH - HEADER_OFFSET - 96 - 1 : DATA_WIDTH - HEADER_OFFSET - 96 - 16];
 // end
 
-typedef struct packed {
-  logic event_type;
-  logic [31:0] id;
-  logic [31:0] price;
-  logic [31:0] qty;
-} event_t;
+// typedef struct packed {
+//   logic event_type;
+//   logic [31:0] id;
+//   logic [31:0] price;
+//   logic [31:0] qty;
+// } event_t;
 
 function automatic logic is_accpeted_mc (logic [IP_WIDTH - 1 : 0] addr);
   is_accpeted_mc = 1'b0;
@@ -118,76 +146,162 @@ function automatic void parse_byte(
   inout event_t           event_buf [10],
   inout logic [2:0]       event_count,
 
-  inout logic [63:0]      test_vector,
-  inout logic [7:0]       test_idx,
-  inout logic [7:0]       test_idx2,
+  // inout logic [63:0]      test_vector,
+  // inout logic [7:0]       test_idx,
+  // inout logic [7:0]       test_idx2,
+
+  inout logic [47:0]      eth_dest_mac_accumulator,
+  inout logic [47:0]      eth_src_mac_accumulator,
+  inout logic [15:0]      eth_type_accumulator,
+
+  inout logic [31:0]      ip_header_accumlator,
+  inout logic [15:0]      udp_header_accumulator,
 
   inout logic [7:0] bytes_left
 );
 
-  test_vector[test_idx] = 1;
+  // test_vector[test_idx] = 1;
 
   case (state)
-    WAIT_TYPE : begin
-      $display("wait type state ----------byte: %0d--------------------", in_byte);
-      if (in_byte != 0) begin
-        msg_type_accumulator = in_byte;
-        state = WAIT_LEN;
+    READ_ETH_DST_MAC : begin
+      // $display("reading eth dst mac");
+
+      eth_dest_mac_accumulator = {eth_dest_mac_accumulator[39:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_ETH_SRC_MAC;
+        bytes_left = 6;
+        $display("read eth dest addr: %0d", eth_dest_mac_accumulator);
       end else begin
-        state = WAIT_TYPE;
+        state = READ_ETH_DST_MAC;
       end
     end
 
-    WAIT_LEN : begin
+    READ_ETH_SRC_MAC : begin
+      // $display("reading eth src mac");
+
+      eth_src_mac_accumulator = {eth_src_mac_accumulator[39:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_ETH_TYPE;
+        bytes_left = 2;
+        $display("read eth src addr: %0d", eth_src_mac_accumulator);
+      end else begin
+        state = READ_ETH_SRC_MAC;
+      end
+    end
+
+    READ_ETH_TYPE : begin
+      // $display("reading eth type");
+
+      eth_type_accumulator = {eth_type_accumulator[7:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_IP_HEADER;
+        bytes_left = 4;
+        $display("read eth type: %0d", eth_type_accumulator);
+      end else begin
+        state = READ_ETH_TYPE;
+      end
+
+    end
+
+    READ_IP_HEADER : begin
+      // $display("reading ip header");
+      ip_header_accumlator = {ip_header_accumlator[23:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_UDP_HEADER;
+        bytes_left = 2;
+        $display("read ip header: %0d", ip_header_accumlator);
+      end else begin
+        state = READ_IP_HEADER;
+      end
+    end
+
+    READ_UDP_HEADER : begin
+      // $display("reading udp header");
+      udp_header_accumulator = {udp_header_accumulator[7:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_MESSAGE_TYPE;
+        bytes_left = 1;
+        $display("read payload len: %0d", udp_header_accumulator);
+      end else begin
+        state = READ_UDP_HEADER;
+      end
+    end
+
+    READ_MESSAGE_TYPE : begin
+      // $display("read message type: ");
+      if (in_byte == 1) begin
+        msg_type_accumulator = in_byte;
+        state = READ_MESSAGE_LEN;
+        $display("ADD type message found!", msg_type_accumulator);
+      end else begin
+        state = READ_MESSAGE_TYPE;
+      end
+    end
+
+    READ_MESSAGE_LEN : begin
       msg_len_accumulator = in_byte;
       // if (msg_type_accumulator == '1) begin
-      $display("in wait len case, in_byte: %0d", in_byte);
-      $display("msg_type_accumulator: %0d", msg_type_accumulator);
+      // $display("in wait len case, in_byte: %0d", in_byte);
+      // $display("msg_type_accumulator: %0d", msg_type_accumulator);
       if (msg_type_accumulator == 1) begin
-        state = READ_ID;
-        bytes_left = 4;
+        state = READ_MESSAGE_ID;
+        bytes_left = 8;
+        $display("message len: %0d", msg_len_accumulator);
       end else begin
-        state = WAIT_TYPE;
+        state = READ_MESSAGE_TYPE;
       end
     end
 
-    READ_ID : begin
-      $display("in read ID case -------------------%0d--------------------", bytes_left);
+    READ_MESSAGE_ID : begin
+      // $display("in read ID case -------------------%0d--------------------", bytes_left);
       orderid_accumulator = {orderid_accumulator[23:0], in_byte};
       bytes_left--;
 
       if (bytes_left == 0) begin
         if (msg_type_accumulator == 1) begin
-          state = READ_PRICE;
-          bytes_left = 4;
+          state = READ_MESSAGE_PRICE;
+          bytes_left = 8;
+          $display("message id: %0d", orderid_accumulator);
         end else begin
-          state = WAIT_TYPE;
+          state = READ_MESSAGE_TYPE;
         end
       end
     end
 
-    READ_PRICE : begin
-      $display("in read PRICE case -------------------%0d--------------------", bytes_left);
+    READ_MESSAGE_PRICE : begin
+      // $display("in read PRICE case -------------------%0d--------------------", bytes_left);
       price_accumulator = {price_accumulator[23:0], in_byte};
       bytes_left--;
 
       if (bytes_left == 0) begin
         if (msg_type_accumulator == 1) begin
-          state = READ_QTY;
-          bytes_left = 4;
+          state = READ_MESSAGE_QTY;
+          bytes_left = 8;
+          $display("message price: %0d", price_accumulator);
         end
       end else begin
-        state = READ_PRICE;
+        state = READ_MESSAGE_PRICE;
       end
     end
 
-    READ_QTY : begin
+    READ_MESSAGE_QTY : begin
       qty_accumulator = {qty_accumulator[23:0], in_byte};
       bytes_left--;
       // test_idx2 = 'd7;
 
       if (bytes_left == 0) begin
         // test_idx2 = 'd7;
+        $display("message qty: %0d", qty_accumulator);
         if (msg_type_accumulator == 1) begin
           // if (event_count < 10) begin
             event_buf[event_count].event_type = 'd1;
@@ -196,13 +310,11 @@ function automatic void parse_byte(
             event_buf[event_count].qty = qty_accumulator;
             event_count++;
           // end
-
-          state = WAIT_TYPE;
-        end else begin
-          state = WAIT_TYPE;
         end
+
+        state = READ_MESSAGE_TYPE;
       end else begin
-        state = READ_QTY;
+        state = READ_MESSAGE_QTY;
       end
     end
 
@@ -225,7 +337,7 @@ endfunction
 //   end
 // end
 
-byte bytes [0:63];
+byte unsigned bytes [0:63];
 // assign bytes = s_axis_tdata[511:0];
 
 logic [63:0] test_vector;
@@ -240,6 +352,18 @@ begin
   end
 end
 
+// eth header accumulators
+logic [47:0] eth_dest_mac; // 6 bytes
+logic [47:0] eth_src_mac; // 6 bytes
+logic [15:0] eth_type; // 2 bytes -> looking for 0x0800 (IPv4)
+
+// ip header accumulators
+logic [31:0] ip_header; // 4 bytes of dst ip
+
+// udp header accumulators 
+logic [15:0] payload_length; // 2 bytes (65k range)
+
+// payload accumulators
 logic [7:0] msg_type;
 logic [7:0] msg_len;
 
@@ -255,16 +379,83 @@ logic [2:0] event_count;
 
 logic [7:0] bytes_left;
 
+// pipeline étages sont ces, c'est beacoup de facile pour représenter
+typedef struct packed {
+  parser_state_t parser_state;
+
+  logic [47:0] reg_eth_dest_mac; // eth
+  logic [47:0] reg_eth_src_mac_next; // eth
+  logic [15:0] reg_eth_type_next; // eth
+  logic [31:0] reg_ip_header_next; // udp 
+  logic [15:0] reg_payload_length_next; // udp
+
+  logic [7:0]  reg_msg_type;
+  logic [7:0]  reg_msg_len;
+  logic [31:0] reg_orderid;
+  logic [31:0] reg_price;
+  logic [31:0] reg_qty;
+
+} pipeline_state_t;
+
+pipeline_state_t stage1;
+pipeline_state_t stage2;
+pipeline_state_t stage3;
+pipeline_state_t stage4;
+
+pipeline_state_t stage1_next;
+pipeline_state_t stage2_next;
+pipeline_state_t stage3_next;
+pipeline_state_t stage4_next;
+
+// next pieces for pipeline demo
+parser_state_t next_state;
+logic [7:0] msg_type_next;
+logic [7:0] msg_len_next;
+logic [31:0] order_id_next;
+logic [31:0] price_next;
+logic [31:0] qty_next;
+logic [47:0] eth_dest_mac_next; // 6 bytes
+logic [47:0] eth_src_mac_next; // 6 bytes
+logic [15:0] eth_type_next; // 2 bytes -> looking for 0x0800 (IPv4)
+logic [31:0] ip_header_next; // 4 bytes of dst ip
+logic [15:0] payload_length_next; // 2 bytes (65k range)
+
 always_ff @(posedge clk)
 begin
   if (rst) begin
     // event_buffer <= '0;
     event_count <= '0;
-    test_idx3 <= 0;
+    // test_idx3 <= 0;
+    
+    // stage1 <= stage1_next;
+    // stage2 <= stage2_next;
+    // stage3 <= stage3_next;
+    // stage4 <= stage4_next;
+
+    stage1 <= 0;
+    stage2 <= 0;
+    stage3 <= 0;
+    stage4 <= 0;
+
   end else begin
     event_buffer <= event_buffer_next;
     event_count <= event_count_next;
-    test_idx3 <= test_idx2;
+    // test_idx3 <= test_idx2;
+    event1 <= event_buffer[0];
+    event2 <= event_buffer[1];
+    event3 <= event_buffer[2];
+    event4 <= event_buffer[3];
+    event5 <= event_buffer[4];
+    event6 <= event_buffer[5];
+    event7 <= event_buffer[6];
+    event8 <= event_buffer[7];
+    event9 <= event_buffer[8];
+    event10 <= event_buffer[9];
+
+    stage1 <= stage1_next;
+    stage2 <= stage2_next;
+    stage3 <= stage3_next;
+    stage4 <= stage4_next;
   end
 end
 
@@ -272,20 +463,30 @@ logic [31:0] debug_id [64];
 logic [31:0] debug_price;
 logic [31:0] debug_qty;
 
+// next state feeder
+always_comb
+begin
+  stage2_next = stage1;
+  stage3_next = stage2;
+  stage4_next = stage3;
+  stage1_next = stage1;
+end
+
 always_comb
 begin
   event_count_next = 0;
   debug_id[0] = order_id;
   debug_price[0] = price;
-  debug_qty[0] =qty;
-  parser_state = WAIT_TYPE;
+  debug_qty[0] = qty;
+  parser_state = READ_ETH_DST_MAC;
+  bytes_left = 6;
 
-  for(int i = 0; i < 64; i++) begin
+  for(int i = 0; i < 32; i++) begin
     // if (s_axis_tkeep[i]) begin
     //   // next_state = parse_byte(next_state, s_axis_tdata[i]);
     //
     // end
-    $display("reading byte: %0d", bytes[i]);
+    $display("parsing byte %2d: -------------- %3d --------------", i, bytes[i]);
     parse_byte(
       bytes[i],
       parser_state,
@@ -298,16 +499,23 @@ begin
       event_buffer_next,
       event_count_next,
 
-      test_vector,
-      i,
-      test_idx2,
+      // test_vector,
+      // i,
+      // test_idx2,
+
+      eth_dest_mac,
+      eth_src_mac,
+      eth_type,
+
+      ip_header,
+      payload_length,
 
       bytes_left
     );
 
     debug_id[i+1] = order_id;
     // $display("byte %0d", i);
-    $display("after parse: state: %10d, id: %10d, price: %10d, qty: %10d", parser_state, order_id, price, qty);
+    // $display("after parse: state: %10d, id: %10d, price: %10d, qty: %10d", parser_state, order_id, price, qty);
   end
 end
 

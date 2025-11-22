@@ -1,0 +1,222 @@
+feed parser
+  CMAC IP gives us a 250MHz User Logic Box
+  has an AXI4-Stream bus
+
+  port items:
+    1: tvalid
+    512: tdata
+    64: tkeep
+    1: tlast
+    16: tuser_size
+    16: tuser_src
+    16: tuser_dst
+    1: tready
+
+data formatting:
+ToyITCH - Scratch
+
+type:
+  0x01: add
+  0x02: cancel
+  0x03: modify
+  0x04: trade
+  0xFE: heartbeat
+  0xFF: endpkt
+  
+field:
+  8 bytes: order id
+  4 bytes: price
+  4 bytes: quantity
+  1 byte: side
+  
+  4 byte: new price
+  4 byte: new qty
+  4 bytes: price delta
+
+  4 bytes: trade size
+  1 byte: flags
+
+ADD:
+  type: 0x01
+  length: 1 byte
+  orderid: 8 bytes
+  price: 4 bytes
+  qty: 4 bytes
+  side: 1 byte
+  
+  = 18 bytes
+
+CANCEL:
+  type: 0x02
+  length: 1 byte
+  orderid: 8 bytes
+
+  = 9 bytes
+
+MODIFY:
+  type: 0x03
+  length: 
+  orderid
+  new price
+  new qty
+
+  = 
+
+TRADE:
+  type: 0x04
+  length: 1 byte
+  order_id: 8 bytes
+  trade_price: 4 bytes
+  executed_qty: 4 bytes
+
+  = 
+
+HEARTBEAT:
+  type: 0xFE
+  length
+
+END_PKT:
+  type: 0xFF
+  length
+
+
+
+
+Packet Encoding:
+  (14 bytes) Ethernet header: -> hardware targetting
+    6 bytes: dest MAC
+    6 bytes: source MAC
+    2 bytes: eth_type (= 0x0800)
+
+  in theory this is completely useless unless im doing multiple device streaming, which is not occuring
+
+  (4 bytes) IP header: -> 
+    dst IP: 239.192.1.1 A-F
+    dst IP: 239.192.1.2 G-M
+    dst IP: 239.192.1.3 N-T
+    dst IP: 239.192.1.4 U-Z
+
+  (2 bytes) UDP header: -> 
+    payload length
+
+  (1 byte)  message type
+  (2 bytes) message length
+
+  ADD
+  (8 bytes) order ID
+  (8 bytes) order price
+  (8 bytes) order qty
+
+  MODIFY
+  (8 bytes) order ID
+  (8 bytes) new_price
+  (8 bytes) new_qty
+
+  CANCEL
+
+
+Local Format: (Unified Internal Market Data Event)
+  1 byte: type
+  1 byte: side
+  2 bytes: ticker ID
+  8 bytes: orderid
+  4 bytes: price
+  4 bytes: qty
+  8 bytes: timestamp
+
+
+typedef enum logic [2:0] {
+  WAIT_TYPE,
+  WAIT_LEN,
+  READ_ID,
+  READ_PRICE,
+  READ_QTY,
+  READ_SIDE,
+  READ_NEW_PRICE,
+  READ_NEW_QTY
+} parser_state_t;
+
+ADD test:
+1 byte: ADD type = 01
+1 byte: length = 4
+4 bytes: orderid
+4 bytes: price
+4 bytes: qty
+
+
+function automatic void parse_byte(
+  input byte in_byte,
+  inout parser_state_t state,
+  inout logic [7:0] msg_type,
+  inout logic [7:0] msg_len,
+
+  inout logic [31:0] orderid,
+  inout logic [31:0] price,
+  inout logic [31:0] qty,
+
+  inout logic [7:0] bytes_left
+);
+
+consume until you finish a message,
+when you finish a message, commit said message into the event buffer
+at the end of a clock cycle, you register the state of the machine so that it can capture events that are spliced between beats
+
+
+function automatic void parse_byte(
+  input byte in_byte,
+  inout parser_state_t state,
+  inout logic [7:0]       msg_type_accumulator,
+  inout logic [7:0]       msg_len_accumulator,
+
+  inout logic [31:0]      orderid_accumulator,
+  inout logic [31:0]      price_accumulator,
+  inout logic [31:0]      qty_accumulator,
+
+  inout event_t           event_buffer [10],
+  inout logic [2:0]       event_count
+
+  inout logic [7:0] bytes_left
+);
+
+
+d123 = 0111 1011
+d178 = 1011 0010
+d120 = 0111 1000
+d196 = 1100 0100
+
+0111 1011 1011 0010 0111 1000 1100 0100
+01111011101100100111100011000100
+
+11000100011110001011001001111011 = d3296244347
+
+-- packet raws
+
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+
+000001100000011100000110000001110000011000000111
+= 'd6627235661319
+
+1 1 1 1 1 1
+000000010000000100000001000000010000000100000001
+= 'd1103823438081
+
+0x0800
+= 'd2048
+
+8 8 8 8
+00001000000010000000100000001000
+= 'd134744072
+
+
+data pipeline math
+
+link is very rarely going up to max speed on the data send
+25G link might clock up to 8G on z=3 assurances
+
+nous donne approximaté ~16 clk cycles pour faire un frame
+
+
+
