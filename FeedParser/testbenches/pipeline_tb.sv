@@ -54,7 +54,7 @@ module struct_pipeline_test_tb();
 
     // mettre les truc voici
 
-    #500
+    #100
     clk1_en = 0;
     disable CLK_GEN;
   end

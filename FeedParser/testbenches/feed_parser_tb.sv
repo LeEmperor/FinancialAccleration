@@ -335,7 +335,7 @@ module feed_parser_tb();
 
     t_s_axis_tdata = test_vect512;
 
-    #10
+    #100
     clk1_en = 0;
     disable CLK_GEN;
   end

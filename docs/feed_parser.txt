@@ -96,8 +96,24 @@ Packet Encoding:
     dst IP: 239.192.1.3 N-T
     dst IP: 239.192.1.4 U-Z
 
-  UDP header: -> 
+  (2 bytes) UDP header: -> 
     payload length
+
+  (1 byte)  message type
+  (2 bytes) message length
+
+  ADD
+  (8 bytes) order ID
+  (8 bytes) order price
+  (8 bytes) order qty
+
+  MODIFY
+  (8 bytes) order ID
+  (8 bytes) new_price
+  (8 bytes) new_qty
+
+  CANCEL
+
 
 Local Format: (Unified Internal Market Data Event)
   1 byte: type
@@ -161,4 +177,36 @@ function automatic void parse_byte(
 
   inout logic [7:0] bytes_left
 );
+
+
+d123 = 0111 1011
+d178 = 1011 0010
+d120 = 0111 1000
+d196 = 1100 0100
+
+0111 1011 1011 0010 0111 1000 1100 0100
+01111011101100100111100011000100
+
+11000100011110001011001001111011 = d3296244347
+
+-- packet raws
+
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+6 7 = 0000011000000111
+
+000001100000011100000110000001110000011000000111
+= 'd6627235661319
+
+1 1 1 1 1 1
+000000010000000100000001000000010000000100000001
+= 'd1103823438081
+
+0x0800
+= 'd2048
+
+8 8 8 8
+00001000000010000000100000001000
+= 'd134744072
 

@@ -1,19 +1,66 @@
 module struct_pipeline_test (
   input logic clk, rst,
-
-  input logic [63:0] data_bus,
-
+  input logic [511:0] data_bus,
   output logic a
 );
 
-typedef struct packed {
-  logic data1;
-  logic data2;
-  logic data3;
-  logic data4;
+typedef enum {
+  READ_ETH_DST_MAC,
+  READ_ETH_SRC_MAC,
+  READ_ETH_TYPE,
 
-  // logic [31:0] funky_line;
+  READ_IP_HEADER,
+  READ_UDP_HEADER,
+
+  READ_MESSAGE_TYPE,
+  READ_MESSAGE_LEN,
+  READ_MESSAGE_ID,
+  READ_MESSAGE_PRICE,
+  READ_MESSAGE_QTY,
+  READ_MESSAGE_SIDE,
+  READ_MESSAGE_NEW_PRICE,
+  READ_MESSAGE_NEW_QTY
+} parser_state_t;
+
+typedef struct packed {
+  parser_state_t current_state;
+  parser_state_t next_state;
+
+  logic [47:0] eth_dest_mac; // 6 bytes
+  logic [47:0] eth_src_mac; // 6 bytes
+  logic [15:0] eth_type; // 2 bytes -> looking for 0x0800 (IPv4)
+
+  // ip header accumulators
+  logic [31:0] ip_header; // 4 bytes of dst ip
+
+  // udp header accumulators 
+  logic [15:0] payload_length; // 2 bytes (65k range)
+
+  // payload accumulators
+  logic [7:0] msg_type;
+  logic [7:0] msg_len;
+
+  logic [31:0] orider_id;
+  logic [31:0] price;
+  logic [31:0] qty;
 } pipeline_state_t;
+
+typedef struct packed {
+  // msg data
+  logic [1:0] msg_type;
+  logic [7:0] msg_len;
+
+  logic [7:0] order_id;
+  logic [7:0] order_price;
+  logic [7:0] order_qty;
+} order_t;
+
+
+typedef struct packed {
+  logic [1:0] msg_type;
+  logic [31:0] price;
+  logic [31:0] qty;
+} event_t;
 
 pipeline_state_t stage1;
 pipeline_state_t stage2;
@@ -28,37 +75,6 @@ pipeline_state_t stage4_next;
 logic [3:0] counter_offset;
 logic [3:0] counter_offset_next;
 
-typedef enum {
-  DEFAULT,
-
-  READING_BIT1,
-  READING_BIT2,
-  READING_BIT3,
-  READING_BIT4,
-
-  READING_BIT5,
-  READING_BIT6,
-  READING_BIT7,
-  READING_BIT8,
-
-  READING_BIT9,
-  READING_BIT10,
-  READING_BIT11,
-  READING_BIT12,
-
-  READING_BIT13,
-  READING_BIT14,
-  READING_BIT15,
-  READING_BIT16,
-
-  DONE,
-
-  BRUH
-} parser_state_t;
-
-parser_state_t current_state;
-parser_state_t next_state;
-
 // pipeline advancedment
 always_ff @(posedge clk)
 begin
@@ -68,79 +84,197 @@ begin
     stage3 <= 0;
     stage4 <= 0;
     counter_offset <= 0;
-    current_state <= DEFAULT;
   end else begin
     stage1 <= stage1_next;
     stage2 <= stage2_next;
     stage3 <= stage3_next;
     stage4 <= stage4_next;
     counter_offset <= counter_offset_next;
-    current_state <= next_state;
   end
 end
 
+function automatic void parse_byte(
+  input byte in_byte,
+  inout pipeline_state_t pipeline_state,
 
-function automatic void parse_bit (
-  input logic in_bit,
-  inout parser_state_t pstate,
-
-  inout logic debug_flag1,
-  inout logic debug_flag2,
-  inout logic debug_flag3
+  inout event_t event_buf
 );
+  case (state)
+    READ_ETH_DST : begin
+      pipeline_state.
 
-
-  case(pstate) 
-    DEFAULT : begin  
-      pstate = (in_bit) ? READING_BIT1 : DEFAULT;
-      $display("default state read");
     end
 
-    READING_BIT1 : pstate = (in_bit) ? READING_BIT2 : DEFAULT;
-    READING_BIT2 : pstate = (in_bit) ? READING_BIT3 : DEFAULT;
-    READING_BIT3 : begin
-      pstate = (in_bit) ? READING_BIT4 : DEFAULT;
-      debug_flag1 = 1;
-    end
-    READING_BIT4 : pstate = (in_bit) ? READING_BIT5 : DEFAULT;
-    READING_BIT5 : pstate = (in_bit) ? READING_BIT6 : DEFAULT;
-    READING_BIT6 : pstate = (in_bit) ? READING_BIT7 : DEFAULT;
-    READING_BIT7 : pstate = (in_bit) ? READING_BIT8 : DEFAULT;
-    READING_BIT8 : pstate = (in_bit) ? READING_BIT9 : DEFAULT;
-    READING_BIT9 : pstate = (in_bit) ? READING_BIT10 : DEFAULT;
-    READING_BIT10 : pstate = (in_bit) ? READING_BIT11 : DEFAULT;
-    READING_BIT11 : pstate = (in_bit) ? READING_BIT12 : DEFAULT;
-    READING_BIT12 : pstate = (in_bit) ? READING_BIT13 : DEFAULT;
 
-    READING_BIT13 : begin 
-      pstate = (in_bit) ? READING_BIT14 : DEFAULT;
-      debug_flag3 = 1;
+    READ_ETH_DST_MAC : begin
+      // $display("reading eth dst mac");
+
+      eth_dest_mac_accumulator = {eth_dest_mac_accumulator[39:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_ETH_SRC_MAC;
+        bytes_left = 6;
+        $display("read eth dest addr: %0d", eth_dest_mac_accumulator);
+      end else begin
+        state = READ_ETH_DST_MAC;
+      end
     end
 
-    READING_BIT14 : pstate = (in_bit) ? READING_BIT15 : DEFAULT;
+    READ_ETH_SRC_MAC : begin
+      // $display("reading eth src mac");
 
-    READING_BIT15 : begin 
-      pstate = (in_bit) ? READING_BIT16 : DEFAULT;
-      debug_flag2 = 1;
+      eth_src_mac_accumulator = {eth_src_mac_accumulator[39:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_ETH_TYPE;
+        bytes_left = 2;
+        $display("read eth src addr: %0d", eth_src_mac_accumulator);
+      end else begin
+        state = READ_ETH_SRC_MAC;
+      end
     end
 
-    READING_BIT16 : pstate = (in_bit) ? DONE : DEFAULT;
+    READ_ETH_TYPE : begin
+      // $display("reading eth type");
 
-    default : begin // seul pour DONE
-      debug_flag1 = 1;
-      pstate = DEFAULT;
+      eth_type_accumulator = {eth_type_accumulator[7:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_IP_HEADER;
+        bytes_left = 4;
+        $display("read eth type: %0d", eth_type_accumulator);
+      end else begin
+        state = READ_ETH_TYPE;
+      end
+
+    end
+
+    READ_IP_HEADER : begin
+      // $display("reading ip header");
+      ip_header_accumlator = {ip_header_accumlator[23:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_UDP_HEADER;
+        bytes_left = 2;
+        $display("read ip header: %0d", ip_header_accumlator);
+      end else begin
+        state = READ_IP_HEADER;
+      end
+    end
+
+    READ_UDP_HEADER : begin
+      // $display("reading udp header");
+      udp_header_accumulator = {udp_header_accumulator[7:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        state = READ_MESSAGE_TYPE;
+        bytes_left = 1;
+        $display("read payload len: %0d", udp_header_accumulator);
+      end else begin
+        state = READ_UDP_HEADER;
+      end
+    end
+
+    READ_MESSAGE_TYPE : begin
+      // $display("read message type: ");
+      if (in_byte == 1) begin
+        msg_type_accumulator = in_byte;
+        state = READ_MESSAGE_LEN;
+        $display("ADD type message found!", msg_type_accumulator);
+      end else begin
+        state = READ_MESSAGE_TYPE;
+      end
+    end
+
+    READ_MESSAGE_LEN : begin
+      msg_len_accumulator = in_byte;
+      // if (msg_type_accumulator == '1) begin
+      // $display("in wait len case, in_byte: %0d", in_byte);
+      // $display("msg_type_accumulator: %0d", msg_type_accumulator);
+      if (msg_type_accumulator == 1) begin
+        state = READ_MESSAGE_ID;
+        bytes_left = 8;
+        $display("message len: %0d", msg_len_accumulator);
+      end else begin
+        state = READ_MESSAGE_TYPE;
+      end
+    end
+
+    READ_MESSAGE_ID : begin
+      // $display("in read ID case -------------------%0d--------------------", bytes_left);
+      orderid_accumulator = {orderid_accumulator[23:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        if (msg_type_accumulator == 1) begin
+          state = READ_MESSAGE_PRICE;
+          bytes_left = 8;
+          $display("message id: %0d", orderid_accumulator);
+        end else begin
+          state = READ_MESSAGE_TYPE;
+        end
+      end
+    end
+
+    READ_MESSAGE_PRICE : begin
+      // $display("in read PRICE case -------------------%0d--------------------", bytes_left);
+      price_accumulator = {price_accumulator[23:0], in_byte};
+      bytes_left--;
+
+      if (bytes_left == 0) begin
+        if (msg_type_accumulator == 1) begin
+          state = READ_MESSAGE_QTY;
+          bytes_left = 8;
+          $display("message price: %0d", price_accumulator);
+        end
+      end else begin
+        state = READ_MESSAGE_PRICE;
+      end
+    end
+
+    READ_MESSAGE_QTY : begin
+      qty_accumulator = {qty_accumulator[23:0], in_byte};
+      bytes_left--;
+      // test_idx2 = 'd7;
+
+      if (bytes_left == 0) begin
+        // test_idx2 = 'd7;
+        $display("message qty: %0d", qty_accumulator);
+        if (msg_type_accumulator == 1) begin
+          // if (event_count < 10) begin
+            event_buf[event_count].event_type = 'd1;
+            event_buf[event_count].id = orderid_accumulator;
+            event_buf[event_count].price = price_accumulator; 
+            event_buf[event_count].qty = qty_accumulator;
+            event_count++;
+          // end
+        end
+
+        state = READ_MESSAGE_TYPE;
+      end else begin
+        state = READ_MESSAGE_QTY;
+      end
+    end
+
+    default : begin
+      event_count = event_count;
     end
   endcase
 
 endfunction
 
-logic debug1;
-logic debug2;
-logic debug3;
-
-// logic [7:0] data_wire1;
-// logic [7:0] data_wire2;
-// logic [7:0] data_wire2;
+byte unsigned bytes [0:63];
+always_comb
+begin
+  for (int i = 0; i < 64; i++) begin
+    bytes[i] = in_data[i * 8 +: 8];
+  end
+end
 
 // next state logic
 always_comb
@@ -149,19 +283,13 @@ begin
   stage3_next = stage2;
   stage4_next = stage3;
   stage1_next = 0;
-  debug1 = 0;
-  debug2 = 0;
-  debug3 = 0;
 
   for(int i = counter_offset; i < counter_offset + 4; i++) begin
-    $display("using bit: %0d", i);
     $display("counter offset: %0d", counter_offset);
-    parse_bit(
-      data_bus[i],
-      next_state,
-      debug1,
-      debug2,
-      debug3
+
+    parse_byte(
+      bytes[i],
+      stage1_next 
     );
 
     if (counter_offset >= 16) begin
@@ -170,11 +298,6 @@ begin
       counter_offset_next = counter_offset + 4;
     end
   end
-
-  stage1_next.data1 = debug1;
-  stage1_next.data2 = debug2;
-  stage1_next.data3 = debug3;
-
 end
 
 endmodule

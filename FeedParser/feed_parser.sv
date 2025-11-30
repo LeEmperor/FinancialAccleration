@@ -481,7 +481,7 @@ begin
   parser_state = READ_ETH_DST_MAC;
   bytes_left = 6;
 
-  for(int i = 0; i < 32; i++) begin
+  for(int i = 0; i < 16; i++) begin
     // if (s_axis_tkeep[i]) begin
     //   // next_state = parse_byte(next_state, s_axis_tdata[i]);
     //
