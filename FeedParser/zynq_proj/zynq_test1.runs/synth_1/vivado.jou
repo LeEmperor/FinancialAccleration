@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Dec 23 14:50:36 2025
-# Process ID: 55445
+# Start of session at: Mon Dec 29 02:28:42 2025
+# Process ID: 43784
 # Current directory: /home/wayne/FPGA/FinancialAccleration/FeedParser/zynq_proj/zynq_test1.runs/synth_1
-# Command line: vivado -log and_gate.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source and_gate.tcl
-# Log file: /home/wayne/FPGA/FinancialAccleration/FeedParser/zynq_proj/zynq_test1.runs/synth_1/and_gate.vds
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/wayne/FPGA/FinancialAccleration/FeedParser/zynq_proj/zynq_test1.runs/synth_1/top.vds
 # Journal file: /home/wayne/FPGA/FinancialAccleration/FeedParser/zynq_proj/zynq_test1.runs/synth_1/vivado.jou
-# Running On: wayne, OS: Linux, CPU Frequency: 3552.113 MHz, CPU Physical cores: 12, Host memory: 33551 MB
+# Running On: wayne, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 12, Host memory: 33551 MB
 #-----------------------------------------------------------
-source and_gate.tcl -notrace
+source top.tcl -notrace
