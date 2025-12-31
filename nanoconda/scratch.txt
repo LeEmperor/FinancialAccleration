@@ -1,0 +1,14 @@
+mdp3
+
+donner les niveaux de prix (en lieu des ordres individuelles)
+
+msg type: ADD, DELETE, MODIFY
+msg len: 
+sequence context:  obey this
+payload fields: price, qty, level, flags
+
+qu'est-ce que un gap?
+pourquoi il y a besoin d'un snapshot?
+
+
+
