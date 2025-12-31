@@ -6,7 +6,7 @@ payload fields:
 *)
 
 (* module Bruh = struct *)
-type enum_order = ADD | DELETE | MODIFY
+type enum_order = ADD | DELETE | MODIFY | RAW
 (* end *)
 
 type order = {
@@ -16,16 +16,52 @@ type order = {
 type side = Buy | Sell
 
 type add = {
-  order_id : int64;
   side : side;
   price : int64;
   qty : int32;
 }
 
+type del = {
+  price: int64;
+  qty: int32;
+}
+
+type exec = {
+  side : side;
+  price: int64;
+  qty : int32;
+}
+
+type msg = 
+  | Add of add
+  | Del of del
+  | Exec of exec
+  | Unknown of {enum_order : int; raw : bytes}
+
 let _string_of_type_enum = function
   | ADD -> "add";
   | DELETE -> "delete";
   | MODIFY -> "modify"
+  | _ -> "raw"
+
+type parseError =
+  | Truncated of string
+  | Bad_value of string
+
+type 'a result = ('a, parseError) Stdlib.result
+
+type cursor = {
+  buffer: bytes;
+  mutable offset: int
+}
+
+let _parse_msg (c : cursor) : msg result = 
+  let msg_type = Bytes.read_u16 c in
+
+  Ok (
+    Unknown {msg_type; raw}
+  )
+
 
 let _makeAdd = 
   ()

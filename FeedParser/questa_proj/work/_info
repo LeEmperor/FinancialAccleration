@@ -257,7 +257,7 @@ R4
 T_opt1
 !i145 1
 !i144 0
-Z12 !s110 1764524369
+!s110 1764524369
 V?^=zS`^MM3WE?HOg[MZHH2
 04 14 4 work feed_parser_tb fast 0
 =3-d03957782a7d-692c8151-69b7e-ebc
@@ -274,7 +274,7 @@ R4
 T_opt2
 !i145 1
 !i144 0
-Z13 !s110 1763510178
+Z12 !s110 1763510178
 V@F>A6iG=?LKf7h>oM>bPN2
 04 8 4 work demo2_tb fast 0
 =2-00e04c1c2998-691d07a2-a337b-9851
@@ -290,20 +290,20 @@ R11
 R4
 vdemo1
 2/home/wayne/FPGA/FPGAtors/demo1.sv
-Z14 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z13 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
 !s110 1763501020
 !i10b 1
 !s100 CfRgI8jjWDMK<1`EhEFWz1
 I0F<AlWzoC>^9^jVhi`5<o3
 S1
-Z15 d/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj
+Z14 d/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj
 w1763501018
 8/home/wayne/FPGA/FPGAtors/demo1.sv
 F/home/wayne/FPGA/FPGAtors/demo1.sv
 !i122 151
 L0 5 31
-Z16 VDg1SIo80bB@j0V0VzS_@n1
-Z17 OL;L;2025.2;82
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+Z16 OL;L;2025.2;82
 r1
 !s85 0
 31
@@ -311,24 +311,24 @@ r1
 !s107 /home/wayne/FPGA/FPGAtors/demo1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FPGAtors/demo1.sv|
 !i113 0
-Z18 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z17 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R10
 vdemo2
 2/home/wayne/FPGA/FPGAtors/demo2.sv
-R14
 R13
+R12
 !i10b 1
 !s100 nROP[YD`8RDT>igK?Fl__2
 I_Wg>;Jca;@lM78I3;LAL13
 S1
-R15
+R14
 w1763509983
 8/home/wayne/FPGA/FPGAtors/demo2.sv
 F/home/wayne/FPGA/FPGAtors/demo2.sv
 !i122 171
 L0 5 168
+R15
 R16
-R17
 r1
 !s85 0
 31
@@ -336,24 +336,24 @@ r1
 !s107 /home/wayne/FPGA/FPGAtors/demo2.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FPGAtors/demo2.sv|
 !i113 0
-R18
+R17
 R10
 vdemo2_tb
 2/home/wayne/FPGA/FPGAtors/template.sv
-R14
+R13
 !s110 1763509342
 !i10b 1
 !s100 V][>bzVmff;T8nbdZXmmi1
 I0G4ik]j7UfHz>fVinVaSL2
 S1
-R15
+R14
 w1763509340
 8/home/wayne/FPGA/FPGAtors/template.sv
 F/home/wayne/FPGA/FPGAtors/template.sv
 !i122 166
 L0 7 91
+R15
 R16
-R17
 r1
 !s85 0
 31
@@ -361,14 +361,14 @@ r1
 !s107 /home/wayne/FPGA/FPGAtors/template.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FPGAtors/template.sv|
 !i113 0
-R18
+R17
 R10
 vfeed_parser
-Z19 2/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
-R14
+Z18 2/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
+R13
 DXx4 work 19 feed_parser_sv_unit 0 22 f@_egd4TT:fC91nZ_W4T60
-Z20 !s110 1764526527
-R16
+Z19 !s110 1764555959
+R15
 r1
 !s85 0
 !i10b 1
@@ -376,24 +376,24 @@ r1
 Im4>`kg3jl=f=dM[KjK?hE3
 !s105 feed_parser_sv_unit
 S1
-R15
-Z21 w1764526515
-Z22 8/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
-Z23 F/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
-!i122 227
+R14
+Z20 w1764526515
+Z21 8/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
+Z22 F/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
+!i122 231
 L0 12 511
-R17
+R16
 31
-Z24 !s108 1764526527.000000
-Z25 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv|
-Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv|
+Z23 !s108 1764555959.000000
+Z24 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv|
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-sv|/home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv|
 !i113 0
-R18
+R17
 R10
 Xfeed_parser_sv_unit
+R18
+R13
 R19
-R14
-R20
 Vf@_egd4TT:fC91nZ_W4T60
 r1
 !s85 0
@@ -402,92 +402,227 @@ r1
 If@_egd4TT:fC91nZ_W4T60
 !i103 1
 S1
-R15
+R14
+R20
 R21
 R22
-R23
-!i122 227
-L0 5 0
-R17
+!i122 231
+Z26 L0 5 0
+R16
 31
+R23
 R24
 R25
-R26
 !i113 0
-R18
+R17
 R10
 vfeed_parser_tb
 2/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv
-R14
-R12
+R13
+!s110 1764561289
 !i10b 1
 !s100 eaLh=ilA:ea`MNEWY<TW30
 IfOoj_mk_:W>;434JHPP6d1
 S1
-R15
-w1764524304
+R14
+w1764561275
 8/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv
 F/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv
-!i122 224
+!i122 238
 L0 7 337
+R15
 R16
-R17
 r1
 !s85 0
 31
-!s108 1764524369.000000
+!s108 1764561289.000000
 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv|
 !i113 0
-R18
-R10
-vstruct_pipeline_test
-2/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
-R14
-!s110 1764524279
-!i10b 1
-!s100 BLMSLHBacFDQ]DjG6M:DI1
-IhO]biU:b50QMB4WEBfSWl0
-S1
-R15
-w1764524093
-8/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
-F/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
-!i122 222
-L0 1 209
-R16
 R17
+R10
+Xparser_pkg
+Z27 2/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv
+R13
+Z28 DXx4 work 9 types_pkg 0 22 ?4m5Yg;Fcec0U:zcPQJR?3
+Z29 !s110 1764694901
+!i10b 1
+!s100 ISgFWbUM_?idM6OSnd0JZ0
+I>5MKk:A8oMJ^NPVh>R0ee3
+S1
+R14
+Z30 w1764632839
+Z31 8/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv
+Z32 F/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv
+!i122 264
+R26
+V>5MKk:A8oMJ^NPVh>R0ee3
+R16
 r1
 !s85 0
 31
-!s108 1764524279.000000
-!s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv|
+Z33 !s108 1764694901.000000
+!s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv|
+Z34 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv|
 !i113 0
-R18
+R17
+R10
+Xpkg_parser_sv_unit
+R27
+R13
+R29
+Vf9cP`2;RS>V^n=9<KIB?V2
+r1
+!s85 0
+!i10b 1
+!s100 @FEz0ULZU<Qe<H?mjJ>>Q1
+If9cP`2;RS>V^n=9<KIB?V2
+!i103 1
+S1
+R14
+R30
+R31
+R32
+!i122 264
+L0 148 0
+R16
+31
+R33
+Z35 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_parser.sv|
+R34
+!i113 0
+R17
+R10
+Xpkg_types_sv_unit
+Z36 2/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv
+R13
+Z37 !s110 1764627966
+VHB^RQOS:eG2j@e8KHh0cz1
+r1
+!s85 0
+!i10b 1
+!s100 FTQMDYeVk3330=co>icQK2
+IHB^RQOS:eG2j@e8KHh0cz1
+!i103 1
+S1
+R14
+Z38 w1764627869
+Z39 8/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv
+Z40 F/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv
+!i122 253
+L0 73 0
+R16
+31
+Z41 !s108 1764627966.000000
+Z42 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv|
+Z43 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv|
+!i113 0
+R17
+R10
+vstruct_pipeline_test
+Z44 2/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
+R13
+R28
+Z45 DXx4 work 10 parser_pkg 0 22 >5MKk:A8oMJ^NPVh>R0ee3
+DXx4 work 12 test_sv_unit 0 22 ncim8A997D4kMnEXJBzN;3
+R29
+R15
+r1
+!s85 0
+!i10b 1
+!s100 N>S0YdhH^]V_@b]W>c[kk3
+I`>G6OFCjaS]A3PlOH0Fmc3
+!s105 test_sv_unit
+S1
+R14
+Z46 w1764639761
+Z47 8/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
+Z48 F/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
+!i122 263
+L0 8 77
+R16
+31
+Z49 !s108 1764694900.000000
+Z50 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv|
+Z51 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv|
+!i113 0
+R17
 R10
 vstruct_pipeline_test_tb
 2/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv
-R14
-!s110 1764523248
+R13
+R19
 !i10b 1
 !s100 S5cIjl]kMmZPUlR[<:doT0
 IXimZE`[@Fe31jeDkYg4Nz0
 S1
-R15
+R14
 w1764523117
 8/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv
 F/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv
-!i122 219
+!i122 233
 L0 7 56
+R15
 R16
-R17
 r1
 !s85 0
 31
-!s108 1764523248.000000
+R23
 !s107 /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv|
 !i113 0
-R18
+R17
+R10
+Xtest_sv_unit
+R44
+R13
+R28
+R45
+R29
+Vncim8A997D4kMnEXJBzN;3
+r1
+!s85 0
+!i10b 1
+!s100 ?522ZbJ[b0VihXNQ6khZ21
+Incim8A997D4kMnEXJBzN;3
+!i103 1
+S1
+R14
+R46
+R47
+R48
+!i122 263
+R26
+R16
+31
+R49
+R50
+R51
+!i113 0
+R17
+R10
+Xtypes_pkg
+R36
+R13
+R37
+!i10b 1
+!s100 <YRXWD6R:3@0EL9G@aR8Y1
+I?4m5Yg;Fcec0U:zcPQJR?3
+S1
+R14
+R38
+R39
+R40
+!i122 253
+R26
+V?4m5Yg;Fcec0U:zcPQJR?3
+R16
+r1
+!s85 0
+31
+R41
+R42
+R43
+!i113 0
+R17
 R10

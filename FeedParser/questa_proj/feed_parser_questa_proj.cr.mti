@@ -1,10 +1,24 @@
-/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv
+/home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv {1 {vlog -work work -vopt -sv /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv
 Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+Start time: 21:25:59 on Nov 30,2025
+vlog -reportprogress 300 -work work -vopt -sv /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/pipeline_tb.sv 
 ** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
 -- Compiling module struct_pipeline_test_tb
 
 Top level modules:
 	struct_pipeline_test_tb
+End time: 21:25:59 on Nov 30,2025, Elapsed time: 0:00:00
+
+} {} {}} /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv {2 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
+-- Compiling package types_pkg
+** Warning: /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv(73): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: /home/wayne/FPGA/FinancialAccleration/FeedParser/pkg_types.sv(75): (vlog-2284) Empty $unit scope found.
+-- Compiling package pkg_types_sv_unit
+
+Top level modules:
+	--none--
 
 } {} {}} /home/wayne/FPGA/FPGAtors/demo2.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FPGAtors/demo2.sv
 Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
@@ -14,58 +28,6 @@ Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 Top level modules:
 	demo2
 
-} {} {}} /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
-Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
--- Compiling package feed_parser_sv_unit
--- Compiling module feed_parser
-
-Top level modules:
-	feed_parser
-
-} {} {}} /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv {0 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv
-Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
--- Compiling module struct_pipeline_test
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(102): (vlog-2730) Undefined variable: 'state'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(103): (vlog-2730) Undefined variable: 'READ_ETH_DST'.
-** Error: (vlog-13069) /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(106): near "end": syntax error, unexpected end.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(113): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(127): (vlog-2730) Undefined variable: 'eth_src_mac_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(128): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(142): (vlog-2730) Undefined variable: 'eth_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(143): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(157): (vlog-2730) Undefined variable: 'ip_header_accumlator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(158): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(171): (vlog-2730) Undefined variable: 'udp_header_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(172): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(186): (vlog-2730) Undefined variable: 'msg_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(195): (vlog-2730) Undefined variable: 'msg_len_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(199): (vlog-2730) Undefined variable: 'msg_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(201): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(210): (vlog-2730) Undefined variable: 'orderid_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(211): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(214): (vlog-2730) Undefined variable: 'msg_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(226): (vlog-2730) Undefined variable: 'price_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(227): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(230): (vlog-2730) Undefined variable: 'msg_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(241): (vlog-2730) Undefined variable: 'qty_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(242): (vlog-2730) Undefined variable: 'bytes_left'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(248): (vlog-2730) Undefined variable: 'msg_type_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(250): (vlog-2730) Undefined variable: 'event_count'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(251): (vlog-2730) Undefined variable: 'orderid_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(252): (vlog-2730) Undefined variable: 'price_accumulator'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(265): (vlog-2730) Undefined variable: 'event_count'.
-** Error: /home/wayne/FPGA/FinancialAccleration/FeedParser/test.sv(275): (vlog-2730) Undefined variable: 'in_data'.
-
-} {5.0 35.0} {}} /home/wayne/FPGA/FPGAtors/template.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FPGAtors/template.sv
-Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
--- Compiling module demo2_tb
-
-Top level modules:
-	demo2_tb
-
 } {} {}} /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FinancialAccleration/FeedParser/testbenches/feed_parser_tb.sv
 Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 ** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
@@ -73,5 +35,25 @@ Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 
 Top level modules:
 	feed_parser_tb
+
+} {} {}} /home/wayne/FPGA/FPGAtors/template.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/FPGA/FPGAtors/template.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
+-- Compiling module demo2_tb
+
+Top level modules:
+	demo2_tb
+
+} {} {}} /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv {1 {vlog -work work -vopt -sv /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+Start time: 21:25:59 on Nov 30,2025
+vlog -reportprogress 300 -work work -vopt -sv /home/wayne/FPGA/FinancialAccleration/FeedParser/feed_parser.sv 
+** Note: (vlog-220) '/home/wayne/FPGA/FinancialAccleration/FeedParser/questa_proj/feed_parser_questa_proj.mpf' is used as the ini file.
+-- Compiling package feed_parser_sv_unit
+-- Compiling module feed_parser
+
+Top level modules:
+	feed_parser
+End time: 21:25:59 on Nov 30,2025, Elapsed time: 0:00:00
 
 } {} {}}
