@@ -55,25 +55,86 @@ type cursor = {
   mutable offset: int
 }
 
-let _parse_msg (c : cursor) : msg result = 
-  let msg_type = Bytes.read_u16 c in
+let print_cursor_buffer (c: cursor) =
+  let tmp = Bytes.to_string c.buffer in
+  Printf.printf "cursor buffer: ------------------offset: %d----------------\n%s\n" c.offset tmp
 
-  Ok (
-    Unknown {msg_type; raw}
+let pint (d: int) : unit =
+  Printf.printf "int: %d\n" d 
+
+let pchar (c: char) : unit =
+  Printf.printf "char: %c\n" c
+
+let pstring (s: string) : unit =
+  Printf.printf "string: %s\n" s
+
+let enum_order_of_u8 (b: int) : (enum_order) result =
+  match b with
+    | 0x41 -> Ok ADD    (* A *)
+    | 0x44 -> Ok DELETE (* D *)
+    | 0x4D -> Ok MODIFY (* M *)
+    | other -> Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other))
+
+let parse_msg (c : cursor) : msg result = 
+  let msg_type  = Bytes.get_uint8 c.buffer c.offset in
+  c.offset <- c.offset + 1;
+
+  let tmp = match enum_order_of_u8 msg_type with
+  | Ok ADD ->
+      pstring "Add enum matched!";
+      Ok (Unknown {enum_order = msg_type; raw = Bytes.empty })
+  | Error e -> 
+      (* pstring "error on mapping enum from byte"; *)
+      Error e 
+  | _ -> 
+      pstring "fallback on parse_msg, enum was mapped; however no behaviour is based on this enum occuring!";
+      Error (Bad_value (Printf.sprintf "unknown enum map match returned, does not signify mapping was invalid"))
+  in
+
+  Error (
+    Bad_value "bad val string"
   )
+
+  (* Ok ( *)
+  (*   Unknown { *)
+  (*     enum_order = -1; raw = Bytes.empty *)
+  (*   } *)
+  (* ) *)
 
 
 let _makeAdd = 
   ()
 
-let () = 
-  print_endline "Bonjour, das Welt!";
+let print_parse_error = function
+  | Truncated msg -> 
+      Printf.printf "Parse error (truncated): %s\n" msg
+  | Bad_value msg ->
+      Printf.printf "Parse error (bad value): %s\n" msg
 
-  let _add_inst : enum_order = ADD in
-  let _del_inst : enum_order = DELETE in
-  let _mod_inst : enum_order = MODIFY in
-  let bruh : string = _string_of_type_enum _del_inst in
-  Printf.printf "mapped: %s\n" bruh;
+let () = 
+  (* print_endline "Bonjour, das Welt!"; *)
+
+  let c: cursor = {
+    (* buffer = Bytes.of_string "ADMB"; *)
+    buffer = Bytes.of_string "B";
+    offset = 0;
+  } in
+
+  (* let tmp = parse_msg c in *)
+  (* let tmp2 = parse_msg c in *)
+  (* let tmp3 = parse_msg c in *)
+  let tmp4 = parse_msg c in
+  let tmp5 = match tmp4 with
+    | Ok msg ->
+        pstring "bruh"
+    | Error e ->
+        print_parse_error e
+  in
+
+  (* let tmp: char = Bytes.get (Bytes.of_string "test_string") 0 in *)
+  (* pchar tmp; *)
+
+  (* print_cursor_buffer c; *)
 
   ()
 

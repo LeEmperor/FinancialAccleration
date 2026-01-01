@@ -1,4 +1,6 @@
 (executable
  (public_name dune_proj)
  (name main)
- (libraries dune_proj))
+ (libraries dune_proj)
+ (flags(:standard -w -27-69-37-34-32-26-50))
+ )
