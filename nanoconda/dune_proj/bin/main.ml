@@ -65,7 +65,7 @@ let pint (d: int) : unit =
 let pchar (c: char) : unit =
   Printf.printf "char: %c\n" c
 
-let pstring (s: string) : unit =
+let pstr (s: string) : unit =
   Printf.printf "string: %s\n" s
 
 let enum_order_of_u8 (b: int) : (enum_order) result =
@@ -73,7 +73,10 @@ let enum_order_of_u8 (b: int) : (enum_order) result =
     | 0x41 -> Ok ADD    (* A *)
     | 0x44 -> Ok DELETE (* D *)
     | 0x4D -> Ok MODIFY (* M *)
-    | other -> Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other))
+    | other -> 
+        (* pstring "unmatchable msg type of byte: 0x%02X"; *)
+        Printf.printf "unmatchable msg type of byte: 0x%02X\n" other;
+        Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other))
 
 let parse_msg (c : cursor) : msg result = 
   let msg_type  = Bytes.get_uint8 c.buffer c.offset in
@@ -81,13 +84,13 @@ let parse_msg (c : cursor) : msg result =
 
   let tmp = match enum_order_of_u8 msg_type with
   | Ok ADD ->
-      pstring "Add enum matched!";
+      pstr "Add enum matched!";
       Ok (Unknown {enum_order = msg_type; raw = Bytes.empty })
   | Error e -> 
       (* pstring "error on mapping enum from byte"; *)
       Error e 
   | _ -> 
-      pstring "fallback on parse_msg, enum was mapped; however no behaviour is based on this enum occuring!";
+      pstr "fallback on parse_msg, enum was mapped; however no behaviour is based on this enum occuring!";
       Error (Bad_value (Printf.sprintf "unknown enum map match returned, does not signify mapping was invalid"))
   in
 
@@ -126,7 +129,7 @@ let () =
   let tmp4 = parse_msg c in
   let tmp5 = match tmp4 with
     | Ok msg ->
-        pstring "bruh"
+        pstr "bruh"
     | Error e ->
         print_parse_error e
   in
