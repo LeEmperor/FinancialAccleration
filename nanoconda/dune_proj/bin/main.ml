@@ -5,55 +5,87 @@ sequence context:
 payload fields:
 *)
 
-(* module Bruh = struct *)
-type enum_order = ADD | DELETE | MODIFY | RAW
-(* end *)
+type msg_type_e = ADD | DELETE | MODIFY | RAW
 
 type order = {
-  t: enum_order
+  t: msg_type_e 
 }
 
-type side = Buy | Sell
+type side_e = Buy | Sell
 
-type add = {
-  side : side;
+type add_t = {
+  side : side_e;
   price : int64;
   qty : int32;
 }
 
-type del = {
+type delete_t = {
+  side: side_e;
   price: int64;
   qty: int32;
 }
 
-type exec = {
-  side : side;
+type modify_t = {
+  side: side_e;
+  price_delta: int64;
+  qty_delta: int32;
+}
+
+type exec_t = {
+  side : side_e;
   price: int64;
   qty : int32;
 }
 
-type msg = 
-  | Add of add
-  | Del of del
-  | Exec of exec
-  | Unknown of {enum_order : int; raw : bytes}
+type msg_t = 
+  | Add of add_t
+  | Delete of delete_t
+  | Execute of exec_t
+  | Unknown of {code : int; raw : bytes}
 
-let _string_of_type_enum = function
+let string_of_msg_type_e = function
   | ADD -> "add";
   | DELETE -> "delete";
   | MODIFY -> "modify"
-  | _ -> "raw"
+  | _ -> "unmappable msg type"
 
 type parseError =
   | Truncated of string
   | Bad_value of string
 
-type 'a result = ('a, parseError) Stdlib.result
-
 type cursor = {
   buffer: bytes;
   mutable offset: int
 }
+
+module Result = struct
+  type 'a t = ('a, parseError) Stdlib.result
+
+  let ( let* ) r f = match r with
+  | Ok x -> f x
+  | Error e -> Error e
+
+  let ( let+ )r f = match r with
+  | Ok x -> Ok (f x)
+  | Error e -> Error e
+
+  let errorf fmt =
+    Printf.ksprintf (fun s -> Error (Bad_value s)) fmt
+end
+
+let ensure (c: cursor) (n: int) : unit Result.t =
+  let remaining = Bytes.length c.buffer - c.offset in
+  if remaining >= n then Ok ()
+  else Error (Truncated (Printf.sprintf "need %d bytes, have %d remaining" n remaining))
+
+let read_u8 (c: cursor) : int Result.t =
+  let open Result in 
+  let* () = ensure c 1 in
+  let v = Bytes.get_uint8 c.buffer c.offset in
+  c.offset <- c.offset + 1;
+  Ok v
+
+type 'a result = ('a, parseError) Stdlib.result
 
 let print_cursor_buffer (c: cursor) =
   let tmp = Bytes.to_string c.buffer in
@@ -68,45 +100,69 @@ let pchar (c: char) : unit =
 let pstr (s: string) : unit =
   Printf.printf "string: %s\n" s
 
-let enum_order_of_u8 (b: int) : (enum_order) result =
+let print_msg_data (m: msg_t) : unit =
+  let tmp: unit = match m with
+  | Add add ->
+      (* pstr "msg variant ADD found" *)
+      Printf.printf "ADD msg found with price: %020Ld\n" add.price;
+  | Delete del ->
+      pstr "msg variant DELETE found"
+  | Execute exec ->
+      pstr "msg variant EXECUTE found"
+  | _ ->
+      pstr "default variant found"
+  in
+
+  ()
+
+let msg_type_of_u8 (b: int) : (msg_type_e) Result.t =
   match b with
     | 0x41 -> Ok ADD    (* A *)
     | 0x44 -> Ok DELETE (* D *)
     | 0x4D -> Ok MODIFY (* M *)
-    | other -> 
-        (* pstring "unmatchable msg type of byte: 0x%02X"; *)
-        Printf.printf "unmatchable msg type of byte: 0x%02X\n" other;
-        Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other))
+    (* | other ->  *)
+    (*     (* pstring "unmatchable msg type of byte: 0x%02X"; *) *)
+    (*     Printf.printf "unmatchable msg type of byte: 0x%02X\n" other; *)
+    (*     Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other)) *)
+    | other -> Ok RAW
 
-let parse_msg (c : cursor) : msg result = 
-  let msg_type  = Bytes.get_uint8 c.buffer c.offset in
-  c.offset <- c.offset + 1;
+let parse_msg (c : cursor) : msg_t Result.t = 
+  let open Result in
+  let* byte = read_u8 c in
+  let* msg_type = msg_type_of_u8 byte in
 
-  let tmp = match enum_order_of_u8 msg_type with
-  | Ok ADD ->
-      pstr "Add enum matched!";
-      Ok (Unknown {enum_order = msg_type; raw = Bytes.empty })
-  | Error e -> 
-      (* pstring "error on mapping enum from byte"; *)
-      Error e 
-  | _ -> 
-      pstr "fallback on parse_msg, enum was mapped; however no behaviour is based on this enum occuring!";
-      Error (Bad_value (Printf.sprintf "unknown enum map match returned, does not signify mapping was invalid"))
-  in
-
-  Error (
-    Bad_value "bad val string"
-  )
-
-  (* Ok ( *)
-  (*   Unknown { *)
-  (*     enum_order = -1; raw = Bytes.empty *)
-  (*   } *)
-  (* ) *)
-
-
-let _makeAdd = 
-  ()
+  match msg_type with
+  | ADD ->
+      Ok (
+        Add {
+          side = Buy;
+          price = 10L;
+          qty = 10l;
+        }
+      )
+  | MODIFY ->
+      Ok (
+        Add {
+          side = Buy;
+          price = 10L;
+          qty = 10l;
+        }
+      )
+  | DELETE ->
+      Ok (
+        Add {
+          side = Buy;
+          price = 10L;
+          qty = 10l;
+        }
+      )
+  | RAW -> 
+      Ok (
+        Unknown {
+          code = -1;
+          raw = Bytes.empty;
+        }
+      )
 
 let print_parse_error = function
   | Truncated msg -> 
@@ -119,20 +175,27 @@ let () =
 
   let c: cursor = {
     (* buffer = Bytes.of_string "ADMB"; *)
-    buffer = Bytes.of_string "B";
+    buffer = Bytes.of_string "A";
     offset = 0;
   } in
 
-  (* let tmp = parse_msg c in *)
+  let tmp: msg_t Result.t = parse_msg c in
+  let tmp = match tmp with
+  | Ok msg ->
+      print_msg_data msg
+  | Error e ->
+      print_parse_error e
+  in
+
   (* let tmp2 = parse_msg c in *)
   (* let tmp3 = parse_msg c in *)
-  let tmp4 = parse_msg c in
-  let tmp5 = match tmp4 with
-    | Ok msg ->
-        pstr "bruh"
-    | Error e ->
-        print_parse_error e
-  in
+  (* let tmp4 = parse_msg c in *)
+  (* let tmp5 = match tmp4 with *)
+  (*   | Ok msg -> *)
+  (*       pstr "bruh" *)
+  (*   | Error e -> *)
+  (*       print_parse_error e *)
+  (* in *)
 
   (* let tmp: char = Bytes.get (Bytes.of_string "test_string") 0 in *)
   (* pchar tmp; *)
