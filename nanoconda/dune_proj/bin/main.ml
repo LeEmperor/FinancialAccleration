@@ -128,7 +128,7 @@ let msg_type_of_u8 (b: int) : (msg_type_e) Result.t =
 
 let parse_msg (c : cursor) : msg_t Result.t = 
   let open Result in
-  let* byte = read_u8 c in
+  let* byte = read_u8 c in (* c'est un monad *)
   let* msg_type = msg_type_of_u8 byte in
 
   match msg_type with
