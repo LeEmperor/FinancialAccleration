@@ -104,7 +104,7 @@ let print_msg_data (m: msg_t) : unit =
   let tmp: unit = match m with
   | Add add ->
       (* pstr "msg variant ADD found" *)
-      Printf.printf "ADD msg found with price: %020Ld\n" add.price;
+      Printf.printf "ADD msg found with price: %05Ld\n" add.price;
   | Delete del ->
       pstr "msg variant DELETE found"
   | Execute exec ->
@@ -126,43 +126,75 @@ let msg_type_of_u8 (b: int) : (msg_type_e) Result.t =
     (*     Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other)) *)
     | other -> Ok RAW
 
+let parse_side (c: cursor) = 
+  (* Ok ( *)
+  (*   Buy *)
+  (* ) *)
+  Buy
+
+let parse_add (c: cursor) = 
+  Ok (
+    Add {
+      side = parse_side c;
+      price = 10L;
+      qty = 10l;
+    }
+  )
+
 let parse_msg (c : cursor) : msg_t Result.t = 
   let open Result in
-  let* byte = read_u8 c in
+  let* byte = read_u8 c in (* c'est un monad! *)
   let* msg_type = msg_type_of_u8 byte in
 
-  match msg_type with
+  (* match msg_type with *)
+  (* | ADD -> *)
+  (*     Ok ( *)
+  (*       Add { *)
+  (*         side = Buy; *)
+  (*         price = 10L; *)
+  (*         qty = 10l; *)
+  (*       } *)
+  (*     ) *)
+  (**)
+  (**)
+  (* | MODIFY -> *)
+  (*     Ok ( *)
+  (*       Add { *)
+  (*         side = Buy; *)
+  (*         price = 10L; *)
+  (*         qty = 10l; *)
+  (*       } *)
+  (*     ) *)
+  (* | DELETE -> *)
+  (*     Ok ( *)
+  (*       Add { *)
+  (*         side = Buy; *)
+  (*         price = 10L; *)
+  (*         qty = 10l; *)
+  (*       } *)
+  (*     ) *)
+  (* | RAW ->  *)
+  (*     Ok ( *)
+  (*       Unknown { *)
+  (*         code = -1; *)
+  (*         raw = Bytes.empty; *)
+  (*       } *)
+  (*     ) *)
+
+  let res =  match msg_type with
   | ADD ->
-      Ok (
-        Add {
-          side = Buy;
-          price = 10L;
-          qty = 10l;
-        }
-      )
-  | MODIFY ->
-      Ok (
-        Add {
-          side = Buy;
-          price = 10L;
-          qty = 10l;
-        }
-      )
-  | DELETE ->
-      Ok (
-        Add {
-          side = Buy;
-          price = 10L;
-          qty = 10l;
-        }
-      )
-  | RAW -> 
+      let add_msg  = parse_add c in
+      add_msg
+  | _ -> 
       Ok (
         Unknown {
           code = -1;
           raw = Bytes.empty;
         }
       )
+  in
+
+  res
 
 let print_parse_error = function
   | Truncated msg -> 
@@ -203,4 +235,5 @@ let () =
   (* print_cursor_buffer c; *)
 
   ()
+
 

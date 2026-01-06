@@ -11,4 +11,7 @@ qu'est-ce que un gap?
 pourquoi il y a besoin d'un snapshot?
 
 
+64 byte packs?
+c'est un attendre-async en indicateur que un neu byte est present oui?
 
+comme le forme normale de nourisher le feed parser avec cette?
