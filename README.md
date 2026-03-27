@@ -1,3 +1,7 @@
-The code found in here is a rough sum of all of my various RTL and some software designs related to my research and work. 
+# FUTURE NOTICE
 
-Much of this is scratch or basic boilerplate and should be treated as a non-reference for anything important. 
+Given the sensitive nature of many of these things, this public repo has been provided as a dump reference for interested parties, but in no way reflects current state of remaining production systems.
+
+If you wish to learn more about these systems, reach out via email, LinkedIn, or Discord and I may be of help there. 
+
+Cheers and good luck!
