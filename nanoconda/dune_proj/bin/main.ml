@@ -58,7 +58,7 @@ type cursor = {
   mutable offset: int
 }
 
-module Result = struct
+module Parse_result = struct
   type 'a t = ('a, parseError) Stdlib.result
 
   let ( let* ) r f = match r with
@@ -73,19 +73,19 @@ module Result = struct
     Printf.ksprintf (fun s -> Error (Bad_value s)) fmt
 end
 
-let ensure (c: cursor) (n: int) : unit Result.t =
+let ensure (c: cursor) (n: int) : unit Parse_result.t =
   let remaining = Bytes.length c.buffer - c.offset in
   if remaining >= n then Ok ()
   else Error (Truncated (Printf.sprintf "need %d bytes, have %d remaining" n remaining))
 
-let read_u8 (c: cursor) : int Result.t =
-  let open Result in 
+let read_u8 (c: cursor) : int Parse_result.t =
+  let open Parse_result in 
   let* () = ensure c 1 in
   let v = Bytes.get_uint8 c.buffer c.offset in
   c.offset <- c.offset + 1;
   Ok v
 
-type 'a result = ('a, parseError) Stdlib.result
+(* type 'a result = ('a, parseError) Stdlib.result *)
 
 let print_cursor_buffer (c: cursor) =
   let tmp = Bytes.to_string c.buffer in
@@ -115,7 +115,17 @@ let print_msg_data (m: msg_t) : unit =
 
   ()
 
-let msg_type_of_u8 (b: int) : (msg_type_e) Result.t =
+let print_parsed_message (in_msg: msg_t Parse_result.t) : string = (* let open Parse_result in *)
+  (* let* () = print_endline "parsing msg_t" in *)
+
+  let msg_type_string : string = match in_msg with 
+  | Ok add_t  -> print_endline "matched an add_t"; "add type"
+  | other -> "unknown msg type"
+  in
+
+  msg_type_string
+
+let msg_type_of_u8 (b: int) : (msg_type_e) Parse_result.t =
   match b with
     | 0x41 -> Ok ADD    (* A *)
     | 0x44 -> Ok DELETE (* D *)
@@ -126,23 +136,65 @@ let msg_type_of_u8 (b: int) : (msg_type_e) Result.t =
     (*     Error (Bad_value (Printf.sprintf "unknown msg_type byte: 0x%02X" other)) *)
     | other -> Ok RAW
 
-let parse_side (c: cursor) = 
+let parse_side (c: cursor) : side_e Parse_result.t = 
   (* Ok ( *)
   (*   Buy *)
   (* ) *)
-  Buy
+  (* Buy *)
+  let open Parse_result in
+  let* byte = read_u8 c in
+  let tmp: side_e = match byte with
+    | 0x01 -> Buy
+    | other -> Sell
+  in
 
-let parse_add (c: cursor) = 
   Ok (
-    Add {
-      side = parse_side c;
-      price = 10L;
-      qty = 10l;
-    }
+    Buy
   )
 
-let parse_msg (c : cursor) : msg_t Result.t = 
-  let open Result in
+let parse_price (c: cursor) : int32 Parse_result.t =
+  let open Parse_result in
+
+  let* byte = read_u8 c in
+
+
+  Ok (
+    10l;
+  )
+
+
+let parse_add (c: cursor) : add_t Parse_result.t = 
+  let open Parse_result in
+  let*  bruh_side = parse_side c in (* shadowing issue earlier on add_t / exec_t field names *)
+  let   bruh_price = 10L in
+  let   bruh_qty = 10l in
+  let bruh_price2 = parse_price c in
+
+  Ok (
+    ( 
+      {
+        side = bruh_side;
+        price = bruh_price;
+        qty = bruh_qty;
+      } : add_t
+    )
+  )
+
+let parse_delete (c: cursor) : delete_t Parse_result.t =
+  let open Parse_result in
+  let* bruh_side = parse_side c in
+  Ok ( (
+    {
+      side = bruh_side;
+      price = 10L;
+      qty = 10l;
+    } : delete_t
+  ) )
+
+(*func: *)
+
+let parse_msg (c : cursor) : msg_t Parse_result.t = 
+  let open Parse_result in
   let* byte = read_u8 c in (* c'est un monad! *)
   let* msg_type = msg_type_of_u8 byte in
 
@@ -181,20 +233,27 @@ let parse_msg (c : cursor) : msg_t Result.t =
   (*       } *)
   (*     ) *)
 
-  let res =  match msg_type with
-  | ADD ->
-      let add_msg  = parse_add c in
-      add_msg
-  | _ -> 
-      Ok (
-        Unknown {
-          code = -1;
-          raw = Bytes.empty;
-        }
-      )
-  in
+  (* let* res : msg_type_e Parse_result.t = match msg_type with *)
+  (* (* | ADD -> *) *)
+  (* (*     parse_add c *) *)
+  (* | other ->  *)
+  (*     Ok ( *)
+  (*       Unknown { *)
+  (*         code = -1; *)
+  (*         raw = Bytes.empty; *)
+  (*       } *)
+  (*     ) *)
+  (* in *)
 
-  res
+  (* force return an add type Ok parseConstructor*)
+  pstr "using default Ok constructor on an Add type";
+  Ok (
+    Add { (* explicit reconstruct of an add_t type *)
+      side = Buy;
+      price = 10L;
+      qty = 20l;
+    } 
+  )
 
 let print_parse_error = function
   | Truncated msg -> 
@@ -211,13 +270,18 @@ let () =
     offset = 0;
   } in
 
-  let tmp: msg_t Result.t = parse_msg c in
-  let tmp = match tmp with
-  | Ok msg ->
-      print_msg_data msg
-  | Error e ->
-      print_parse_error e
-  in
+  let tmp: msg_t Parse_result.t = parse_msg c in
+  (* let tmp = match tmp with *)
+  (* | Ok msg -> *)
+  (*     print_msg_data msg *)
+  (* | Error e -> *)
+  (*     print_parse_error e *)
+  (* in *)
+
+  (* let open Parse_result in *)
+  let parsed_msg : (msg_t Parse_result.t) = parse_msg c in
+  let print_this : string = print_parsed_message parsed_msg in
+  print_endline print_this;
 
   (* let tmp2 = parse_msg c in *)
   (* let tmp3 = parse_msg c in *)
