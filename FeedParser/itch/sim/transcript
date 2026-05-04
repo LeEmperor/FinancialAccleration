@@ -1,0 +1,85 @@
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project hft_test1
+do compile_script.do
+# Compile of itch_demo_top.sv was successful.
+# Compile of order_book.sv was successful.
+# 2 compiles, 0 failed with no errors.
+do compile_script.do
+do sim_script.do
+# ** Note: (vsim-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_itch_demo 
+# Start time: 11:49:10 on Apr 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "order_book(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_itch_demo(fast)
+# Loading work.moldudp64_parser(fast)
+# Loading work.itch_decoder(fast)
+# Loading work.order_book(fast)
+# Loading work.uart_reporter(fast)
+add wave -r *
+do run_script.do
+# 
+# === ITCH Demo Testbench ===
+# 
+# [5885000] ADD  ref=0000000000001001 side= BUY sz=1000 px=1234052
+# [5955000] BBO  bid=1234052 x 1000  ask=0 x 0
+# [9685000] ADD  ref=0000000000001002 side=SELL sz=500 px=1234552
+# [9755000] BBO  bid=1234052 x 1000  ask=1234552 x 500
+# [13485000] ADD  ref=0000000000001003 side= BUY sz=300 px=1233952
+# 
+# --- After Packet 1 (3 Adds) ---
+# [PASS] best_bid_price = 0x000000000012d484
+# [PASS] best_bid_size = 0x00000000000003e8
+# [PASS] best_ask_price = 0x000000000012d678
+# [PASS] best_ask_size = 0x00000000000001f4
+# [18685000] EXE  ref=0000000000001001 sz=500
+# [18755000] BBO  bid=1234052 x 500  ask=1234552 x 500
+# [21985000] CAN  ref=0000000000001003 sz=100
+# 
+# --- After Packet 2 (Exe + Can) ---
+# [PASS] best_bid_price = 0x000000000012d484
+# [PASS] best_bid_size = 0x00000000000001f4
+# [28385000] REP  orig=0000000000001002 new=0000000000001010 sz=200 px=1235112
+# [28455000] BBO  bid=1234052 x 500  ask=0 x 0
+# [28485000] BBO  bid=1234052 x 500  ask=1235112 x 200
+# [30485000] DEL  ref=0000000000001001
+# [30555000] BBO  bid=1233952 x 200  ask=1235112 x 200
+# 
+# --- After Packet 3 (Rep + Del) ---
+# [PASS] best_bid_price = 0x000000000012d420
+# [PASS] best_ask_price = 0x000000000012d8a8
+# [PASS] best_ask_size = 0x00000000000000c8
+# [33175000] GAP  seq=8
+# [36985000] ADD  ref=0000000000002001 side=SELL sz=100 px=1234208
+# [37055000] BBO  bid=1233952 x 200  ask=1234208 x 100
+# 
+# --- After Packet 4 (Gap test) ---
+# [PASS] gap_detected asserted correctly
+# 
+# === Results: 10 PASS, 0 FAIL ===
+# 
+# ALL TESTS PASSED
+# 
+# ** Note: $finish    : /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_demo.sv(529)
+#    Time: 38545 ns  Iteration: 1  Instance: /tb_itch_demo
+# 1
+# Break in Module tb_itch_demo at /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_demo.sv line 529
+# 0 ps
+# 40472250 ps

@@ -1,0 +1,160 @@
+<mxfile host="65bd71144e">
+    <diagram id="jkMjAphU3j2nWwZodfPU" name="Page-1">
+        <mxGraphModel dx="1315" dy="1321" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;fillColor=#0f0f1a;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry width="1300" height="750" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Market Data — Packet Anatomy" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=22;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry y="18" width="1300" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Ethernet Frame" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="64" width="150" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Eth Header&#xa;14 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e2233;strokeColor=#445588;fontSize=10;fontColor=#8899cc;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="82" width="100" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="IP Header&#xa;20 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e2233;strokeColor=#445588;fontSize=10;fontColor=#8899cc;" vertex="1" parent="1">
+                    <mxGeometry x="163" y="82" width="110" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="UDP Header&#xa;8 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e2233;strokeColor=#445588;fontSize=10;fontColor=#8899cc;" vertex="1" parent="1">
+                    <mxGeometry x="276" y="82" width="90" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2a1800;strokeColor=#cc8800;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="369" y="82" width="810" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="MoldUDP64 Payload  (20-byte header + message blocks)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#ffaa33;" vertex="1" parent="1">
+                    <mxGeometry x="369" y="96" width="810" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="FCS&#xa;4 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e2233;strokeColor=#445588;fontSize=10;fontColor=#8899cc;" vertex="1" parent="1">
+                    <mxGeometry x="1182" y="82" width="58" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=block;endFill=1;strokeColor=#cc8800;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="774" y="138" as="sourcePoint"/>
+                        <mxPoint x="774" y="178" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="MoldUDP64 Header" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#cc8800;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="182" width="180" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Session ID&#xa;10 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a35;strokeColor=#4444aa;fontSize=10;fontColor=#8888ee;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="200" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="ASCII, ignored" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#555588;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="262" width="170" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Sequence Number&#xa;8 B  (uint64 BE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a3a;strokeColor=#2277aa;fontSize=10;fontColor=#66aadd;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="200" width="190" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="gap detect: pkt_seq ≠ expected" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#336688;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="262" width="190" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Msg Count&#xa;2 B  (uint16 BE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a3a;strokeColor=#2277aa;fontSize=10;fontColor=#66aadd;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="200" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="N messages follow" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#336688;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="262" width="160" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Msg Len&#xa;2 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2a10;strokeColor=#33aa55;fontSize=10;fontColor=#66dd88;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="200" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2a10;strokeColor=#33aa55;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="200" width="457" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="ITCH Message Body  (repeated per message)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;fontColor=#44cc66;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="215" width="457" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="× N message blocks" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#33aa55;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="262" width="560" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=block;endFill=1;strokeColor=#33aa55;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="951" y="260" as="sourcePoint"/>
+                        <mxPoint x="951" y="302" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="ITCH 5.0  —  Add Order  (type &quot;A&quot;,  total 36 B)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#44cc66;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="305" width="500" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&#39;A&#39;&#xa;1 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3a0a00;strokeColor=#ff4400;strokeWidth=2;fontSize=11;fontColor=#ff6633;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="323" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="msg type" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#cc3300;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="385" width="60" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Stock&#xa;Locate&#xa;2 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a1a2a;strokeColor=#336688;fontSize=10;fontColor=#5588aa;" vertex="1" parent="1">
+                    <mxGeometry x="124" y="323" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="symbol ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#336688;" vertex="1" parent="1">
+                    <mxGeometry x="124" y="385" width="80" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Tracking&#xa;2 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a1a2a;strokeColor=#336688;fontSize=10;fontColor=#5588aa;" vertex="1" parent="1">
+                    <mxGeometry x="208" y="323" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="ignored" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#336688;" vertex="1" parent="1">
+                    <mxGeometry x="208" y="385" width="80" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Timestamp&#xa;6 B  (ns)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a3a;strokeColor=#2277aa;fontSize=10;fontColor=#66aadd;" vertex="1" parent="1">
+                    <mxGeometry x="292" y="323" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="ns since midnight" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#336688;" vertex="1" parent="1">
+                    <mxGeometry x="292" y="385" width="110" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Order Ref&#xa;8 B  (uint64)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a10;strokeColor=#44aa33;fontSize=10;fontColor=#66cc44;" vertex="1" parent="1">
+                    <mxGeometry x="406" y="323" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="unique order ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#44aa33;" vertex="1" parent="1">
+                    <mxGeometry x="406" y="385" width="130" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Side&#xa;&#39;B&#39;/&#39;S&#39;&#xa;1 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2a1a00;strokeColor=#cc8800;strokeWidth=2;fontSize=11;fontColor=#ffaa33;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="323" width="70" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="bid or ask" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#cc8800;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="385" width="70" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Shares&#xa;4 B  (uint32)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a10;strokeColor=#44aa33;fontSize=10;fontColor=#66cc44;" vertex="1" parent="1">
+                    <mxGeometry x="614" y="323" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="quantity" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#44aa33;" vertex="1" parent="1">
+                    <mxGeometry x="614" y="385" width="120" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Stock&#xa;8 B  (ASCII)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2a10;strokeColor=#44aa33;fontSize=10;fontColor=#66cc44;" vertex="1" parent="1">
+                    <mxGeometry x="738" y="323" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="e.g. &quot;AAPL    &quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#44aa33;" vertex="1" parent="1">
+                    <mxGeometry x="738" y="385" width="120" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Price&#xa;4 B  (uint32)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2a1a00;strokeColor=#cc8800;strokeWidth=2;fontSize=11;fontColor=#ffaa33;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="862" y="323" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="actual × 10000" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=8;fontColor=#cc8800;" vertex="1" parent="1">
+                    <mxGeometry x="862" y="385" width="130" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Other ITCH message types:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;fontColor=#888888;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="430" width="220" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&#39;D&#39;  Delete Order&#xa;19 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#884444;fontSize=10;fontColor=#cc8888;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="452" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="&#39;U&#39;  Replace Order&#xa;35 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#884444;fontSize=10;fontColor=#cc8888;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="452" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&#39;E&#39;  Order Executed&#xa;31 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#884444;fontSize=10;fontColor=#cc8888;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="452" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&#39;X&#39;  Cancel Order&#xa;23 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#884444;fontSize=10;fontColor=#cc8888;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="452" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="All multi-byte fields are big-endian on the wire." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#666688;fontStyle=2;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="516" width="400" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Price example:&#xa;$123.45  →  1,234,500  →  0x0012D484" style="shape=callout;whiteSpace=wrap;html=1;fillColor=#2a1800;strokeColor=#cc8800;fontSize=10;fontColor=#ffaa33;perimeter=calloutPerimeter;" vertex="1" parent="1">
+                    <mxGeometry x="862" y="430" width="250" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

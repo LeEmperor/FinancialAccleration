@@ -1,0 +1,91 @@
+/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_moldudp64_parser.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_moldudp64_parser.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_moldudp64_parser
+
+Top level modules:
+	tb_moldudp64_parser
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_uart_reporter.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_uart_reporter.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_uart_reporter
+
+Top level modules:
+	tb_uart_reporter
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/eth_rmii_rx.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/eth_rmii_rx.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module eth_rmii_rx
+
+Top level modules:
+	eth_rmii_rx
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/itch_decoder.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/itch_decoder.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module itch_decoder
+
+Top level modules:
+	itch_decoder
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/uart_test_top.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/uart_test_top.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module uart_test_top
+
+Top level modules:
+	uart_test_top
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_eth_rmii_rx.sv {2 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_eth_rmii_rx.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_eth_rmii_rx
+** Warning: /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_eth_rmii_rx.sv(267): (vlog-2244) Variable 'mismatch' is implicitly static. You must either explicitly declare it as static or automatic
+or remove the initialization in the declaration of variable.
+
+Top level modules:
+	tb_eth_rmii_rx
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_demo.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_demo.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_itch_demo
+
+Top level modules:
+	tb_itch_demo
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_decoder.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_itch_decoder.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_itch_decoder
+
+Top level modules:
+	tb_itch_decoder
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_order_book.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/tb_order_book.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module tb_order_book
+
+Top level modules:
+	tb_order_book
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/moldudp64_parser.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/moldudp64_parser.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module moldudp64_parser
+
+Top level modules:
+	moldudp64_parser
+
+} {} {}} /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/uart_reporter.sv {1 {vlog -work work -vopt -sv -stats=none /home/wayne/devel/FinancialAccleration/FeedParser/itch/rtl/uart_reporter.sv
+Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) '/home/wayne/devel/FinancialAccleration/FeedParser/itch/sim/hft_test1.mpf' is used as the ini file.
+-- Compiling module uart_reporter
+
+Top level modules:
+	uart_reporter
+
+} {} {}}
